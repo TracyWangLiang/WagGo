@@ -7,10 +7,6 @@
 		<string>tel</string>
 		<string>telprompt</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need access to your photo library to allow you to select images for posting content and updating your profile picture</string>
-	<key>NSCameraUsageDescription</key>
-	<string>We need access to your camera to take photos for posting content and updating your profile picture.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
