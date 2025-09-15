@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05EA8CE8C206E5D4BA3A3B85 /* Pods_WagGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */; };
+		338B68702E67CF480004B4BD /* QuestGlyphHarness.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B686F2E67CF480004B4BD /* QuestGlyphHarness.m */; };
+		338B68732E67D4ED0004B4BD /* TailTalkStickerEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B68722E67D4ED0004B4BD /* TailTalkStickerEngine.m */; };
+		33A6E73A2E652A7B0088A4A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E72D2E652A7B0088A4A3 /* AppDelegate.m */; };
+		33A6E73B2E652A7B0088A4A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7322E652A7B0088A4A3 /* main.m */; };
+		33A6E73C2E652A7B0088A4A3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7362E652A7B0088A4A3 /* SceneDelegate.m */; };
+		33A6E73E2E652A7B0088A4A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E72E2E652A7B0088A4A3 /* Assets.xcassets */; };
+		33A6E7402E652A7B0088A4A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7312E652A7B0088A4A3 /* LaunchScreen.storyboard */; };
+		33A6E7412E652A7B0088A4A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7342E652A7B0088A4A3 /* Main.storyboard */; };
+		33A6E7472E652B620088A4A3 /* TrailMarkGlyphController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7462E652B610088A4A3 /* TrailMarkGlyphController.m */; };
+		33A6E74A2E652B750088A4A3 /* FurryToneCasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7492E652B750088A4A3 /* FurryToneCasterController.m */; };
+		33A6E74D2E652B8C0088A4A3 /* WagCharmGlyphController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E74C2E652B8C0088A4A3 /* WagCharmGlyphController.m */; };
+		33A6E7502E652B9C0088A4A3 /* SnoutLensShifterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E74F2E652B9C0088A4A3 /* SnoutLensShifterController.m */; };
+		33A6E7542E652BC00088A4A3 /* FurOrbitGatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7522E652BC00088A4A3 /* FurOrbitGatherController.m */; };
+		33A6E7552E652BC00088A4A3 /* FurOrbitGatherController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7532E652BC00088A4A3 /* FurOrbitGatherController.xib */; };
+		33A6E7592E652CAD0088A4A3 /* BarkTrailSeekerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7572E652CAD0088A4A3 /* BarkTrailSeekerController.m */; };
+		33A6E75A2E652CAD0088A4A3 /* BarkTrailSeekerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7582E652CAD0088A4A3 /* BarkTrailSeekerController.xib */; };
+		33A6E75E2E654FAC0088A4A3 /* TrailMarkGlyphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E75C2E654FAC0088A4A3 /* TrailMarkGlyphCell.m */; };
+		33A6E75F2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E75D2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib */; };
+		33A6E7632E65749E0088A4A3 /* FurryToneCasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7612E65749E0088A4A3 /* FurryToneCasterView.m */; };
+		33A6E7642E65749E0088A4A3 /* FurryToneCasterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7622E65749E0088A4A3 /* FurryToneCasterView.xib */; };
+		33A6E7682E6574AF0088A4A3 /* FurryToneCasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7662E6574AF0088A4A3 /* FurryToneCasterCell.m */; };
+		33A6E7692E6574AF0088A4A3 /* FurryToneCasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7672E6574AF0088A4A3 /* FurryToneCasterCell.xib */; };
+		33A6E76D2E657CC00088A4A3 /* FurryToneCasterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E76B2E657CC00088A4A3 /* FurryToneCasterViewCell.m */; };
+		33A6E76E2E657CC00088A4A3 /* FurryToneCasterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E76C2E657CC00088A4A3 /* FurryToneCasterViewCell.xib */; };
+		33A6E7712E65905D0088A4A3 /* BarkStepCrownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7702E65905D0088A4A3 /* BarkStepCrownController.m */; };
+		33A6E7752E65925E0088A4A3 /* WagCharmGlyphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7742E65925E0088A4A3 /* WagCharmGlyphCell.xib */; };
+		33A6E7762E65925E0088A4A3 /* WagCharmGlyphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7732E65925E0088A4A3 /* WagCharmGlyphCell.m */; };
+		33A6E77C2E659BC90088A4A3 /* WagGoMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E77B2E659BC90088A4A3 /* WagGoMacros.m */; };
+		33C85C072E66C31B0085CE01 /* FelineLinkClusterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C062E66C31B0085CE01 /* FelineLinkClusterController.xib */; };
+		33C85C082E66C31B0085CE01 /* FelineLinkClusterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C052E66C31B0085CE01 /* FelineLinkClusterController.m */; };
+		33C85C0C2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C0B2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib */; };
+		33C85C0D2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C0A2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m */; };
+		33C85C112E66C5F20085CE01 /* FelineLinkClusterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C102E66C5F20085CE01 /* FelineLinkClusterCell.xib */; };
+		33C85C122E66C5F20085CE01 /* FelineLinkClusterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C0F2E66C5F20085CE01 /* FelineLinkClusterCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WagGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		338B686E2E67CF480004B4BD /* QuestGlyphHarness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestGlyphHarness.h; sourceTree = "<group>"; };
+		338B686F2E67CF480004B4BD /* QuestGlyphHarness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestGlyphHarness.m; sourceTree = "<group>"; };
+		338B68712E67D4ED0004B4BD /* TailTalkStickerEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TailTalkStickerEngine.h; sourceTree = "<group>"; };
+		338B68722E67D4ED0004B4BD /* TailTalkStickerEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TailTalkStickerEngine.m; sourceTree = "<group>"; };
+		33A6E70F2E652A700088A4A3 /* WagGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WagGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A6E72C2E652A7B0088A4A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33A6E72D2E652A7B0088A4A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33A6E72E2E652A7B0088A4A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33A6E72F2E652A7B0088A4A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A6E7302E652A7B0088A4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33A6E7322E652A7B0088A4A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33A6E7332E652A7B0088A4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33A6E7352E652A7B0088A4A3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		33A6E7362E652A7B0088A4A3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		33A6E7452E652B610088A4A3 /* TrailMarkGlyphController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailMarkGlyphController.h; sourceTree = "<group>"; };
+		33A6E7462E652B610088A4A3 /* TrailMarkGlyphController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailMarkGlyphController.m; sourceTree = "<group>"; };
+		33A6E7482E652B750088A4A3 /* FurryToneCasterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterController.h; sourceTree = "<group>"; };
+		33A6E7492E652B750088A4A3 /* FurryToneCasterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterController.m; sourceTree = "<group>"; };
+		33A6E74B2E652B8C0088A4A3 /* WagCharmGlyphController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WagCharmGlyphController.h; sourceTree = "<group>"; };
+		33A6E74C2E652B8C0088A4A3 /* WagCharmGlyphController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WagCharmGlyphController.m; sourceTree = "<group>"; };
+		33A6E74E2E652B9C0088A4A3 /* SnoutLensShifterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnoutLensShifterController.h; sourceTree = "<group>"; };
+		33A6E74F2E652B9C0088A4A3 /* SnoutLensShifterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnoutLensShifterController.m; sourceTree = "<group>"; };
+		33A6E7512E652BC00088A4A3 /* FurOrbitGatherController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurOrbitGatherController.h; sourceTree = "<group>"; };
+		33A6E7522E652BC00088A4A3 /* FurOrbitGatherController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurOrbitGatherController.m; sourceTree = "<group>"; };
+		33A6E7532E652BC00088A4A3 /* FurOrbitGatherController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurOrbitGatherController.xib; sourceTree = "<group>"; };
+		33A6E7562E652CAD0088A4A3 /* BarkTrailSeekerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarkTrailSeekerController.h; sourceTree = "<group>"; };
+		33A6E7572E652CAD0088A4A3 /* BarkTrailSeekerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarkTrailSeekerController.m; sourceTree = "<group>"; };
+		33A6E7582E652CAD0088A4A3 /* BarkTrailSeekerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarkTrailSeekerController.xib; sourceTree = "<group>"; };
+		33A6E75B2E654FAC0088A4A3 /* TrailMarkGlyphCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailMarkGlyphCell.h; sourceTree = "<group>"; };
+		33A6E75C2E654FAC0088A4A3 /* TrailMarkGlyphCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailMarkGlyphCell.m; sourceTree = "<group>"; };
+		33A6E75D2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrailMarkGlyphCell.xib; sourceTree = "<group>"; };
+		33A6E7602E65749E0088A4A3 /* FurryToneCasterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterView.h; sourceTree = "<group>"; };
+		33A6E7612E65749E0088A4A3 /* FurryToneCasterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterView.m; sourceTree = "<group>"; };
+		33A6E7622E65749E0088A4A3 /* FurryToneCasterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurryToneCasterView.xib; sourceTree = "<group>"; };
+		33A6E7652E6574AF0088A4A3 /* FurryToneCasterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterCell.h; sourceTree = "<group>"; };
+		33A6E7662E6574AF0088A4A3 /* FurryToneCasterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterCell.m; sourceTree = "<group>"; };
+		33A6E7672E6574AF0088A4A3 /* FurryToneCasterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurryToneCasterCell.xib; sourceTree = "<group>"; };
+		33A6E76A2E657CC00088A4A3 /* FurryToneCasterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterViewCell.h; sourceTree = "<group>"; };
+		33A6E76B2E657CC00088A4A3 /* FurryToneCasterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterViewCell.m; sourceTree = "<group>"; };
+		33A6E76C2E657CC00088A4A3 /* FurryToneCasterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurryToneCasterViewCell.xib; sourceTree = "<group>"; };
+		33A6E76F2E65905D0088A4A3 /* BarkStepCrownController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarkStepCrownController.h; sourceTree = "<group>"; };
+		33A6E7702E65905D0088A4A3 /* BarkStepCrownController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarkStepCrownController.m; sourceTree = "<group>"; };
+		33A6E7722E65925E0088A4A3 /* WagCharmGlyphCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WagCharmGlyphCell.h; sourceTree = "<group>"; };
+		33A6E7732E65925E0088A4A3 /* WagCharmGlyphCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WagCharmGlyphCell.m; sourceTree = "<group>"; };
+		33A6E7742E65925E0088A4A3 /* WagCharmGlyphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WagCharmGlyphCell.xib; sourceTree = "<group>"; };
+		33A6E77A2E659BC90088A4A3 /* WagGoMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WagGoMacros.h; sourceTree = "<group>"; };
+		33A6E77B2E659BC90088A4A3 /* WagGoMacros.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WagGoMacros.m; sourceTree = "<group>"; };
+		33C85C042E66C31B0085CE01 /* FelineLinkClusterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FelineLinkClusterController.h; sourceTree = "<group>"; };
+		33C85C052E66C31B0085CE01 /* FelineLinkClusterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FelineLinkClusterController.m; sourceTree = "<group>"; };
+		33C85C062E66C31B0085CE01 /* FelineLinkClusterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FelineLinkClusterController.xib; sourceTree = "<group>"; };
+		33C85C092E66C5D80085CE01 /* FelineLinkClusterMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FelineLinkClusterMessageCell.h; sourceTree = "<group>"; };
+		33C85C0A2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FelineLinkClusterMessageCell.m; sourceTree = "<group>"; };
+		33C85C0B2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FelineLinkClusterMessageCell.xib; sourceTree = "<group>"; };
+		33C85C0E2E66C5F20085CE01 /* FelineLinkClusterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FelineLinkClusterCell.h; sourceTree = "<group>"; };
+		33C85C0F2E66C5F20085CE01 /* FelineLinkClusterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FelineLinkClusterCell.m; sourceTree = "<group>"; };
+		33C85C102E66C5F20085CE01 /* FelineLinkClusterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FelineLinkClusterCell.xib; sourceTree = "<group>"; };
+		BF287D1727A763E53374FC2E /* Pods-WagGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagGo.debug.xcconfig"; path = "Target Support Files/Pods-WagGo/Pods-WagGo.debug.xcconfig"; sourceTree = "<group>"; };
+		F39010D3FA4A43ADA0DB44C1 /* Pods-WagGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagGo.release.xcconfig"; path = "Target Support Files/Pods-WagGo/Pods-WagGo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33A6E70C2E652A700088A4A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EA8CE8C206E5D4BA3A3B85 /* Pods_WagGo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33A6E7062E652A700088A4A3 = {
+			isa = PBXGroup;
+			children = (
+				33A6E7392E652A7B0088A4A3 /* WagGo */,
+				33A6E7102E652A700088A4A3 /* Products */,
+				C7FF9F54D66CBCEB71C37DB0 /* Pods */,
+				3E471E3C433A669A1E9F958F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		33A6E7102E652A700088A4A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33A6E70F2E652A700088A4A3 /* WagGo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33A6E7392E652A7B0088A4A3 /* WagGo */ = {
+			isa = PBXGroup;
+			children = (
+				33A6E7432E652B170088A4A3 /* M */,
+				33A6E7422E652B100088A4A3 /* V */,
+				33A6E7442E652B1E0088A4A3 /* C */,
+				33A6E72C2E652A7B0088A4A3 /* AppDelegate.h */,
+				33A6E72D2E652A7B0088A4A3 /* AppDelegate.m */,
+				33A6E72E2E652A7B0088A4A3 /* Assets.xcassets */,
+				33A6E72F2E652A7B0088A4A3 /* Info.plist */,
+				33A6E7312E652A7B0088A4A3 /* LaunchScreen.storyboard */,
+				33A6E7322E652A7B0088A4A3 /* main.m */,
+				33A6E7342E652A7B0088A4A3 /* Main.storyboard */,
+				33A6E7352E652A7B0088A4A3 /* SceneDelegate.h */,
+				33A6E7362E652A7B0088A4A3 /* SceneDelegate.m */,
+			);
+			path = WagGo;
+			sourceTree = "<group>";
+		};
+		33A6E7422E652B100088A4A3 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				33A6E75B2E654FAC0088A4A3 /* TrailMarkGlyphCell.h */,
+				33A6E75C2E654FAC0088A4A3 /* TrailMarkGlyphCell.m */,
+				33A6E75D2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib */,
+				33A6E7602E65749E0088A4A3 /* FurryToneCasterView.h */,
+				33A6E7612E65749E0088A4A3 /* FurryToneCasterView.m */,
+				33A6E7622E65749E0088A4A3 /* FurryToneCasterView.xib */,
+				33A6E7652E6574AF0088A4A3 /* FurryToneCasterCell.h */,
+				33A6E7662E6574AF0088A4A3 /* FurryToneCasterCell.m */,
+				33A6E7672E6574AF0088A4A3 /* FurryToneCasterCell.xib */,
+				33A6E76A2E657CC00088A4A3 /* FurryToneCasterViewCell.h */,
+				33A6E76B2E657CC00088A4A3 /* FurryToneCasterViewCell.m */,
+				33A6E76C2E657CC00088A4A3 /* FurryToneCasterViewCell.xib */,
+				33A6E7722E65925E0088A4A3 /* WagCharmGlyphCell.h */,
+				33A6E7732E65925E0088A4A3 /* WagCharmGlyphCell.m */,
+				33A6E7742E65925E0088A4A3 /* WagCharmGlyphCell.xib */,
+				33C85C092E66C5D80085CE01 /* FelineLinkClusterMessageCell.h */,
+				33C85C0A2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m */,
+				33C85C0B2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib */,
+				33C85C0E2E66C5F20085CE01 /* FelineLinkClusterCell.h */,
+				33C85C0F2E66C5F20085CE01 /* FelineLinkClusterCell.m */,
+				33C85C102E66C5F20085CE01 /* FelineLinkClusterCell.xib */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		33A6E7432E652B170088A4A3 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				33A6E77A2E659BC90088A4A3 /* WagGoMacros.h */,
+				33A6E77B2E659BC90088A4A3 /* WagGoMacros.m */,
+				338B686E2E67CF480004B4BD /* QuestGlyphHarness.h */,
+				338B686F2E67CF480004B4BD /* QuestGlyphHarness.m */,
+				338B68712E67D4ED0004B4BD /* TailTalkStickerEngine.h */,
+				338B68722E67D4ED0004B4BD /* TailTalkStickerEngine.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		33A6E7442E652B1E0088A4A3 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				33A6E76F2E65905D0088A4A3 /* BarkStepCrownController.h */,
+				33A6E7702E65905D0088A4A3 /* BarkStepCrownController.m */,
+				33A6E7452E652B610088A4A3 /* TrailMarkGlyphController.h */,
+				33A6E7462E652B610088A4A3 /* TrailMarkGlyphController.m */,
+				33A6E7482E652B750088A4A3 /* FurryToneCasterController.h */,
+				33A6E7492E652B750088A4A3 /* FurryToneCasterController.m */,
+				33A6E74B2E652B8C0088A4A3 /* WagCharmGlyphController.h */,
+				33A6E74C2E652B8C0088A4A3 /* WagCharmGlyphController.m */,
+				33A6E74E2E652B9C0088A4A3 /* SnoutLensShifterController.h */,
+				33A6E74F2E652B9C0088A4A3 /* SnoutLensShifterController.m */,
+				33A6E7512E652BC00088A4A3 /* FurOrbitGatherController.h */,
+				33A6E7522E652BC00088A4A3 /* FurOrbitGatherController.m */,
+				33A6E7532E652BC00088A4A3 /* FurOrbitGatherController.xib */,
+				33A6E7562E652CAD0088A4A3 /* BarkTrailSeekerController.h */,
+				33A6E7572E652CAD0088A4A3 /* BarkTrailSeekerController.m */,
+				33A6E7582E652CAD0088A4A3 /* BarkTrailSeekerController.xib */,
+				33C85C042E66C31B0085CE01 /* FelineLinkClusterController.h */,
+				33C85C052E66C31B0085CE01 /* FelineLinkClusterController.m */,
+				33C85C062E66C31B0085CE01 /* FelineLinkClusterController.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		3E471E3C433A669A1E9F958F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7FF9F54D66CBCEB71C37DB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF287D1727A763E53374FC2E /* Pods-WagGo.debug.xcconfig */,
+				F39010D3FA4A43ADA0DB44C1 /* Pods-WagGo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33A6E70E2E652A700088A4A3 /* WagGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A6E7272E652A710088A4A3 /* Build configuration list for PBXNativeTarget "WagGo" */;
+			buildPhases = (
+				64DC72845491E8E8503B3C09 /* [CP] Check Pods Manifest.lock */,
+				33A6E70B2E652A700088A4A3 /* Sources */,
+				33A6E70C2E652A700088A4A3 /* Frameworks */,
+				33A6E70D2E652A700088A4A3 /* Resources */,
+				461509C8C3A1A333FD418888 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WagGo;
+			productName = WagGo;
+			productReference = 33A6E70F2E652A700088A4A3 /* WagGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33A6E7072E652A700088A4A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					33A6E70E2E652A700088A4A3 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = 33A6E70A2E652A700088A4A3 /* Build configuration list for PBXProject "WagGo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33A6E7062E652A700088A4A3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 33A6E7102E652A700088A4A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33A6E70E2E652A700088A4A3 /* WagGo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33A6E70D2E652A700088A4A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A6E7692E6574AF0088A4A3 /* FurryToneCasterCell.xib in Resources */,
+				33A6E73E2E652A7B0088A4A3 /* Assets.xcassets in Resources */,
+				33C85C072E66C31B0085CE01 /* FelineLinkClusterController.xib in Resources */,
+				33C85C112E66C5F20085CE01 /* FelineLinkClusterCell.xib in Resources */,
+				33A6E7752E65925E0088A4A3 /* WagCharmGlyphCell.xib in Resources */,
+				33A6E75A2E652CAD0088A4A3 /* BarkTrailSeekerController.xib in Resources */,
+				33A6E75F2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib in Resources */,
+				33A6E7552E652BC00088A4A3 /* FurOrbitGatherController.xib in Resources */,
+				33A6E7642E65749E0088A4A3 /* FurryToneCasterView.xib in Resources */,
+				33A6E7402E652A7B0088A4A3 /* LaunchScreen.storyboard in Resources */,
+				33A6E7412E652A7B0088A4A3 /* Main.storyboard in Resources */,
+				33C85C0C2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib in Resources */,
+				33A6E76E2E657CC00088A4A3 /* FurryToneCasterViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		461509C8C3A1A333FD418888 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WagGo/Pods-WagGo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WagGo/Pods-WagGo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WagGo/Pods-WagGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64DC72845491E8E8503B3C09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WagGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33A6E70B2E652A700088A4A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A6E75E2E654FAC0088A4A3 /* TrailMarkGlyphCell.m in Sources */,
+				33A6E7542E652BC00088A4A3 /* FurOrbitGatherController.m in Sources */,
+				33A6E77C2E659BC90088A4A3 /* WagGoMacros.m in Sources */,
+				33A6E74A2E652B750088A4A3 /* FurryToneCasterController.m in Sources */,
+				33A6E7472E652B620088A4A3 /* TrailMarkGlyphController.m in Sources */,
+				33C85C0D2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m in Sources */,
+				33C85C082E66C31B0085CE01 /* FelineLinkClusterController.m in Sources */,
+				33A6E7632E65749E0088A4A3 /* FurryToneCasterView.m in Sources */,
+				338B68702E67CF480004B4BD /* QuestGlyphHarness.m in Sources */,
+				33A6E7712E65905D0088A4A3 /* BarkStepCrownController.m in Sources */,
+				33A6E73A2E652A7B0088A4A3 /* AppDelegate.m in Sources */,
+				33A6E7762E65925E0088A4A3 /* WagCharmGlyphCell.m in Sources */,
+				33A6E7502E652B9C0088A4A3 /* SnoutLensShifterController.m in Sources */,
+				33A6E76D2E657CC00088A4A3 /* FurryToneCasterViewCell.m in Sources */,
+				33A6E73B2E652A7B0088A4A3 /* main.m in Sources */,
+				33A6E7682E6574AF0088A4A3 /* FurryToneCasterCell.m in Sources */,
+				33A6E73C2E652A7B0088A4A3 /* SceneDelegate.m in Sources */,
+				338B68732E67D4ED0004B4BD /* TailTalkStickerEngine.m in Sources */,
+				33A6E7592E652CAD0088A4A3 /* BarkTrailSeekerController.m in Sources */,
+				33C85C122E66C5F20085CE01 /* FelineLinkClusterCell.m in Sources */,
+				33A6E74D2E652B8C0088A4A3 /* WagCharmGlyphController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		33A6E7312E652A7B0088A4A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33A6E7302E652A7B0088A4A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		33A6E7342E652A7B0088A4A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33A6E7332E652A7B0088A4A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33A6E7282E652A710088A4A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF287D1727A763E53374FC2E /* Pods-WagGo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WagGo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WagGo.WagGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33A6E7292E652A710088A4A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F39010D3FA4A43ADA0DB44C1 /* Pods-WagGo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WagGo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WagGo.WagGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33A6E72A2E652A710088A4A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		33A6E72B2E652A710088A4A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33A6E70A2E652A700088A4A3 /* Build configuration list for PBXProject "WagGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A6E72A2E652A710088A4A3 /* Debug */,
+				33A6E72B2E652A710088A4A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A6E7272E652A710088A4A3 /* Build configuration list for PBXNativeTarget "WagGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A6E7282E652A710088A4A3 /* Debug */,
+				33A6E7292E652A710088A4A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33A6E7072E652A700088A4A3 /* Project object */;
+}
