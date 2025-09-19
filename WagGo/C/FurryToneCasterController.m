@@ -184,15 +184,12 @@
     if (magnitude.count <= 0) {
         return;
     }
-    
+    NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
+    NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
-    NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
     NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
-    NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
-    
     NSString * duskHymnLattice;
-   
     NSString * petOfflineAccess = [NSString stringWithFormat:@"%@", magnitude[@"petOfflineAccess"]];
    
     NSString * petNotificationsControl = [NSString stringWithFormat:@"%@", magnitude[@"petNotificationsControl"]];
@@ -246,12 +243,13 @@
             [self.navigationController pushViewController:furOrbit animated:YES];
             return;
         }
-        NSString * aetherDriftHalo = @"sWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoFWagGoWagGoWagGouWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGodWagGowWagGohWagGoWagGoUWagGoWagGoWagGorWagGoWagGoWagGoWagGorWagGoWagGoWagGopWagGoWagGoWagGoWagGo2WagGoWagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGohWagGoWagGoWagGo{WagGoWagGo";
+        
+        NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
         NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
+        NSString * aetherDriftHalo = @"sWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoFWagGoWagGoWagGouWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGodWagGowWagGohWagGoWagGoUWagGoWagGoWagGorWagGoWagGoWagGoWagGorWagGoWagGoWagGopWagGoWagGoWagGoWagGo2WagGoWagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGohWagGoWagGoWagGo{WagGoWagGo";
         NSString * duskHymnLattice = [self distillRuneCipher:aetherDriftHalo];
         NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
         NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
-        NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
 
         NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
         SnoutLensShifterController * sonutLen = [[SnoutLensShifterController alloc] init];
@@ -260,15 +258,14 @@
         
         
     }else if (clawLoomSpiral == 1005) {
-        
+        NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
+        NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
+        NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
         NSString * petCommunity = [NSString stringWithFormat:@"%@", snoutTwistVortex[@"petCommunity"]];
         NSString * aetherDriftHalo = @"sWagGoWagGoWagGodWagGoWagGoWagGoWagGojWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoWagGokWagGoWagGoWagGoWagGorWagGoWagGoWagGopWagGoWagGoWagGoWagGohWagGoWagGoWagGosWagGoWagGodWagGoWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGo2WagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGoWagGohWagGoWagGoWagGoWagGo{WagGoBWagGoWagGoWagGoWagGoWagGoxWagGovWagGoWagGohWagGoWagGoWagGoWagGouWagGoWagGoWagGoWagGoLWagGoWagGoWagGogWagGo@WagGoWagGoWagGo";
-        NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
         NSString * duskHymnLattice = [self distillRuneCipher:aetherDriftHalo];
         NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
-        NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
         NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
-        NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
         NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,petCommunity,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
         SnoutLensShifterController * sonutLen = [[SnoutLensShifterController alloc] init];
         sonutLen.snoutTwistVortex = snoutTwistVortex;

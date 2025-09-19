@@ -240,13 +240,13 @@
     QuestGlyphHarness *questHarness = [[QuestGlyphHarness alloc] init];
     NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     [questHarness synthesizeTrialBeaconWithFactor:@12 crestGlyph:@"lumen"];
+    NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
     NSString * duskHymnLattice = [self distillRuneCipher:aetherDriftHalo];
+    NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     NSArray *chroniclesPrism = [questHarness convergeChroniclePulseWithLimit:3];
     NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
     NSString *derivedEmber = [questHarness deriveRelicSigilWithHint:@"emberCore" anchorSeed:@101];
-    NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
     NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
-    NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     for (NSString *entryGlyph in chroniclesPrism) {
         NSString *joinedTrail = [NSString stringWithFormat:@"%@:%@", derivedEmber, entryGlyph];
         [questHarness imprintArcaneTrialWithMark:joinedTrail depthGauge:(NSInteger)entryGlyph.length];
