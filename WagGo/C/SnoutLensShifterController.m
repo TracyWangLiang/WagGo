@@ -326,17 +326,9 @@
     }
 }
 
-//- (void)verifyReceipt:(SKPaymentTransaction *)transaction {
-//    NSURL *tailPrismChord = [[NSBundle mainBundle] appStoreReceiptURL];
-//    NSData *clawTwirlCrest = [NSData dataWithContentsOfURL:tailPrismChord];
-//    NSString *snoutRippleMark = [clawTwirlCrest base64EncodedStringWithOptions:0];
-//}
-
 - (void)dealloc {
     [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
 }
-
-
 
 
 @end
