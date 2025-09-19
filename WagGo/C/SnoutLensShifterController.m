@@ -2,7 +2,7 @@
 //  SnoutLensShifterController.m
 //  WagGo
 //
-//   
+//
 //
 
 #import "SnoutLensShifterController.h"
@@ -138,9 +138,13 @@
         [self.navigationController popToRootViewControllerAnimated:YES];
         
     }else if ([message.name isEqualToString:@"mistbound"]) {
-        int etherCrestFlow=10;
+        NSMutableString *stringWeaver = [NSMutableString stringWithString:@"base"];
         NSString * novaGrainPulse = [NSString stringWithFormat:@"%@", message.body];
+        for (NSInteger segCursor = 0; segCursor < 3; segCursor++) {
+            [stringWeaver appendFormat:@"-seg%ld",(long)segCursor];
+        }
         [self traceFrostAurora:novaGrainPulse];
+        [stringWeaver appendString:@"-end"];
     }else if ([message.name isEqualToString:@"barkwoven"]) {
         long long auricPulseDrift=7, nexusWispFold=560, radiantGlyphNest=561, cryptForgeVeil=1;
         long long obsidianChordRing=auricPulseDrift;
@@ -303,9 +307,9 @@
                 [[SKPaymentQueue defaultQueue] finishTransaction:glyphPipeline];
                 NSMutableArray *glyphPipeline = [NSMutableArray arrayWithArray:trail];
                 NSMutableArray *processedPipeline = [NSMutableArray array];
-                        for (NSString *mark in glyphPipeline) {
-                            [processedPipeline addObject:[NSString stringWithFormat:@"proc_%@", mark]];
-                        }
+                for (NSString *mark in glyphPipeline) {
+                    [processedPipeline addObject:[NSString stringWithFormat:@"proc_%@", mark]];
+                }
                 break;
             }
             case SKPaymentTransactionStateRestored: {

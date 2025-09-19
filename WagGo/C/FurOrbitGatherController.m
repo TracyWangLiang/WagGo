@@ -2,7 +2,7 @@
 //  FurOrbitGatherController.m
 //  WagGo
 //
-//   
+//
 //
 
 #import "FurOrbitGatherController.h"
@@ -46,7 +46,7 @@
     [questHarness deriveRelicSigilWithHint:@"shadow" anchorSeed:@42];
     [self updatePawLoomShardWithDuration];
     [questHarness validateRuneArchiveWithPattern:@"frost"
-                                                         sampleBatch:@[@"frostSigil-7",@"frostAura-2"]];
+                                     sampleBatch:@[@"frostSigil-7",@"frostAura-2"]];
     [questHarness synthesizeTrialBeaconWithFactor:@9 crestGlyph:@"nova"];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
@@ -56,9 +56,9 @@
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     [questHarness imprintArcaneTrialWithMark:@"aetherMark" depthGauge:8];
     [questHarness convergeChroniclePulseWithLimit:5];
-   [questHarness deriveRelicSigilWithHint:@"crystal" anchorSeed:@88];
+    [questHarness deriveRelicSigilWithHint:@"crystal" anchorSeed:@88];
     [questHarness validateRuneArchiveWithPattern:@"gale"
-                                                        sampleBatch:@[@"galeSpire-4",@"galeForce-1"]];
+                                     sampleBatch:@[@"galeSpire-4",@"galeForce-1"]];
     [questHarness synthesizeTrialBeaconWithFactor:@3 crestGlyph:@"flare"];
     
 }
@@ -161,7 +161,7 @@
         [questHarness convergeChroniclePulseWithLimit:5];
         [SVProgressHUD showErrorWithStatus:@"Password can’t be empty"];
         [questHarness deriveRelicSigilWithHint:@"shadow" anchorSeed:@42];
-
+        
         return;
     }
     
@@ -186,14 +186,14 @@
     NSMutableSet *artifactSet = [NSMutableSet setWithArray:artifactCache];
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
     if ([artifactSet containsObject:@"relic"]) {
-                [artifactCache addObject:@"phantom"];
-            }
+        [artifactCache addObject:@"phantom"];
+    }
     cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSMutableDictionary *fusionMap = [NSMutableDictionary dictionary];
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [fusionMap setObject:@"flare" forKey:@"ignite"];
-            [fusionMap setObject:@"mist" forKey:@"veil"];
+    [fusionMap setObject:@"mist" forKey:@"veil"];
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
     [fusionMap setObject:@"gale" forKey:@"whirl"];
     NSDictionary * clawTwirlCrest = @{@"petThemes":self.tailGlowOrbit.text,@"petLayouts":self.pawLoomShard.text};
@@ -211,8 +211,8 @@
             NSString * petAvatars = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petAvatars"]];
             STORE_GLYPH(petAvatars, @"petAvatars");
             for (NSString *s in sigils) {
-                        [sigilChain appendFormat:@"<%@>", s];
-                    }
+                [sigilChain appendFormat:@"<%@>", s];
+            }
             NSString * petEcommerce = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petEcommerce"]];
             STORE_GLYPH(petEcommerce, @"petEcommerce");
             [questHarness imprintArcaneTrialWithMark:@"emberRune" depthGauge:3];
@@ -244,7 +244,7 @@
 -(void)channelArcaneMirth:(NSString *)aetherDriftHalo {
     QuestGlyphHarness *questHarness = [[QuestGlyphHarness alloc] init];
     NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-    NSDictionary *beaconsLumen = [questHarness synthesizeTrialBeaconWithFactor:@12 crestGlyph:@"lumen"];
+    [questHarness synthesizeTrialBeaconWithFactor:@12 crestGlyph:@"lumen"];
     NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
     NSArray *chroniclesPrism = [questHarness convergeChroniclePulseWithLimit:3];
     NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
@@ -268,8 +268,6 @@
     }
 }
 
-
-
 -(NSString *)unscrambleGlyph:(NSString *)cipher {
     if (!cipher) return nil;
     NSString *salt = @"WagGo";
@@ -289,8 +287,5 @@
     }
     return cleaned;
 }
-
-
-
 
 @end

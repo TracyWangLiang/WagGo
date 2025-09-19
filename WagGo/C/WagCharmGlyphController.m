@@ -260,13 +260,13 @@
 -(void)refineLatticeGleam:(NSString *)petEcommerce {
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDictionary * clawTwirlCrest = @{@"petRewards":petEcommerce};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
-    NSDictionary * clawTwirlCrest = @{@"petRewards":petEcommerce};
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/zzkceqmxrcffjz/wisjpyjuubqjyi", furHaloShard];
     
@@ -291,11 +291,9 @@
             
             NSString * petProductReviews = [NSString stringWithFormat:@"%@", vortexLoomVeil[@"petProductReviews"]];
             self.furPulseGlyph.text = petProductReviews;
-            
-            
-            
             NSArray * userDynamicVoList = vortexLoomVeil[@"userDynamicVoList"];
             if (userDynamicVoList == nil || [userDynamicVoList isKindOfClass:[NSNull class]]) {
+                self.snoutTwistHalo.text = @"0";
                 return;
             }
             self.snoutTwistHalo.text = [NSString stringWithFormat:@"%lu", (unsigned long)userDynamicVoList.count];
@@ -310,13 +308,13 @@
 -(void)unravelFlareHalo:(NSString *)petEcommerce {
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDictionary * clawTwirlCrest = @{@"petSupportCenter":petEcommerce, @"petContentGuidelines":@"49163782"};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
-    NSDictionary * clawTwirlCrest = @{@"petSupportCenter":petEcommerce, @"petContentGuidelines":@"49163782"};
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/wbxqivdwjvz/cmueiduzox", furHaloShard];
     
@@ -325,10 +323,11 @@
         if ([purrFlickSigil isEqualToString:@"200000"]) {
             
             if (![responseObject[@"data"] isKindOfClass:[NSArray class]]) {
-                return;
+                self.purrShineTide = @[];
+            }else {
+                NSArray * purrShineTide = responseObject[@"data"];
+                self.purrShineTide = purrShineTide;
             }
-            NSArray * purrShineTide = responseObject[@"data"];
-            self.purrShineTide = purrShineTide;
             [self.whiskerDriftRune reloadData];
             [self scatterPlumeFrost];
         }
@@ -342,13 +341,13 @@
 -(void)ascendValeBloom {
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDictionary * clawTwirlCrest = @{};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
-    NSDictionary * clawTwirlCrest = @{};
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/ymgkhducjkslz/alijydvzqwe", furHaloShard];
     

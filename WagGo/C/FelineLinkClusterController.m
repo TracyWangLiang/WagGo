@@ -168,21 +168,25 @@
 -(void)renderAstraWeave {
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDictionary * clawTwirlCrest = @{@"liveStreaming":@"49163782"};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
-    NSDictionary * clawTwirlCrest = @{@"liveStreaming":@"49163782"};
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/tqdcertrtfzsgnz/klkkraemioqdxh", furHaloShard];
     
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString * purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
         if ([purrFlickSigil isEqualToString:@"200000"]) {
-            NSArray * barkWhirlTrace = responseObject[@"data"];
-            self.barkWhirlTrace = barkWhirlTrace;
+            if ([responseObject[@"data"] isKindOfClass:[NSArray class]]) {
+                NSArray * barkWhirlTrace = responseObject[@"data"];
+                self.barkWhirlTrace = barkWhirlTrace;
+            }else {
+                self.barkWhirlTrace = @[];
+            }
             [self.purrShineTide reloadData];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -195,21 +199,25 @@
     
     NSString * petAlerts = FETCH_GLYPH(@"petEcommerce");
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDictionary * clawTwirlCrest = @{@"petAlerts":petAlerts,@"petNotifications":@"49163782"};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
-    NSDictionary * clawTwirlCrest = @{@"petAlerts":petAlerts,@"petNotifications":@"49163782"};
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/zfwaxmz/cxecvxbeycvdpl", furHaloShard];
     
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString * purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
         if ([purrFlickSigil isEqualToString:@"200000"]) {
-            NSArray * pawEchoGlyph = responseObject[@"data"];
-            self.pawEchoGlyph = pawEchoGlyph;
+            if ([responseObject[@"data"] isKindOfClass:[NSArray class]]) {
+                NSArray * pawEchoGlyph = responseObject[@"data"];
+                self.pawEchoGlyph = pawEchoGlyph;
+            }else {
+                self.pawEchoGlyph = @[];
+            }
             [self.barkPulseOrb reloadData];
         }
         
@@ -219,22 +227,6 @@
     }];
     
 }
-
-//-(void)craftZenithGrove:(NSString *)aetherDriftHalo {
-//
-//    NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-//    NSString * duskHymnLattice = [self unscrambleGlyph:@"sWagGoWagGoWagGodWagGoWagGojWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGoWagGo2WagGosWagGouWagGoWagGoWagGolWagGoWagGoyWagGoWagGoWagGodWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGohWagGoWagGoWagGoFWagGoWagGoWagGokWagGoWagGoWagGoWagGodWagGoWagGowWagGoWagGo2WagGoWagGolWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGohWagGoWagGoWagGo{WagGoWagGoWagGoBWagGoWagGoxWagGoWagGoWagGovWagGoWagGohWagGoWagGoWagGouWagGoWagGoWagGoWagGoWagGoLWagGogWagGoWagGoWagGoWagGo@WagGoWagGoWagGo"];
-//    NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
-//    NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
-//    NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
-//    NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
-//
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,aetherDriftHalo,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
-//    SnoutLensShifterController * sonutLen = [[SnoutLensShifterController alloc] init];
-//    sonutLen.snoutTwistVortex = snoutTwistVortex;
-//    [self.navigationController pushViewController:sonutLen animated:YES];
-//}
-
 
 
 -(NSArray *)barkWhirlTrace {

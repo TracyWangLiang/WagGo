@@ -64,21 +64,25 @@
 -(void)echoPawEchoGlyphWithDistance {
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDictionary * clawTwirlCrest = @{@"petFitness":@"1",@"petToys":@"1"};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
-    NSDictionary * clawTwirlCrest = @{@"petFitness":@"1",@"petToys":@"1"};
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/jqgbuidykwxnnz/nanmj", furHaloShard];
     
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString * purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
         if ([purrFlickSigil isEqualToString:@"200000"]) {
-            NSArray * pawEchoGlyph = responseObject[@"data"];
-            self.pawEchoGlyph = pawEchoGlyph;
+            if ([responseObject[@"data"] isKindOfClass:[NSArray class]]) {
+                NSArray * pawEchoGlyph = responseObject[@"data"];
+                self.pawEchoGlyph = pawEchoGlyph;
+            }else {
+                self.pawEchoGlyph = @[];
+            }
             [self.tailGlowFountain reloadData];
         }
         [self.tailGlowFountain.mj_header endRefreshing];
@@ -93,18 +97,17 @@
     BarkTrailSeekerController * barkTrail = [[BarkTrailSeekerController alloc] init];
     barkTrail.clawLoomSpiralBlock = ^(NSInteger clawLoomSpiral) {
         if (clawLoomSpiral == 10000) {
-            //            [self channelArcaneMirth:@"sWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGovWagGoWagGoWagGoWagGoWagGo2WagGoWagGoWagGoFWagGoWagGouWagGoWagGohWagGoWagGodWagGoWagGoWagGowWagGoWagGoWagGoWagGohWagGoDWagGoWagGoWagGofWagGoWagGoWagGowWagGoWagGoWagGolWagGoWagGoWagGoyWagGoWagGoWagGohWagGoWagGoWagGo2WagGoWagGolWagGoWagGoqWagGoWagGogWagGoWagGoWagGohWagGoWagGoWagGo{WagGoWagGo"];
-            
-            NSString * aetherDriftHalo = @"sWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGovWagGoWagGoWagGoWagGoWagGo2WagGoWagGoWagGoFWagGoWagGouWagGoWagGohWagGoWagGodWagGoWagGoWagGowWagGoWagGoWagGoWagGohWagGoDWagGoWagGoWagGofWagGoWagGoWagGowWagGoWagGoWagGolWagGoWagGoWagGoyWagGoWagGoWagGohWagGoWagGoWagGo2WagGoWagGolWagGoWagGoqWagGoWagGogWagGoWagGoWagGohWagGoWagGoWagGo{WagGoWagGo";
-            NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-            NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
-            NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
+
             NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
             if ([spireFrostChime isEqualToString:@""]) {
                 FurOrbitGatherController * furOrbit = [[FurOrbitGatherController alloc] init];
                 [self.navigationController pushViewController:furOrbit animated:YES];
                 return;
             }
+            NSString * aetherDriftHalo = @"sWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGovWagGoWagGoWagGoWagGoWagGo2WagGoWagGoWagGoFWagGoWagGouWagGoWagGohWagGoWagGodWagGoWagGoWagGowWagGoWagGoWagGoWagGohWagGoDWagGoWagGoWagGofWagGoWagGoWagGowWagGoWagGoWagGolWagGoWagGoWagGoyWagGoWagGoWagGohWagGoWagGoWagGo2WagGoWagGolWagGoWagGoqWagGoWagGogWagGoWagGoWagGohWagGoWagGoWagGo{WagGoWagGo";
+            NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
+            NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
+            NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
             NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
             NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
             
@@ -114,18 +117,18 @@
             [self.navigationController pushViewController:sonutLen animated:YES];
             
         }else {
-            //            [self channelArcaneMirth:@"WagGoWagGosWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoWagGoFWagGoWagGouWagGoWagGoWagGohWagGoWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoSWagGoWagGoWagGoWagGoWagGorWagGoWagGoWagGovWagGoWagGoWagGoWagGoWagGowWagGoWagGo2WagGoWagGoWagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGoWagGogWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGo{WagGo"];
-            
-            NSString * aetherDriftHalo = @"WagGoWagGosWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoWagGoFWagGoWagGouWagGoWagGoWagGohWagGoWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoSWagGoWagGoWagGoWagGoWagGorWagGoWagGoWagGovWagGoWagGoWagGoWagGoWagGowWagGoWagGo2WagGoWagGoWagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGoWagGogWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGo{WagGo";
-            NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-            NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
-            NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
+          
             NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
             if ([spireFrostChime isEqualToString:@""]) {
                 FurOrbitGatherController * furOrbit = [[FurOrbitGatherController alloc] init];
                 [self.navigationController pushViewController:furOrbit animated:YES];
                 return;
             }
+            
+            NSString * aetherDriftHalo = @"WagGoWagGosWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoWagGoFWagGoWagGouWagGoWagGoWagGohWagGoWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoSWagGoWagGoWagGoWagGoWagGorWagGoWagGoWagGovWagGoWagGoWagGoWagGoWagGowWagGoWagGo2WagGoWagGoWagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGoWagGogWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGo{WagGo";
+            NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
+            NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
+            NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
             NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
             NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
             
@@ -143,16 +146,16 @@
 
 -(void)pulsePawMuseFlickerWithSpeed:(UIButton *)sender {
     
-    NSString * aetherDriftHalo = @"WagGoWagGosWagGoWagGoWagGoWagGoWagGodWagGojWagGohWagGoWagGoWagGovWagGo2WagGoWagGoWagGopWagGoWagGoWagGoWagGo|WagGoWagGoWagGoDWagGoWagGoWagGoWagGoWagGofWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGolWagGoWagGoWagGoyWagGoWagGoWagGolWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGolWagGoWagGoWagGohWagGoWagGoWagGoWagGoWagGovWagGoWagGoWagGoWagGoWagGo2WagGoWagGolWagGoWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGoWagGoWagGohWagGoWagGo{WagGo";
-    NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-    NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
-    NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
     NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
     if ([spireFrostChime isEqualToString:@""]) {
         FurOrbitGatherController * furOrbit = [[FurOrbitGatherController alloc] init];
         [self.navigationController pushViewController:furOrbit animated:YES];
         return;
     }
+    NSString * aetherDriftHalo = @"WagGoWagGosWagGoWagGoWagGoWagGoWagGodWagGojWagGohWagGoWagGoWagGovWagGo2WagGoWagGoWagGopWagGoWagGoWagGoWagGo|WagGoWagGoWagGoDWagGoWagGoWagGoWagGoWagGofWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGolWagGoWagGoWagGoyWagGoWagGoWagGolWagGoWagGoWagGoWagGowWagGoWagGoWagGoWagGolWagGoWagGoWagGohWagGoWagGoWagGoWagGoWagGovWagGoWagGoWagGoWagGoWagGo2WagGoWagGolWagGoWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGoWagGoWagGohWagGoWagGo{WagGo";
+    NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
+    NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
+    NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
     NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
     NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     

@@ -63,7 +63,11 @@
     self.furPulseGlyph.text = petVideoLoop;
     
     NSString * petClipping = [NSString stringWithFormat:@"%@", magnitude[@"petClipping"]];
-    self.pawLoomShard.hidden = [petClipping isEqualToString:@"2"];
+    if ([petClipping isEqualToString:@"2"]) {
+        self.pawLoomShard.hidden = YES;
+    }else {
+        self.pawLoomShard.hidden = NO;
+    }
     
 }
 

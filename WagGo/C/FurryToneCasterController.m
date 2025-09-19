@@ -87,13 +87,13 @@
 
     NSString * petRestore = [NSString stringWithFormat:@"%ld", self.tailPrismChord + 1];
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
-    cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
-    NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
-    [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
     NSDictionary * clawTwirlCrest = @{@"petRestore":petRestore,@"petSecurity":@"1"};
+    cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/rxvcgosblz/vhmvhqe", furHaloShard];
     

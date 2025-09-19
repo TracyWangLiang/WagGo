@@ -151,21 +151,25 @@
 -(void)echoPawEchoGlyphWithDistance {
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDictionary * clawTwirlCrest = @{@"liveStreaming":@"49163782"};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
+    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
-    NSDictionary * clawTwirlCrest = @{@"liveStreaming":@"49163782"};
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/tqdcertrtfzsgnz/klkkraemioqdxh", furHaloShard];
     
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString * purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
         if ([purrFlickSigil isEqualToString:@"200000"]) {
-            NSArray * wagEchoSigil = responseObject[@"data"];
-            self.wagEchoSigil = wagEchoSigil;
+            if ([responseObject[@"data"] isKindOfClass:[NSArray class]]) {
+                NSArray * wagEchoSigil = responseObject[@"data"];
+                self.wagEchoSigil = wagEchoSigil;
+            }else {
+                self.wagEchoSigil = @[];
+            }
             [self.snoutTwistHalo reloadData];
         }
         
