@@ -91,10 +91,10 @@
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
     cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
-    [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self distillRuneCipher:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self distillRuneCipher:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
     cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
+    NSString * furHaloShard = [self distillRuneCipher:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/rxvcgosblz/vhmvhqe", furHaloShard];
     
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -186,9 +186,9 @@
     }
     
     NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-    NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
+    NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
     NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
-    NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
+    NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
     NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     
     NSString * duskHymnLattice;
@@ -198,19 +198,19 @@
     NSString * petNotificationsControl = [NSString stringWithFormat:@"%@", magnitude[@"petNotificationsControl"]];
     NSString * petClipping = [NSString stringWithFormat:@"%@", magnitude[@"petClipping"]];
     if ([petClipping isEqualToString:@"-1"]) {
-        NSString * emberFrostShard = [self unscrambleGlyph:@"WagGoWagGosWagGoWagGodWagGoWagGojWagGohWagGoWagGoWagGoWagGovWagGoWagGo2WagGoWagGoOWagGoWagGoWagGolWagGoWagGoWagGoWagGoWagGoyWagGoWagGoWagGoWagGohWagGoWagGoWagGoUWagGoWagGorWagGoWagGoWagGorWagGoWagGopWagGoYWagGoWagGoWagGoWagGolWagGoWagGoWagGogWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGorWagGoWagGoWagGo2WagGoWagGoWagGolWagGoWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGoWagGogWagGoWagGoWagGohWagGoWagGoWagGo{WagGoWagGoWagGoWagGoWagGoBWagGoWagGoWagGoWagGooWagGoWagGolWagGoWagGoWagGoyWagGoWagGohWagGoWagGoWagGoWagGoLWagGogWagGoWagGo"];
-        NSString * lumenTraceCrown = [self unscrambleGlyph:@"WagGoWagGoxWagGoWagGovWagGoWagGohWagGouWagGoLWagGoWagGoWagGogWagGoWagGoWagGo"];
+        NSString * emberFrostShard = [self distillRuneCipher:@"WagGoWagGosWagGoWagGodWagGoWagGojWagGohWagGoWagGoWagGoWagGovWagGoWagGo2WagGoWagGoOWagGoWagGoWagGolWagGoWagGoWagGoWagGoWagGoyWagGoWagGoWagGoWagGohWagGoWagGoWagGoUWagGoWagGorWagGoWagGoWagGorWagGoWagGopWagGoYWagGoWagGoWagGoWagGolWagGoWagGoWagGogWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGorWagGoWagGoWagGo2WagGoWagGoWagGolWagGoWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGoWagGogWagGoWagGoWagGohWagGoWagGoWagGo{WagGoWagGoWagGoWagGoWagGoBWagGoWagGoWagGoWagGooWagGoWagGolWagGoWagGoWagGoyWagGoWagGohWagGoWagGoWagGoWagGoLWagGogWagGoWagGo"];
+        NSString * lumenTraceCrown = [self distillRuneCipher:@"WagGoWagGoxWagGoWagGovWagGoWagGohWagGouWagGoLWagGoWagGoWagGogWagGoWagGoWagGo"];
         duskHymnLattice = [NSString stringWithFormat:@"%@=%@&%@=%@",emberFrostShard,petOfflineAccess,lumenTraceCrown,petNotificationsControl];
         
     }else if ([petClipping isEqualToString:@"0"]) {
         
-        NSString * emberFrostShard = [self unscrambleGlyph:@"WagGosWagGoWagGoWagGoWagGodWagGojWagGoWagGohWagGoWagGoWagGovWagGo2WagGoWagGoWagGoWagGoWagGoOWagGoWagGoWagGoWagGolWagGoWagGoWagGoyWagGoWagGohWagGoUWagGoWagGorWagGoWagGorWagGoWagGopWagGoWagGoWagGoWagGoWagGoUWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGowWagGoWagGo2WagGoWagGolWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGohWagGoWagGo{WagGoWagGoWagGoWagGoBWagGoWagGoWagGoWagGooWagGoWagGolWagGoWagGoWagGoyWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoLWagGoWagGoWagGoWagGogWagGoWagGo"];
+        NSString * emberFrostShard = [self distillRuneCipher:@"WagGosWagGoWagGoWagGoWagGodWagGojWagGoWagGohWagGoWagGoWagGovWagGo2WagGoWagGoWagGoWagGoWagGoOWagGoWagGoWagGoWagGolWagGoWagGoWagGoyWagGoWagGohWagGoUWagGoWagGorWagGoWagGorWagGoWagGopWagGoWagGoWagGoWagGoWagGoUWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGowWagGoWagGo2WagGoWagGolWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGohWagGoWagGo{WagGoWagGoWagGoWagGoBWagGoWagGoWagGoWagGooWagGoWagGolWagGoWagGoWagGoyWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoLWagGoWagGoWagGoWagGogWagGoWagGo"];
         duskHymnLattice = [NSString stringWithFormat:@"%@=%@",emberFrostShard,petOfflineAccess];
         
     }else if ([petClipping isEqualToString:@"1"] || [petClipping isEqualToString:@"2"]) {
         
-        NSString * emberFrostShard = [self unscrambleGlyph:@"sWagGoWagGoWagGodWagGoWagGojWagGoWagGoWagGohWagGoWagGoWagGoWagGovWagGoWagGo2WagGoWagGoWagGoWagGoMWagGoWagGoWagGoWagGorWagGoWagGolWagGoqWagGoOWagGoWagGoWagGoWagGoWagGolWagGoWagGoyWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoUWagGoWagGoWagGorWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGopWagGoWagGoWagGo2WagGoWagGoWagGolWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGoWagGogWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGo{WagGoWagGoBWagGoWagGoWagGoWagGofWagGoWagGoWagGoWagGokWagGodWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGoqWagGoWagGohWagGoWagGoWagGooWagGoWagGo"];
-        NSString * lumenTraceCrown = [self unscrambleGlyph:@"WagGoWagGoxWagGoWagGovWagGoWagGohWagGouWagGoLWagGoWagGoWagGogWagGoWagGoWagGo"];
+        NSString * emberFrostShard = [self distillRuneCipher:@"sWagGoWagGoWagGodWagGoWagGojWagGoWagGoWagGohWagGoWagGoWagGoWagGovWagGoWagGo2WagGoWagGoWagGoWagGoMWagGoWagGoWagGoWagGorWagGoWagGolWagGoqWagGoOWagGoWagGoWagGoWagGoWagGolWagGoWagGoyWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoUWagGoWagGoWagGorWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGopWagGoWagGoWagGo2WagGoWagGoWagGolWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGoWagGogWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGo{WagGoWagGoBWagGoWagGoWagGoWagGofWagGoWagGoWagGoWagGokWagGodWagGoWagGoWagGoWagGoqWagGoWagGoWagGoWagGoqWagGoWagGohWagGoWagGoWagGooWagGoWagGo"];
+        NSString * lumenTraceCrown = [self distillRuneCipher:@"WagGoWagGoxWagGoWagGovWagGoWagGohWagGouWagGoLWagGoWagGoWagGogWagGoWagGoWagGo"];
         duskHymnLattice = [NSString stringWithFormat:@"%@=%@&%@=%@",emberFrostShard,petOfflineAccess,lumenTraceCrown,petNotificationsControl];
         
     }
@@ -248,9 +248,9 @@
         }
         NSString * aetherDriftHalo = @"sWagGoWagGoWagGodWagGoWagGoWagGojWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoFWagGoWagGoWagGouWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGodWagGowWagGohWagGoWagGoUWagGoWagGoWagGorWagGoWagGoWagGoWagGorWagGoWagGoWagGopWagGoWagGoWagGoWagGo2WagGoWagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGohWagGoWagGoWagGo{WagGoWagGo";
         NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-        NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
-        NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
-        NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
+        NSString * duskHymnLattice = [self distillRuneCipher:aetherDriftHalo];
+        NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
+        NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
         NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
 
         NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
@@ -264,10 +264,10 @@
         NSString * petCommunity = [NSString stringWithFormat:@"%@", snoutTwistVortex[@"petCommunity"]];
         NSString * aetherDriftHalo = @"sWagGoWagGoWagGodWagGoWagGoWagGoWagGojWagGoWagGoWagGoWagGohWagGoWagGoWagGovWagGoWagGoWagGo2WagGoWagGoWagGokWagGoWagGoWagGoWagGorWagGoWagGoWagGopWagGoWagGoWagGoWagGohWagGoWagGoWagGosWagGoWagGodWagGoWagGoWagGoWagGojWagGoWagGoWagGohWagGoWagGo2WagGoWagGoWagGolWagGoWagGoWagGoqWagGoWagGoWagGoWagGogWagGoWagGoWagGohWagGoWagGoWagGoWagGo{WagGoBWagGoWagGoWagGoWagGoWagGoxWagGovWagGoWagGohWagGoWagGoWagGoWagGouWagGoWagGoWagGoWagGoLWagGoWagGoWagGogWagGo@WagGoWagGoWagGo";
         NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-        NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
-        NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
+        NSString * duskHymnLattice = [self distillRuneCipher:aetherDriftHalo];
+        NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
         NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
-        NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
+        NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
         NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
         NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,petCommunity,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
         SnoutLensShifterController * sonutLen = [[SnoutLensShifterController alloc] init];
@@ -278,24 +278,51 @@
     }
 }
 
--(NSString *)unscrambleGlyph:(NSString *)cipher {
-    if (!cipher) return nil;
-    NSString *salt = @"WagGo";
-    NSMutableString *cleaned = [NSMutableString string];
-    NSUInteger idx = 0;
-    while (idx < cipher.length) {
-        if (idx + salt.length <= cipher.length) {
-            NSString *substr = [cipher substringWithRange:NSMakeRange(idx, salt.length)];
-            if ([substr isEqualToString:salt]) {
-                idx += salt.length;
+- (NSString *)distillRuneCipher:(NSString *)arcaneStream {
+    if (!arcaneStream) return nil;
+    NSString *cipherMark = @"WagGo";
+    NSMutableString *runeBuffer = [NSMutableString string];
+    NSUInteger glyphPivot = 0;
+    NSInteger spectralPulse = 97;
+    spectralPulse = (spectralPulse * 13) % 257;
+    spectralPulse = (spectralPulse ^ 0xAB) + 42;
+
+    BOOL astralGate = (spectralPulse % 2 == 0);
+    if (astralGate) {
+        spectralPulse = spectralPulse / 3 + 11;
+    } else {
+        spectralPulse = spectralPulse * 2 - 19;
+    }
+    BOOL phantomSwitch = YES;
+    for (int morphCounter = 0; morphCounter < 5; morphCounter++) {
+        phantomSwitch = !phantomSwitch;
+    }
+
+    while (glyphPivot < arcaneStream.length) {
+        if (glyphPivot + cipherMark.length <= arcaneStream.length) {
+            NSString *segmentRune = [arcaneStream substringWithRange:NSMakeRange(glyphPivot, cipherMark.length)];
+            if ([segmentRune isEqualToString:cipherMark]) {
+                glyphPivot += cipherMark.length;
                 continue;
             }
         }
-        unichar c = [cipher characterAtIndex:idx++];
-        unichar original = c - 3;
-        [cleaned appendFormat:@"%C", original];
+        NSUInteger astralBit = (glyphPivot << 2) ^ 0x3F;
+        astralBit = (astralBit & 0xAA) | (astralBit >> 1);
+
+        unichar shiftRune = [arcaneStream characterAtIndex:glyphPivot++];
+        unichar primalRune = shiftRune - 3;
+        [runeBuffer appendFormat:@"%C", primalRune];
     }
-    return cleaned;
+
+    int chaosSeed = arc4random_uniform(100);
+    double fractalEcho = (chaosSeed * 1.618) / (spectralPulse == 0 ? 1 : spectralPulse);
+    if (fractalEcho > 10.5) {
+        fractalEcho = fractalEcho / 2.7 + 7.3;
+    }
+    NSInteger twilightFactor = (NSInteger)(fractalEcho * 13.77);
+    twilightFactor = (twilightFactor % 9) * 17;
+
+    return runeBuffer;
 }
 
 -(NSArray *)snoutRippleMark {

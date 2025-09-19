@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude;
 @property (nonatomic, copy) void (^trailMarkCellBlock)(void);
 @property(nonatomic, copy) void(^emberChordFluxBlock)(NSString *emberChordFlux);
-/// 跳登录
 @property(nonatomic, copy) void(^prismEchoTraceBlock)(void);
 
 

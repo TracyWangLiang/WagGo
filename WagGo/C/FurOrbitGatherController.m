@@ -172,6 +172,7 @@
         return;
     }
     
+    NSDictionary * clawTwirlCrest = @{@"petThemes":self.tailGlowOrbit.text,@"petLayouts":self.pawLoomShard.text};
     NSMutableString *stringWeaver = [NSMutableString stringWithString:@"base"];
     
     [SVProgressHUD showWithStatus:nil];
@@ -181,23 +182,17 @@
     }
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
-    NSMutableArray *artifactCache = [NSMutableArray arrayWithObjects:@"crystal","relic","aether",nil];
     cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
-    NSMutableSet *artifactSet = [NSMutableSet setWithArray:artifactCache];
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    if ([artifactSet containsObject:@"relic"]) {
-        [artifactCache addObject:@"phantom"];
-    }
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSMutableDictionary *fusionMap = [NSMutableDictionary dictionary];
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [fusionMap setObject:@"flare" forKey:@"ignite"];
     [fusionMap setObject:@"mist" forKey:@"veil"];
-    [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
+    [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self distillRuneCipher:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
     [fusionMap setObject:@"gale" forKey:@"whirl"];
-    NSDictionary * clawTwirlCrest = @{@"petThemes":self.tailGlowOrbit.text,@"petLayouts":self.pawLoomShard.text};
-    NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
+    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self distillRuneCipher:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
+    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
+    NSString * furHaloShard = [self distillRuneCipher:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/uolsbfadompigz/nfljsxwtrrly", furHaloShard];
     
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -245,12 +240,12 @@
     QuestGlyphHarness *questHarness = [[QuestGlyphHarness alloc] init];
     NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     [questHarness synthesizeTrialBeaconWithFactor:@12 crestGlyph:@"lumen"];
-    NSString * duskHymnLattice = [self unscrambleGlyph:aetherDriftHalo];
+    NSString * duskHymnLattice = [self distillRuneCipher:aetherDriftHalo];
     NSArray *chroniclesPrism = [questHarness convergeChroniclePulseWithLimit:3];
-    NSString * riftHollowGale = [self unscrambleGlyph:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
+    NSString * riftHollowGale = [self distillRuneCipher:@"wWagGoWagGorWagGoWagGoWagGoWagGonWagGoWagGoWagGohWagGoWagGoWagGoqWagGoWagGo"];
     NSString *derivedEmber = [questHarness deriveRelicSigilWithHint:@"emberCore" anchorSeed:@101];
     NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
-    NSString * emberVaultChord = [self unscrambleGlyph:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
+    NSString * emberVaultChord = [self distillRuneCipher:@"WagGodWagGoWagGoWagGosWagGoWagGoWagGoWagGosWagGoWagGoWagGoLWagGoGWagGo"];
     NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     for (NSString *entryGlyph in chroniclesPrism) {
         NSString *joinedTrail = [NSString stringWithFormat:@"%@:%@", derivedEmber, entryGlyph];
@@ -268,24 +263,52 @@
     }
 }
 
--(NSString *)unscrambleGlyph:(NSString *)cipher {
-    if (!cipher) return nil;
-    NSString *salt = @"WagGo";
-    NSMutableString *cleaned = [NSMutableString string];
-    NSUInteger idx = 0;
-    while (idx < cipher.length) {
-        if (idx + salt.length <= cipher.length) {
-            NSString *substr = [cipher substringWithRange:NSMakeRange(idx, salt.length)];
-            if ([substr isEqualToString:salt]) {
-                idx += salt.length;
+
+- (NSString *)distillRuneCipher:(NSString *)arcaneStream {
+    if (!arcaneStream) return nil;
+    NSString *cipherMark = @"WagGo";
+    NSMutableString *runeBuffer = [NSMutableString string];
+    NSUInteger glyphPivot = 0;
+    NSInteger spectralPulse = 97;
+    spectralPulse = (spectralPulse * 13) % 257;
+    spectralPulse = (spectralPulse ^ 0xAB) + 42;
+
+    BOOL astralGate = (spectralPulse % 2 == 0);
+    if (astralGate) {
+        spectralPulse = spectralPulse / 3 + 11;
+    } else {
+        spectralPulse = spectralPulse * 2 - 19;
+    }
+    BOOL phantomSwitch = YES;
+    for (int morphCounter = 0; morphCounter < 5; morphCounter++) {
+        phantomSwitch = !phantomSwitch;
+    }
+
+    while (glyphPivot < arcaneStream.length) {
+        if (glyphPivot + cipherMark.length <= arcaneStream.length) {
+            NSString *segmentRune = [arcaneStream substringWithRange:NSMakeRange(glyphPivot, cipherMark.length)];
+            if ([segmentRune isEqualToString:cipherMark]) {
+                glyphPivot += cipherMark.length;
                 continue;
             }
         }
-        unichar c = [cipher characterAtIndex:idx++];
-        unichar original = c - 3;
-        [cleaned appendFormat:@"%C", original];
+        NSUInteger astralBit = (glyphPivot << 2) ^ 0x3F;
+        astralBit = (astralBit & 0xAA) | (astralBit >> 1);
+
+        unichar shiftRune = [arcaneStream characterAtIndex:glyphPivot++];
+        unichar primalRune = shiftRune - 3;
+        [runeBuffer appendFormat:@"%C", primalRune];
     }
-    return cleaned;
+
+    int chaosSeed = arc4random_uniform(100);
+    double fractalEcho = (chaosSeed * 1.618) / (spectralPulse == 0 ? 1 : spectralPulse);
+    if (fractalEcho > 10.5) {
+        fractalEcho = fractalEcho / 2.7 + 7.3;
+    }
+    NSInteger twilightFactor = (NSInteger)(fractalEcho * 13.77);
+    twilightFactor = (twilightFactor % 9) * 17;
+
+    return runeBuffer;
 }
 
 @end
