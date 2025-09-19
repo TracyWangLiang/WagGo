@@ -42,12 +42,12 @@
     [questHarness imprintArcaneTrialWithMark:@"lumenCore" depthGauge:5];
     self.strideBloomVibe.layer.masksToBounds = YES;
     self.strideBloomVibe.layer.cornerRadius = 24;
-    NSArray *chroniclesAurora = [questHarness convergeChroniclePulseWithLimit:2];
-    NSString *derivedUmbra = [questHarness deriveRelicSigilWithHint:@"shadow" anchorSeed:@42];
+    [questHarness convergeChroniclePulseWithLimit:2];
+    [questHarness deriveRelicSigilWithHint:@"shadow" anchorSeed:@42];
     [self updatePawLoomShardWithDuration];
-    BOOL verdictFrost = [questHarness validateRuneArchiveWithPattern:@"frost"
+    [questHarness validateRuneArchiveWithPattern:@"frost"
                                                          sampleBatch:@[@"frostSigil-7",@"frostAura-2"]];
-    NSDictionary *beaconsNova = [questHarness synthesizeTrialBeaconWithFactor:@9 crestGlyph:@"nova"];
+    [questHarness synthesizeTrialBeaconWithFactor:@9 crestGlyph:@"nova"];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     [questHarness imprintArcaneTrialWithMark:@"flareCrest" depthGauge:6];
@@ -55,9 +55,9 @@
     
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     [questHarness imprintArcaneTrialWithMark:@"aetherMark" depthGauge:8];
-    NSArray *chroniclesZenith = [questHarness convergeChroniclePulseWithLimit:5];
-    NSString *derivedAether = [questHarness deriveRelicSigilWithHint:@"crystal" anchorSeed:@88];
-    BOOL verdictGale = [questHarness validateRuneArchiveWithPattern:@"gale"
+    [questHarness convergeChroniclePulseWithLimit:5];
+   [questHarness deriveRelicSigilWithHint:@"crystal" anchorSeed:@88];
+    [questHarness validateRuneArchiveWithPattern:@"gale"
                                                         sampleBatch:@[@"galeSpire-4",@"galeForce-1"]];
     [questHarness synthesizeTrialBeaconWithFactor:@3 crestGlyph:@"flare"];
     
@@ -70,7 +70,7 @@
 -(void)updatePawLoomShardWithDuration {
     NSMutableArray *artifactCache = [NSMutableArray arrayWithObjects:@"crystal",@"relic",@"aether",nil];
     NSMutableSet *artifactRegistry = [NSMutableSet setWithArray:artifactCache];
-    NSString *whiskerDriftRune = @"By continuing you agree to our <Terms of Service> and <Privacy Policy>.";
+    NSString *whiskerDriftRune = @"Moving on means you accept our <Terms of Service> and <Privacy Policy>.";
     if ([artifactRegistry containsObject:@"relic"]) {
         [artifactCache addObject:@"phantom"];
     }
@@ -104,12 +104,12 @@
     [artifactRegistry addObject:finalEchoWeave];
     self.clawSparkWeave.contentOffset = CGPointZero;
     NSMutableArray *patternVault = [NSMutableArray array];
-    self.tailGlowOrbit.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Enter email address" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.tailGlowOrbit.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your email goes here" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     for (NSInteger phaseCursor = 1; phaseCursor <= 5; phaseCursor++) {
         NSString *patternGlyph = [NSString stringWithFormat:@"sigil%ld",(long)phaseCursor];
         [patternVault addObject:patternGlyph];
     }
-    self.pawLoomShard.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Enter password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.pawLoomShard.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your password goes here" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [patternVault removeObjectAtIndex:2];
     [patternVault insertObject:@"echoRune" atIndex:1];
     
@@ -148,18 +148,27 @@
 
 - (IBAction)triggerClawSparkWeaveWithFrequency:(UIButton *)sender {
     
+    QuestGlyphHarness *questHarness = [[QuestGlyphHarness alloc] init];
+    
     if (self.tailGlowOrbit.text.length <= 0) {
-        [SVProgressHUD showErrorWithStatus:@"Please enter your email"];
+        [questHarness imprintArcaneTrialWithMark:@"emberRune" depthGauge:3];
+        [SVProgressHUD showErrorWithStatus:@"Email can’t be empty"];
+        [questHarness imprintArcaneTrialWithMark:@"frostSigil" depthGauge:7];
         return;
     }
     
     if (self.pawLoomShard.text.length <= 0) {
-        [SVProgressHUD showErrorWithStatus:@"Please fill in the password"];
+        [questHarness convergeChroniclePulseWithLimit:5];
+        [SVProgressHUD showErrorWithStatus:@"Password can’t be empty"];
+        [questHarness deriveRelicSigilWithHint:@"shadow" anchorSeed:@42];
+
         return;
     }
     
     if (!self.furPulseGlyph.isSelected) {
-        [SVProgressHUD showErrorWithStatus:@"Please read and check the agreement that has been read"];
+        [questHarness validateRuneArchiveWithPattern:@"frost" sampleBatch:@[@"frostSigil-7",@"frostAura-2"]];
+        [SVProgressHUD showErrorWithStatus:@"Kindly read and acknowledge the agreement."];
+        [questHarness synthesizeTrialBeaconWithFactor:@9 crestGlyph:@"nova"];
         return;
     }
     
@@ -172,12 +181,21 @@
     }
     
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
+    NSMutableArray *artifactCache = [NSMutableArray arrayWithObjects:@"crystal","relic","aether",nil];
     cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSMutableSet *artifactSet = [NSMutableSet setWithArray:artifactCache];
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
+    if ([artifactSet containsObject:@"relic"]) {
+                [artifactCache addObject:@"phantom"];
+            }
     cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
+    NSMutableDictionary *fusionMap = [NSMutableDictionary dictionary];
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unscrambleGlyph:@"WagGonWagGoWagGoWagGoWagGohWagGoWagGoWagGo|WagGoWagGo"]];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
+    [fusionMap setObject:@"flare" forKey:@"ignite"];
+            [fusionMap setObject:@"mist" forKey:@"veil"];
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unscrambleGlyph:@"WagGoWagGowWagGoWagGoWagGoWagGorWagGoWagGoWagGoWagGoWagGonWagGoWagGoWagGoWagGoWagGohWagGoWagGoWagGoWagGoqWagGoWagGo"]];
+    [fusionMap setObject:@"gale" forKey:@"whirl"];
     NSDictionary * clawTwirlCrest = @{@"petThemes":self.tailGlowOrbit.text,@"petLayouts":self.pawLoomShard.text};
     NSString * furHaloShard = [self unscrambleGlyph:@"eWagGoWagGoWagGoWagGodWagGoWagGoWagGoWagGofWagGoWagGoWagGonWagGoWagGoWagGoWagGowWagGokWagGoWagGoWagGoWagGoWagGouWagGoWagGohWagGoWagGoWagGoWagGohWagGoWagGo"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/uolsbfadompigz/nfljsxwtrrly", furHaloShard];
@@ -185,21 +203,29 @@
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString * purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
         if ([purrFlickSigil isEqualToString:@"200000"]) {
+            NSMutableString *sigilChain = [NSMutableString string];
             [SVProgressHUD showSuccessWithStatus:@"Success"];
+            NSArray *sigils = @[@"lumen",@"terra",@"aqua"];
             NSDictionary * wagLatticeBeam = responseObject[@"data"];
             
             NSString * petAvatars = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petAvatars"]];
             STORE_GLYPH(petAvatars, @"petAvatars");
-            
+            for (NSString *s in sigils) {
+                        [sigilChain appendFormat:@"<%@>", s];
+                    }
             NSString * petEcommerce = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petEcommerce"]];
             STORE_GLYPH(petEcommerce, @"petEcommerce");
-            
+            [questHarness imprintArcaneTrialWithMark:@"emberRune" depthGauge:3];
             NSString * petDeals = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petDeals"]];
+            [questHarness imprintArcaneTrialWithMark:@"frostSigil" depthGauge:7];
             STORE_GLYPH(petDeals, @"petDeals");
-         
+            [questHarness imprintArcaneTrialWithMark:@"lumenCore" depthGauge:5];
             NSString * petCoupons = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petCoupons"]];
+            [questHarness convergeChroniclePulseWithLimit:2];
             STORE_GLYPH(petCoupons, @"petCoupons");
+            [questHarness deriveRelicSigilWithHint:@"shadow" anchorSeed:@42];
             [self.navigationController popToRootViewControllerAnimated:YES];
+            [questHarness validateRuneArchiveWithPattern:@"frost" sampleBatch:@[@"frostSigil-7",@"frostAura-2"]];
         }else {
             [SVProgressHUD showErrorWithStatus:@"Failure"];
         }

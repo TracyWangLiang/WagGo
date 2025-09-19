@@ -102,7 +102,7 @@
                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-LU-Fzo">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-LU-Fzo">
                         <rect key="frame" x="334" y="316" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="Pcf-04-kZc"/>
@@ -110,9 +110,6 @@
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="clawCharmVibe"/>
-                        <connections>
-                            <action selector="pulsePawMuseFlickerWithSpeed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T5G-58-dtZ"/>
-                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,16 +140,16 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="cipherFrostArc" destination="IVS-u5-MB9" id="ezz-JZ-xqR"/>
                 <outlet property="clawSparkWeave" destination="r68-Ap-ErL" id="qgX-MD-Gsc"/>
                 <outlet property="furPulseGlyph" destination="hm6-rJ-FUx" id="Q6k-06-M7b"/>
+                <outlet property="haloMirthSeal" destination="0x2-5c-PBx" id="wC8-oc-3bC"/>
                 <outlet property="pawLoomShard" destination="lwR-As-bYd" id="VRj-ws-EH8"/>
                 <outlet property="strideBloomVibe" destination="wVS-Nc-GWa" id="IUi-WH-qCx"/>
                 <outlet property="tailGlowOrbit" destination="S0o-Gp-xWj" id="f7z-cq-aVh"/>
+                <outlet property="vortexRuneBind" destination="eIB-or-lNX" id="CDX-Wm-OvB"/>
                 <outlet property="wagEchoSigil" destination="uff-Zb-1A0" id="nEX-Vj-xxc"/>
                 <outlet property="whiskerDriftRune" destination="X1N-n3-jNd" id="tfN-2K-0Pd"/>
-                <outletCollection property="snoutTwistHalo" destination="eIB-or-lNX" id="EWp-AN-QYF"/>
-                <outletCollection property="snoutTwistHalo" destination="0x2-5c-PBx" id="f6q-AW-mWb"/>
-                <outletCollection property="snoutTwistHalo" destination="IVS-u5-MB9" id="5xo-ug-7ld"/>
             </connections>
             <point key="canvasLocation" x="126.71755725190839" y="133.80281690140845"/>
         </tableViewCell>

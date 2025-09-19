@@ -136,10 +136,10 @@
                 <constraint firstItem="UqF-Z4-Rhr" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="18" id="wzR-vu-M5X"/>
             </constraints>
             <connections>
+                <outlet property="astralWeaveCore" destination="O4s-I9-zgX" id="w8H-6s-CLJ"/>
+                <outlet property="emberChordFlux" destination="uar-ES-9iL" id="Etk-VL-9mx"/>
+                <outlet property="prismEchoTrace" destination="9no-hN-gml" id="3lO-IC-MbQ"/>
                 <outlet property="snoutTwistHalo" destination="TYX-Xn-iif" id="mx7-Il-OX4"/>
-                <outletCollection property="purrShineTide" destination="uar-ES-9iL" id="DUc-0d-OHr"/>
-                <outletCollection property="purrShineTide" destination="9no-hN-gml" id="Iu3-Ih-SqF"/>
-                <outletCollection property="purrShineTide" destination="O4s-I9-zgX" id="rQI-0A-WD0"/>
             </connections>
             <point key="canvasLocation" x="100.76335877862596" y="135.91549295774649"/>
         </collectionReusableView>

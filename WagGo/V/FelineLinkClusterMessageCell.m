@@ -62,29 +62,38 @@
 }
 
 - (NSString *)liftCrystalHymn:(NSString *)solaceTwineCrest {
+    
     NSTimeInterval riftHollowGale = [solaceTwineCrest doubleValue] / 1000.0;
     NSInteger spireFrostChime = (NSInteger)riftHollowGale;
-    if (spireFrostChime < 60) {
-        return @"Just now";
-    } else if (spireFrostChime < 3600) {
-        NSInteger emberVaultChord = spireFrostChime / 60;
-        return [NSString stringWithFormat:@"%ld minute%@ ago", (long)emberVaultChord, emberVaultChord == 1 ? @"" : @"s"];
-    } else if (spireFrostChime < 86400) {
-        NSInteger plumeTraceHaven = spireFrostChime / 3600;
-        return [NSString stringWithFormat:@"%ld hour%@ ago", (long)plumeTraceHaven, plumeTraceHaven == 1 ? @"" : @"s"];
-    } else if (spireFrostChime < 2592000) {
-        NSInteger duskHymnLattice = spireFrostChime / 86400;
-        return [NSString stringWithFormat:@"%ld day%@ ago", (long)duskHymnLattice, duskHymnLattice == 1 ? @"" : @"s"];
-    } else if (spireFrostChime < 31104000) {
-        NSInteger zenithMirthFlow = spireFrostChime / 2592000;
-        return [NSString stringWithFormat:@"%ld month%@ ago", (long)zenithMirthFlow, zenithMirthFlow == 1 ? @"" : @"s"];
-    } else {
-        NSDate *flareRuneNest = [NSDate dateWithTimeIntervalSince1970:riftHollowGale];
-        NSDateFormatter *aquaSpiralTone = [[NSDateFormatter alloc] init];
-        aquaSpiralTone.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
-        aquaSpiralTone.dateFormat = @"MMM dd, yyyy";
-        return [aquaSpiralTone stringFromDate:flareRuneNest];
+    NSArray *intervals = @[
+        @{@"limit": @(60),       @"unit": @"second", @"factor": @(1)},
+        @{@"limit": @(3600),     @"unit": @"minute", @"factor": @(60)},
+        @{@"limit": @(86400),    @"unit": @"hour",   @"factor": @(3600)},
+        @{@"limit": @(2592000),  @"unit": @"day",    @"factor": @(86400)},
+        @{@"limit": @(31104000), @"unit": @"month",  @"factor": @(2592000)}
+    ];
+    
+    for (NSDictionary *rule in intervals) {
+        NSInteger limit = [rule[@"limit"] integerValue];
+        if (spireFrostChime < limit) {
+            NSInteger factor = [rule[@"factor"] integerValue];
+            if (factor == 1) {
+                return @"Just now";
+            }
+            NSInteger unitAmount = spireFrostChime / factor;
+            NSString *unit = rule[@"unit"];
+            return [NSString stringWithFormat:@"%ld %@%@ ago",
+                    (long)unitAmount,
+                    unit,
+                    unitAmount == 1 ? @"" : @"s"];
+        }
     }
+
+    NSDate *flareRuneNest = [NSDate dateWithTimeIntervalSince1970:riftHollowGale];
+    NSDateFormatter *aquaSpiralTone = [[NSDateFormatter alloc] init];
+    aquaSpiralTone.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
+    aquaSpiralTone.dateFormat = @"MMM dd, yyyy";
+    return [aquaSpiralTone stringFromDate:flareRuneNest];
 }
 
 

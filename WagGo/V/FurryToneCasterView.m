@@ -16,7 +16,12 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *snoutTwistHalo;
 @property(nonatomic, copy)NSArray * wagEchoSigil;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *purrShineTide;
+
+@property (weak, nonatomic) IBOutlet UIButton *emberChordFlux;
+@property (weak, nonatomic) IBOutlet UIButton *prismEchoTrace;
+@property (weak, nonatomic) IBOutlet UIButton *astralWeaveCore;
+
+
 
 
 @end
@@ -28,13 +33,25 @@
     
     [self.snoutTwistHalo registerNib:[UINib nibWithNibName:@"FurryToneCasterViewCell" bundle:nil] forCellWithReuseIdentifier:@"FurryToneCasterViewCell"];
 
+    [self.emberChordFlux setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
+    [self.emberChordFlux setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
+    
+    [self.prismEchoTrace setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
+    [self.prismEchoTrace setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
+    
+    [self.astralWeaveCore setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
+    [self.astralWeaveCore setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
+    
     
     self.snoutTwistHalo.delegate = self;
     self.snoutTwistHalo.dataSource = self;
     
+    self.emberChordFlux.selected = NO;
+    self.prismEchoTrace.selected = NO;
+    self.astralWeaveCore.selected = NO;
+    
     UICollectionViewFlowLayout * purrShineTide = [[UICollectionViewFlowLayout alloc] init];
-    purrShineTide.minimumLineSpacing = 20;
-    purrShineTide.minimumInteritemSpacing = 20;
+
     purrShineTide.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.snoutTwistHalo.collectionViewLayout = purrShineTide;
     [self streamStrideSparkDriftWithFlow:1000];
@@ -42,13 +59,17 @@
 }
 
 -(void)streamStrideSparkDriftWithFlow:(NSInteger)rotation {
-    for (UIButton * purrShineTide in self.purrShineTide) {
-        purrShineTide.selected = NO;
-        if (purrShineTide.tag == rotation) {
-            purrShineTide.selected = YES;
-        }
-        [purrShineTide setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
-        [purrShineTide setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
+    
+    self.emberChordFlux.selected = NO;
+    self.prismEchoTrace.selected = NO;
+    self.astralWeaveCore.selected = NO;
+    
+    if (rotation == 1000) {
+        self.emberChordFlux.selected = YES;
+    }else if (rotation == 1001) {
+       self.prismEchoTrace.selected = YES;
+    }else if (rotation == 1002) {
+        self.astralWeaveCore.selected = YES;
     }
     
     if (self.snoutTwistVortexBlock) {
@@ -100,11 +121,19 @@
 
 -(__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FurryToneCasterViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FurryToneCasterViewCell" forIndexPath:indexPath];
-    
     NSDictionary * magnitude = self.wagEchoSigil[indexPath.row];
     [cell weaveClawLoomSpiralWithDepth:magnitude];
     return cell;
 }
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 20;
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 20;
+}
+
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -112,7 +141,6 @@
     if (magnitude.count <= 0) {
         return;
     }
-    
     if (self.snoutTwistVortexBlock) {
         self.snoutTwistVortexBlock(1005, magnitude);
     }

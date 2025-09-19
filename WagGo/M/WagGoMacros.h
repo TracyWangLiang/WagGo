@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WagGoMacros : NSObject
 
-// 保存字符串
+
 #define STORE_GLYPH(glyph, vaultMark) \
 do { \
     if ((glyph) != nil && (vaultMark) != nil) { \
@@ -21,7 +21,7 @@ do { \
     } \
 } while(0)
 
-// 获取字符串
+
 #define FETCH_GLYPH(vaultMark) \
 ({ \
     NSString *result = @""; \
@@ -35,7 +35,7 @@ do { \
     result; \
 })
 
-// 修改字符串（存在才改）
+
 #define UPDATE_GLYPH(glyph, vaultMark) \
 do { \
     if ((glyph) != nil && (vaultMark) != nil) { \
@@ -48,7 +48,7 @@ do { \
     } \
 } while(0)
 
-// 删除字符串
+
 #define REMOVE_GLYPH(vaultMark) \
 do { \
     if ((vaultMark) != nil) { \
