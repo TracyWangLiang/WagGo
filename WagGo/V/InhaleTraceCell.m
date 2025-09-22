@@ -151,7 +151,7 @@
     NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
     NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,petGrooming,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
+
     NSMutableString *astralWeaveCore = [NSMutableString string];
     [astralWeaveCore appendFormat:@"%@/%@", solaceTwineCrest, duskHymnLattice];
     [astralWeaveCore appendString:petGrooming];

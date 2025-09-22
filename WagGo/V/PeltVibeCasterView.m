@@ -22,8 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *astralWeaveCore;
 
 
-
-
 @end
 
 @implementation PeltVibeCasterView

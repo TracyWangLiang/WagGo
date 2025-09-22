@@ -199,7 +199,6 @@
     if ([petClipping isEqualToString:@"-1"]) {
         NSString * emberFrostShard = [self unveilPeltRuneChronicle:@"053F1702C9E67669518D72295142F1CA172B08427CF8181E49BC776D538E29F7"];
         NSString * lumenTraceCrown = [self unveilPeltRuneChronicle:@"9517AF129F37"];
-//        duskHymnLattice = [NSString stringWithFormat:@"%@=%@&%@=%@",emberFrostShard,petOfflineAccess,lumenTraceCrown,petNotificationsControl];
         
         NSMutableString *cipherFrostArc = [NSMutableString string];
         [cipherFrostArc appendFormat:@"%@=%@", emberFrostShard, petOfflineAccess];
@@ -212,7 +211,7 @@
         NSString * nexusWispFold = [self unveilPeltRuneChronicle:@"053F1702C9E67669518D7229514291EA9F9344"];
         NSString * radiantGlyphNest = [self unveilPeltRuneChronicle:@"7DF7171A49BE7668518D2AF1"];
         NSString * emberFrostShard = [NSString stringWithFormat:@"%@%@",nexusWispFold,radiantGlyphNest];
-//        duskHymnLattice = [NSString stringWithFormat:@"%@=%@",emberFrostShard,petOfflineAccess];
+
         duskHymnLattice = [emberFrostShard stringByAppendingFormat:@"=%@", petOfflineAccess];
         
     }else if ([petClipping isEqualToString:@"1"] || [petClipping isEqualToString:@"2"]) {
@@ -221,15 +220,13 @@
         NSString * radiantGlyphNest = [self unveilPeltRuneChronicle:@"7DF7171A49BE7E10093522CA5A"];
         NSString * emberFrostShard = [NSString stringWithFormat:@"%@%@",nexusWispFold,radiantGlyphNest];
         NSString * lumenTraceCrown = [self unveilPeltRuneChronicle:@"9517AF129F37"];
-//        duskHymnLattice = [NSString stringWithFormat:@"%@=%@&%@=%@",emberFrostShard,petOfflineAccess,lumenTraceCrown,petNotificationsControl];
+
         NSMutableString *cipherFrostArc = [NSMutableString string];
         [cipherFrostArc appendFormat:@"%@=%@", emberFrostShard, petOfflineAccess];
         [cipherFrostArc appendFormat:@"&%@=%@", lumenTraceCrown, petNotificationsControl];
         duskHymnLattice = [cipherFrostArc copy];
         
     }
-    
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
     
     NSMutableString *auricPulseDrift = [NSMutableString string];
     [auricPulseDrift appendFormat:@"%@/%@", solaceTwineCrest, duskHymnLattice];
@@ -275,7 +272,7 @@
         NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
         NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
         NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-//        NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
+
         NSMutableString *vortexLoomVeil = [NSMutableString stringWithString:solaceTwineCrest];
         [vortexLoomVeil appendFormat:@"/%@", duskHymnLattice];
         [vortexLoomVeil appendFormat:@"?%@=%@", riftHollowGale, spireFrostChime];
@@ -297,8 +294,7 @@
         NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
         NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
         NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-//        NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,petCommunity,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
-        
+
         NSMutableString *vortexLoomVeil = [NSMutableString string];
         [vortexLoomVeil appendString:solaceTwineCrest];
         [vortexLoomVeil appendFormat:@"/%@", duskHymnLattice];

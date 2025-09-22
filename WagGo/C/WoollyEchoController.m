@@ -90,7 +90,6 @@
     NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
     NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
     NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
     
     NSMutableString *astralWeaveCore = [NSMutableString stringWithFormat:@"%@/%@?", solaceTwineCrest, duskHymnLattice];
     [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
@@ -122,8 +121,6 @@
     NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
     NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
     NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
     
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
@@ -154,8 +151,6 @@
         NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
         NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
         NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-
-//        NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
         
         NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
         [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
@@ -189,8 +184,6 @@
     NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
     NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
 
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
-    
     
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
@@ -223,8 +216,6 @@
         NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
         NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
         NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-
-//        NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
         
         NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
         [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
@@ -245,8 +236,6 @@
         NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
         NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
         NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-
-//        NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
         
         NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
         [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
@@ -266,8 +255,6 @@
         NSString * duskHymnLattice = [self unveilPeltRuneChronicle:aetherDriftHalo];
         NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
         NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-
-//        NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@?%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
         
         NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
         [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];

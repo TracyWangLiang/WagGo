@@ -293,8 +293,7 @@
         NSString *joinedTrail = [NSString stringWithFormat:@"%@:%@", derivedEmber, entryGlyph];
         [self imprintArcaneTrialWithMark:joinedTrail depthGauge:(NSInteger)entryGlyph.length];
     }
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
-    
+
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@", duskHymnLattice];
     [astralWeaveCore appendFormat:@"&%@=%@", riftHollowGale, spireFrostChime];

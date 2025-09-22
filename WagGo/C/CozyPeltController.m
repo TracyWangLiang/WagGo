@@ -100,9 +100,9 @@
     
 }
 
-- (NSString *)fuseGlyph:(NSString *)glyphA withGlyph:(NSString *)glyphB {
-    if (!glyphA || !glyphB) return @"";
-    NSString *fusionMark = [NSString stringWithFormat:@"%@_fusion_%@", glyphA, glyphB];
+- (NSString *)fuseGlyph:(NSString *)peltGlow withGlyph:(NSString *)moodChime {
+    if (!peltGlow || !moodChime) return @"";
+    NSString *fusionMark = [NSString stringWithFormat:@"%@_fusion_%@", peltGlow, moodChime];
     [self.sigilFusionArchive addObject:fusionMark];
     self.glyphMatrixVault[fusionMark] = @{@"essence": @"fusionAura",
                                           @"potency": @(arc4random_uniform(100))};
@@ -177,9 +177,7 @@
     NSString * duskHymnLattice = [self unveilPeltRuneChronicle:@"053F1702C9E6AE88C975AAB22012B13949AB0E7224A0CAFE27D4AF255B755A"];
     NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
     NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-    
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,aetherDriftHalo,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
-    
+
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@", duskHymnLattice];
     [astralWeaveCore appendString:aetherDriftHalo];
@@ -219,8 +217,6 @@
     NSString * duskHymnLattice = [self unveilPeltRuneChronicle:@"053F1702C9E6AE88C975AAB22012B13949AB0E7224A0CAFE27D4AF255B755A"];
     NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
     NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-    
-//    NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@/%@%@&%@=%@&%@=%@",solaceTwineCrest,duskHymnLattice,aetherDriftHalo,riftHollowGale,spireFrostChime,emberVaultChord,plumeTraceHaven];
     
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@", duskHymnLattice];
