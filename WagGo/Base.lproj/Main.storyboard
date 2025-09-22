@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Wag Charm Glyph Controller-->
+        <!--Woolly Echo Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WagCharmGlyphController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WoollyEchoController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -499,10 +499,10 @@
             </objects>
             <point key="canvasLocation" x="674.04580152671758" y="655.63380281690149"/>
         </scene>
-        <!--Furry Tone Caster Controller-->
+        <!--Pelt Vibe Controller-->
         <scene sceneID="9z4-u0-yxL">
             <objects>
-                <viewController id="fZt-7M-Zim" customClass="FurryToneCasterController" sceneMemberID="viewController">
+                <viewController id="fZt-7M-Zim" customClass="PeltVibeController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GRB-kd-0Ps">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -537,10 +537,10 @@
             </objects>
             <point key="canvasLocation" x="1814.5038167938931" y="271.83098591549299"/>
         </scene>
-        <!--Trail Mark Glyph Controller-->
+        <!--Inhale Trace Controller-->
         <scene sceneID="3yb-lQ-zWm">
             <objects>
-                <viewController id="aym-yy-o40" customClass="TrailMarkGlyphController" sceneMemberID="viewController">
+                <viewController id="aym-yy-o40" customClass="InhaleTraceController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IU5-fW-Gw1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -592,10 +592,10 @@
             </objects>
             <point key="canvasLocation" x="1814.5038167938931" y="-501.4084507042254"/>
         </scene>
-        <!--Bark Step Crown Controller-->
+        <!--Whiff Signal Controller-->
         <scene sceneID="sDx-T3-zxi">
             <objects>
-                <tabBarController id="xzd-T7-Wtb" customClass="BarkStepCrownController" sceneMemberID="viewController">
+                <tabBarController id="xzd-T7-Wtb" customClass="WhiffSignalController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="lPD-L1-Pd1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bos-qG-x9K">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>

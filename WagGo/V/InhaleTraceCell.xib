@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="369" id="KGk-i7-Jjw" customClass="InhaleTraceCell">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="358"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="358"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0o-Gp-xWj">
+                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="orY-WZ-jCn"/>
+                            <constraint firstAttribute="width" constant="44" id="uTB-sp-O9d"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="emitBarkWhirlTraceWithDuration:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="psO-Yy-3NO"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r68-Ap-ErL">
+                        <rect key="frame" x="284" y="5" width="72" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="72" id="TQy-pe-rTW"/>
+                            <constraint firstAttribute="height" constant="34" id="kkz-6I-HKo"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="furGleamCrest"/>
+                        <state key="selected" image="pawDrizzleLoom"/>
+                        <connections>
+                            <action selector="enchantCuddleGlowOrbWithFactor:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yDk-bP-F0c"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwR-As-bYd">
+                        <rect key="frame" x="52" y="11.333333333333334" width="224" height="21.666666666666664"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hm6-rJ-FUx">
+                        <rect key="frame" x="0.0" y="56" width="356" height="202"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-7R-zNp">
+                                <rect key="frame" x="0.0" y="0.0" width="177" height="202"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-or-lNX">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="100"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-5c-PBx">
+                                        <rect key="frame" x="0.0" y="102" width="177" height="100"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-u5-MB9">
+                                <rect key="frame" x="179" y="0.0" width="177" height="202"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hm6-rJ-FUx" secondAttribute="height" multiplier="351:200" priority="999" id="SxU-mg-LrH"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uff-Zb-1A0">
+                        <rect key="frame" x="0.0" y="270" width="356" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="Q8A-6w-lYT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVS-Nc-GWa">
+                        <rect key="frame" x="0.0" y="316" width="33" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="ViX-4d-5d4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title=" 0" image="wagWhirlDrizzle">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" image="whiskerSpireCrown"/>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1N-n3-jNd">
+                        <rect key="frame" x="77" y="316" width="33" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="i00-dn-MH1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title=" 0" image="strideHaloGlint">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-LU-Fzo">
+                        <rect key="frame" x="334" y="316" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="Pcf-04-kZc"/>
+                            <constraint firstAttribute="height" constant="22" id="UVR-sO-eHd"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="clawCharmVibe"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="lwR-As-bYd" firstAttribute="centerY" secondItem="S0o-Gp-xWj" secondAttribute="centerY" id="1ua-WX-rE5"/>
+                    <constraint firstItem="hm6-rJ-FUx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7AB-6M-6Bm"/>
+                    <constraint firstItem="uff-Zb-1A0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7im-G1-U2E"/>
+                    <constraint firstItem="lwR-As-bYd" firstAttribute="leading" secondItem="S0o-Gp-xWj" secondAttribute="trailing" constant="8" id="9x0-5w-qba"/>
+                    <constraint firstItem="wVS-Nc-GWa" firstAttribute="top" secondItem="uff-Zb-1A0" secondAttribute="bottom" constant="10" id="AX3-u7-vd6"/>
+                    <constraint firstItem="6cg-LU-Fzo" firstAttribute="top" secondItem="uff-Zb-1A0" secondAttribute="bottom" constant="10" id="CO5-RI-sC8"/>
+                    <constraint firstItem="wVS-Nc-GWa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cva-Bn-ycI"/>
+                    <constraint firstItem="S0o-Gp-xWj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ejh-Ux-77o"/>
+                    <constraint firstAttribute="trailing" secondItem="hm6-rJ-FUx" secondAttribute="trailing" id="J2A-QU-KV3"/>
+                    <constraint firstItem="r68-Ap-ErL" firstAttribute="leading" secondItem="lwR-As-bYd" secondAttribute="trailing" constant="8" id="K4s-sM-aJW"/>
+                    <constraint firstAttribute="trailing" secondItem="uff-Zb-1A0" secondAttribute="trailing" id="Vui-g4-Asr"/>
+                    <constraint firstItem="uff-Zb-1A0" firstAttribute="top" secondItem="hm6-rJ-FUx" secondAttribute="bottom" constant="12" id="b2e-xf-xVH"/>
+                    <constraint firstItem="S0o-Gp-xWj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b3L-Vn-yGk"/>
+                    <constraint firstAttribute="bottom" secondItem="6cg-LU-Fzo" secondAttribute="bottom" constant="20" id="i2W-xd-eXJ"/>
+                    <constraint firstItem="X1N-n3-jNd" firstAttribute="centerY" secondItem="wVS-Nc-GWa" secondAttribute="centerY" id="j53-AW-IY3"/>
+                    <constraint firstItem="hm6-rJ-FUx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kyg-DY-QZC"/>
+                    <constraint firstItem="X1N-n3-jNd" firstAttribute="leading" secondItem="wVS-Nc-GWa" secondAttribute="trailing" constant="44" id="mY4-ky-xXT"/>
+                    <constraint firstAttribute="trailing" secondItem="r68-Ap-ErL" secondAttribute="trailing" id="t4C-h2-hhW"/>
+                    <constraint firstAttribute="trailing" secondItem="6cg-LU-Fzo" secondAttribute="trailing" id="xcx-Aw-Iiu"/>
+                    <constraint firstItem="hm6-rJ-FUx" firstAttribute="top" secondItem="S0o-Gp-xWj" secondAttribute="bottom" constant="12" id="zLu-hf-dMV"/>
+                    <constraint firstItem="r68-Ap-ErL" firstAttribute="centerY" secondItem="S0o-Gp-xWj" secondAttribute="centerY" id="zq4-OV-6Tr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cipherFrostArc" destination="IVS-u5-MB9" id="ezz-JZ-xqR"/>
+                <outlet property="clawSparkWeave" destination="r68-Ap-ErL" id="qgX-MD-Gsc"/>
+                <outlet property="furPulseGlyph" destination="hm6-rJ-FUx" id="Q6k-06-M7b"/>
+                <outlet property="haloMirthSeal" destination="0x2-5c-PBx" id="wC8-oc-3bC"/>
+                <outlet property="pawLoomShard" destination="lwR-As-bYd" id="VRj-ws-EH8"/>
+                <outlet property="strideBloomVibe" destination="wVS-Nc-GWa" id="IUi-WH-qCx"/>
+                <outlet property="tailGlowOrbit" destination="S0o-Gp-xWj" id="f7z-cq-aVh"/>
+                <outlet property="vortexRuneBind" destination="eIB-or-lNX" id="CDX-Wm-OvB"/>
+                <outlet property="wagEchoSigil" destination="uff-Zb-1A0" id="nEX-Vj-xxc"/>
+                <outlet property="whiskerDriftRune" destination="X1N-n3-jNd" id="tfN-2K-0Pd"/>
+            </connections>
+            <point key="canvasLocation" x="126.71755725190839" y="133.80281690140845"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="clawCharmVibe" width="22" height="23"/>
+        <image name="furGleamCrest" width="64" height="35"/>
+        <image name="pawDrizzleLoom" width="72" height="35"/>
+        <image name="strideHaloGlint" width="22" height="23"/>
+        <image name="wagWhirlDrizzle" width="22" height="23"/>
+        <image name="whiskerSpireCrown" width="23" height="23"/>
+    </resources>
+</document>

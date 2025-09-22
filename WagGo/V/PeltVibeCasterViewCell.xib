@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PeltVibeCasterViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="54" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="54" height="85"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-6w-LSa">
+                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="a9b-6w-LSa" secondAttribute="height" multiplier="1:1" id="7tG-Dq-sxB"/>
+                        </constraints>
+                    </imageView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="furryPrismSpark" translatesAutoresizingMaskIntoConstraints="NO" id="HmF-fN-F0o">
+                        <rect key="frame" x="8" y="44" width="38" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="WSj-8Q-6B9"/>
+                            <constraint firstAttribute="height" constant="20" id="qv9-jF-Hnk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZS-PP-mtq">
+                        <rect key="frame" x="0.0" y="68" width="54" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="ybW-6L-O6d"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jZS-PP-mtq" secondAttribute="bottom" id="D9R-GB-ZkI"/>
+                <constraint firstItem="jZS-PP-mtq" firstAttribute="top" secondItem="HmF-fN-F0o" secondAttribute="bottom" constant="4" id="OsQ-rY-H7F"/>
+                <constraint firstItem="a9b-6w-LSa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WoK-Fy-Mlx"/>
+                <constraint firstItem="HmF-fN-F0o" firstAttribute="bottom" secondItem="a9b-6w-LSa" secondAttribute="bottom" constant="10" id="XYQ-Oa-8ud"/>
+                <constraint firstItem="HmF-fN-F0o" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fmV-Kn-QB3"/>
+                <constraint firstAttribute="trailing" secondItem="a9b-6w-LSa" secondAttribute="trailing" id="hTp-4E-y3J"/>
+                <constraint firstItem="jZS-PP-mtq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nEL-fM-0oi"/>
+                <constraint firstAttribute="trailing" secondItem="jZS-PP-mtq" secondAttribute="trailing" id="pws-go-vxs"/>
+                <constraint firstItem="a9b-6w-LSa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tb8-o0-RRZ"/>
+            </constraints>
+            <connections>
+                <outlet property="clawSparkWeave" destination="jZS-PP-mtq" id="8IG-DS-cCL"/>
+                <outlet property="pawLoomShard" destination="HmF-fN-F0o" id="3AJ-2S-9BR"/>
+                <outlet property="tailGlowOrbit" destination="a9b-6w-LSa" id="KWm-86-OOU"/>
+            </connections>
+            <point key="canvasLocation" x="100.76335877862596" y="19.366197183098592"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="furryPrismSpark" width="38" height="20"/>
+    </resources>
+</document>

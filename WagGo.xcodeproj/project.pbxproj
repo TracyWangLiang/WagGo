@@ -8,48 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		05EA8CE8C206E5D4BA3A3B85 /* Pods_WagGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */; };
-		338B68702E67CF480004B4BD /* QuestGlyphHarness.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B686F2E67CF480004B4BD /* QuestGlyphHarness.m */; };
-		338B68732E67D4ED0004B4BD /* TailTalkStickerEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B68722E67D4ED0004B4BD /* TailTalkStickerEngine.m */; };
 		33A6E73A2E652A7B0088A4A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E72D2E652A7B0088A4A3 /* AppDelegate.m */; };
 		33A6E73B2E652A7B0088A4A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7322E652A7B0088A4A3 /* main.m */; };
 		33A6E73C2E652A7B0088A4A3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7362E652A7B0088A4A3 /* SceneDelegate.m */; };
 		33A6E73E2E652A7B0088A4A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E72E2E652A7B0088A4A3 /* Assets.xcassets */; };
 		33A6E7402E652A7B0088A4A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7312E652A7B0088A4A3 /* LaunchScreen.storyboard */; };
 		33A6E7412E652A7B0088A4A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7342E652A7B0088A4A3 /* Main.storyboard */; };
-		33A6E7472E652B620088A4A3 /* TrailMarkGlyphController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7462E652B610088A4A3 /* TrailMarkGlyphController.m */; };
-		33A6E74A2E652B750088A4A3 /* FurryToneCasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7492E652B750088A4A3 /* FurryToneCasterController.m */; };
-		33A6E74D2E652B8C0088A4A3 /* WagCharmGlyphController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E74C2E652B8C0088A4A3 /* WagCharmGlyphController.m */; };
-		33A6E7502E652B9C0088A4A3 /* SnoutLensShifterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E74F2E652B9C0088A4A3 /* SnoutLensShifterController.m */; };
-		33A6E7542E652BC00088A4A3 /* FurOrbitGatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7522E652BC00088A4A3 /* FurOrbitGatherController.m */; };
-		33A6E7552E652BC00088A4A3 /* FurOrbitGatherController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7532E652BC00088A4A3 /* FurOrbitGatherController.xib */; };
-		33A6E7592E652CAD0088A4A3 /* BarkTrailSeekerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7572E652CAD0088A4A3 /* BarkTrailSeekerController.m */; };
-		33A6E75A2E652CAD0088A4A3 /* BarkTrailSeekerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7582E652CAD0088A4A3 /* BarkTrailSeekerController.xib */; };
-		33A6E75E2E654FAC0088A4A3 /* TrailMarkGlyphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E75C2E654FAC0088A4A3 /* TrailMarkGlyphCell.m */; };
-		33A6E75F2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E75D2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib */; };
-		33A6E7632E65749E0088A4A3 /* FurryToneCasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7612E65749E0088A4A3 /* FurryToneCasterView.m */; };
-		33A6E7642E65749E0088A4A3 /* FurryToneCasterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7622E65749E0088A4A3 /* FurryToneCasterView.xib */; };
-		33A6E7682E6574AF0088A4A3 /* FurryToneCasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7662E6574AF0088A4A3 /* FurryToneCasterCell.m */; };
-		33A6E7692E6574AF0088A4A3 /* FurryToneCasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7672E6574AF0088A4A3 /* FurryToneCasterCell.xib */; };
-		33A6E76D2E657CC00088A4A3 /* FurryToneCasterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E76B2E657CC00088A4A3 /* FurryToneCasterViewCell.m */; };
-		33A6E76E2E657CC00088A4A3 /* FurryToneCasterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E76C2E657CC00088A4A3 /* FurryToneCasterViewCell.xib */; };
-		33A6E7712E65905D0088A4A3 /* BarkStepCrownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7702E65905D0088A4A3 /* BarkStepCrownController.m */; };
-		33A6E7752E65925E0088A4A3 /* WagCharmGlyphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7742E65925E0088A4A3 /* WagCharmGlyphCell.xib */; };
-		33A6E7762E65925E0088A4A3 /* WagCharmGlyphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7732E65925E0088A4A3 /* WagCharmGlyphCell.m */; };
-		33A6E77C2E659BC90088A4A3 /* WagGoMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E77B2E659BC90088A4A3 /* WagGoMacros.m */; };
-		33C85C072E66C31B0085CE01 /* FelineLinkClusterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C062E66C31B0085CE01 /* FelineLinkClusterController.xib */; };
-		33C85C082E66C31B0085CE01 /* FelineLinkClusterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C052E66C31B0085CE01 /* FelineLinkClusterController.m */; };
-		33C85C0C2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C0B2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib */; };
-		33C85C0D2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C0A2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m */; };
-		33C85C112E66C5F20085CE01 /* FelineLinkClusterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C102E66C5F20085CE01 /* FelineLinkClusterCell.xib */; };
-		33C85C122E66C5F20085CE01 /* FelineLinkClusterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C0F2E66C5F20085CE01 /* FelineLinkClusterCell.m */; };
+		33A6E7472E652B620088A4A3 /* InhaleTraceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7462E652B610088A4A3 /* InhaleTraceController.m */; };
+		33A6E74A2E652B750088A4A3 /* PeltVibeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7492E652B750088A4A3 /* PeltVibeController.m */; };
+		33A6E74D2E652B8C0088A4A3 /* WoollyEchoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E74C2E652B8C0088A4A3 /* WoollyEchoController.m */; };
+		33A6E7502E652B9C0088A4A3 /* ClawVaultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E74F2E652B9C0088A4A3 /* ClawVaultController.m */; };
+		33A6E7542E652BC00088A4A3 /* GrassEchoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7522E652BC00088A4A3 /* GrassEchoController.m */; };
+		33A6E7552E652BC00088A4A3 /* GrassEchoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7532E652BC00088A4A3 /* GrassEchoController.xib */; };
+		33A6E7592E652CAD0088A4A3 /* PrairieHushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7572E652CAD0088A4A3 /* PrairieHushController.m */; };
+		33A6E75A2E652CAD0088A4A3 /* PrairieHushController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7582E652CAD0088A4A3 /* PrairieHushController.xib */; };
+		33A6E75E2E654FAC0088A4A3 /* InhaleTraceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E75C2E654FAC0088A4A3 /* InhaleTraceCell.m */; };
+		33A6E75F2E654FAC0088A4A3 /* InhaleTraceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E75D2E654FAC0088A4A3 /* InhaleTraceCell.xib */; };
+		33A6E7632E65749E0088A4A3 /* PeltVibeCasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7612E65749E0088A4A3 /* PeltVibeCasterView.m */; };
+		33A6E7642E65749E0088A4A3 /* PeltVibeCasterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7622E65749E0088A4A3 /* PeltVibeCasterView.xib */; };
+		33A6E7682E6574AF0088A4A3 /* PeltVibeCasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7662E6574AF0088A4A3 /* PeltVibeCasterCell.m */; };
+		33A6E7692E6574AF0088A4A3 /* PeltVibeCasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7672E6574AF0088A4A3 /* PeltVibeCasterCell.xib */; };
+		33A6E76D2E657CC00088A4A3 /* PeltVibeCasterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E76B2E657CC00088A4A3 /* PeltVibeCasterViewCell.m */; };
+		33A6E76E2E657CC00088A4A3 /* PeltVibeCasterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E76C2E657CC00088A4A3 /* PeltVibeCasterViewCell.xib */; };
+		33A6E7712E65905D0088A4A3 /* WhiffSignalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7702E65905D0088A4A3 /* WhiffSignalController.m */; };
+		33A6E7752E65925E0088A4A3 /* WoollyPeltFluffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6E7742E65925E0088A4A3 /* WoollyPeltFluffCell.xib */; };
+		33A6E7762E65925E0088A4A3 /* WoollyPeltFluffCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7732E65925E0088A4A3 /* WoollyPeltFluffCell.m */; };
+		33A6E77C2E659BC90088A4A3 /* InhaleTraceChord.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E77B2E659BC90088A4A3 /* InhaleTraceChord.m */; };
+		33C85C072E66C31B0085CE01 /* CozyPeltController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C062E66C31B0085CE01 /* CozyPeltController.xib */; };
+		33C85C082E66C31B0085CE01 /* CozyPeltController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C052E66C31B0085CE01 /* CozyPeltController.m */; };
+		33C85C0C2E66C5D80085CE01 /* CozyPeltSanctumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C0B2E66C5D80085CE01 /* CozyPeltSanctumCell.xib */; };
+		33C85C0D2E66C5D80085CE01 /* CozyPeltSanctumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C0A2E66C5D80085CE01 /* CozyPeltSanctumCell.m */; };
+		33C85C112E66C5F20085CE01 /* ClawVaultSwishLightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C85C102E66C5F20085CE01 /* ClawVaultSwishLightCell.xib */; };
+		33C85C122E66C5F20085CE01 /* ClawVaultSwishLightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C85C0F2E66C5F20085CE01 /* ClawVaultSwishLightCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WagGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		338B686E2E67CF480004B4BD /* QuestGlyphHarness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestGlyphHarness.h; sourceTree = "<group>"; };
-		338B686F2E67CF480004B4BD /* QuestGlyphHarness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestGlyphHarness.m; sourceTree = "<group>"; };
-		338B68712E67D4ED0004B4BD /* TailTalkStickerEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TailTalkStickerEngine.h; sourceTree = "<group>"; };
-		338B68722E67D4ED0004B4BD /* TailTalkStickerEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TailTalkStickerEngine.m; sourceTree = "<group>"; };
 		33A6E70F2E652A700088A4A3 /* WagGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WagGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A6E72C2E652A7B0088A4A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33A6E72D2E652A7B0088A4A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,48 +54,48 @@
 		33A6E7332E652A7B0088A4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33A6E7352E652A7B0088A4A3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		33A6E7362E652A7B0088A4A3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		33A6E7452E652B610088A4A3 /* TrailMarkGlyphController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailMarkGlyphController.h; sourceTree = "<group>"; };
-		33A6E7462E652B610088A4A3 /* TrailMarkGlyphController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailMarkGlyphController.m; sourceTree = "<group>"; };
-		33A6E7482E652B750088A4A3 /* FurryToneCasterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterController.h; sourceTree = "<group>"; };
-		33A6E7492E652B750088A4A3 /* FurryToneCasterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterController.m; sourceTree = "<group>"; };
-		33A6E74B2E652B8C0088A4A3 /* WagCharmGlyphController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WagCharmGlyphController.h; sourceTree = "<group>"; };
-		33A6E74C2E652B8C0088A4A3 /* WagCharmGlyphController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WagCharmGlyphController.m; sourceTree = "<group>"; };
-		33A6E74E2E652B9C0088A4A3 /* SnoutLensShifterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnoutLensShifterController.h; sourceTree = "<group>"; };
-		33A6E74F2E652B9C0088A4A3 /* SnoutLensShifterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnoutLensShifterController.m; sourceTree = "<group>"; };
-		33A6E7512E652BC00088A4A3 /* FurOrbitGatherController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurOrbitGatherController.h; sourceTree = "<group>"; };
-		33A6E7522E652BC00088A4A3 /* FurOrbitGatherController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurOrbitGatherController.m; sourceTree = "<group>"; };
-		33A6E7532E652BC00088A4A3 /* FurOrbitGatherController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurOrbitGatherController.xib; sourceTree = "<group>"; };
-		33A6E7562E652CAD0088A4A3 /* BarkTrailSeekerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarkTrailSeekerController.h; sourceTree = "<group>"; };
-		33A6E7572E652CAD0088A4A3 /* BarkTrailSeekerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarkTrailSeekerController.m; sourceTree = "<group>"; };
-		33A6E7582E652CAD0088A4A3 /* BarkTrailSeekerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarkTrailSeekerController.xib; sourceTree = "<group>"; };
-		33A6E75B2E654FAC0088A4A3 /* TrailMarkGlyphCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailMarkGlyphCell.h; sourceTree = "<group>"; };
-		33A6E75C2E654FAC0088A4A3 /* TrailMarkGlyphCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailMarkGlyphCell.m; sourceTree = "<group>"; };
-		33A6E75D2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrailMarkGlyphCell.xib; sourceTree = "<group>"; };
-		33A6E7602E65749E0088A4A3 /* FurryToneCasterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterView.h; sourceTree = "<group>"; };
-		33A6E7612E65749E0088A4A3 /* FurryToneCasterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterView.m; sourceTree = "<group>"; };
-		33A6E7622E65749E0088A4A3 /* FurryToneCasterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurryToneCasterView.xib; sourceTree = "<group>"; };
-		33A6E7652E6574AF0088A4A3 /* FurryToneCasterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterCell.h; sourceTree = "<group>"; };
-		33A6E7662E6574AF0088A4A3 /* FurryToneCasterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterCell.m; sourceTree = "<group>"; };
-		33A6E7672E6574AF0088A4A3 /* FurryToneCasterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurryToneCasterCell.xib; sourceTree = "<group>"; };
-		33A6E76A2E657CC00088A4A3 /* FurryToneCasterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FurryToneCasterViewCell.h; sourceTree = "<group>"; };
-		33A6E76B2E657CC00088A4A3 /* FurryToneCasterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FurryToneCasterViewCell.m; sourceTree = "<group>"; };
-		33A6E76C2E657CC00088A4A3 /* FurryToneCasterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurryToneCasterViewCell.xib; sourceTree = "<group>"; };
-		33A6E76F2E65905D0088A4A3 /* BarkStepCrownController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarkStepCrownController.h; sourceTree = "<group>"; };
-		33A6E7702E65905D0088A4A3 /* BarkStepCrownController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarkStepCrownController.m; sourceTree = "<group>"; };
-		33A6E7722E65925E0088A4A3 /* WagCharmGlyphCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WagCharmGlyphCell.h; sourceTree = "<group>"; };
-		33A6E7732E65925E0088A4A3 /* WagCharmGlyphCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WagCharmGlyphCell.m; sourceTree = "<group>"; };
-		33A6E7742E65925E0088A4A3 /* WagCharmGlyphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WagCharmGlyphCell.xib; sourceTree = "<group>"; };
-		33A6E77A2E659BC90088A4A3 /* WagGoMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WagGoMacros.h; sourceTree = "<group>"; };
-		33A6E77B2E659BC90088A4A3 /* WagGoMacros.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WagGoMacros.m; sourceTree = "<group>"; };
-		33C85C042E66C31B0085CE01 /* FelineLinkClusterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FelineLinkClusterController.h; sourceTree = "<group>"; };
-		33C85C052E66C31B0085CE01 /* FelineLinkClusterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FelineLinkClusterController.m; sourceTree = "<group>"; };
-		33C85C062E66C31B0085CE01 /* FelineLinkClusterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FelineLinkClusterController.xib; sourceTree = "<group>"; };
-		33C85C092E66C5D80085CE01 /* FelineLinkClusterMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FelineLinkClusterMessageCell.h; sourceTree = "<group>"; };
-		33C85C0A2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FelineLinkClusterMessageCell.m; sourceTree = "<group>"; };
-		33C85C0B2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FelineLinkClusterMessageCell.xib; sourceTree = "<group>"; };
-		33C85C0E2E66C5F20085CE01 /* FelineLinkClusterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FelineLinkClusterCell.h; sourceTree = "<group>"; };
-		33C85C0F2E66C5F20085CE01 /* FelineLinkClusterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FelineLinkClusterCell.m; sourceTree = "<group>"; };
-		33C85C102E66C5F20085CE01 /* FelineLinkClusterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FelineLinkClusterCell.xib; sourceTree = "<group>"; };
+		33A6E7452E652B610088A4A3 /* InhaleTraceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InhaleTraceController.h; sourceTree = "<group>"; };
+		33A6E7462E652B610088A4A3 /* InhaleTraceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InhaleTraceController.m; sourceTree = "<group>"; };
+		33A6E7482E652B750088A4A3 /* PeltVibeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeltVibeController.h; sourceTree = "<group>"; };
+		33A6E7492E652B750088A4A3 /* PeltVibeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeltVibeController.m; sourceTree = "<group>"; };
+		33A6E74B2E652B8C0088A4A3 /* WoollyEchoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WoollyEchoController.h; sourceTree = "<group>"; };
+		33A6E74C2E652B8C0088A4A3 /* WoollyEchoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoollyEchoController.m; sourceTree = "<group>"; };
+		33A6E74E2E652B9C0088A4A3 /* ClawVaultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClawVaultController.h; sourceTree = "<group>"; };
+		33A6E74F2E652B9C0088A4A3 /* ClawVaultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClawVaultController.m; sourceTree = "<group>"; };
+		33A6E7512E652BC00088A4A3 /* GrassEchoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrassEchoController.h; sourceTree = "<group>"; };
+		33A6E7522E652BC00088A4A3 /* GrassEchoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrassEchoController.m; sourceTree = "<group>"; };
+		33A6E7532E652BC00088A4A3 /* GrassEchoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrassEchoController.xib; sourceTree = "<group>"; };
+		33A6E7562E652CAD0088A4A3 /* PrairieHushController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrairieHushController.h; sourceTree = "<group>"; };
+		33A6E7572E652CAD0088A4A3 /* PrairieHushController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrairieHushController.m; sourceTree = "<group>"; };
+		33A6E7582E652CAD0088A4A3 /* PrairieHushController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrairieHushController.xib; sourceTree = "<group>"; };
+		33A6E75B2E654FAC0088A4A3 /* InhaleTraceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InhaleTraceCell.h; sourceTree = "<group>"; };
+		33A6E75C2E654FAC0088A4A3 /* InhaleTraceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InhaleTraceCell.m; sourceTree = "<group>"; };
+		33A6E75D2E654FAC0088A4A3 /* InhaleTraceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InhaleTraceCell.xib; sourceTree = "<group>"; };
+		33A6E7602E65749E0088A4A3 /* PeltVibeCasterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeltVibeCasterView.h; sourceTree = "<group>"; };
+		33A6E7612E65749E0088A4A3 /* PeltVibeCasterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeltVibeCasterView.m; sourceTree = "<group>"; };
+		33A6E7622E65749E0088A4A3 /* PeltVibeCasterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeltVibeCasterView.xib; sourceTree = "<group>"; };
+		33A6E7652E6574AF0088A4A3 /* PeltVibeCasterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeltVibeCasterCell.h; sourceTree = "<group>"; };
+		33A6E7662E6574AF0088A4A3 /* PeltVibeCasterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeltVibeCasterCell.m; sourceTree = "<group>"; };
+		33A6E7672E6574AF0088A4A3 /* PeltVibeCasterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeltVibeCasterCell.xib; sourceTree = "<group>"; };
+		33A6E76A2E657CC00088A4A3 /* PeltVibeCasterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeltVibeCasterViewCell.h; sourceTree = "<group>"; };
+		33A6E76B2E657CC00088A4A3 /* PeltVibeCasterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeltVibeCasterViewCell.m; sourceTree = "<group>"; };
+		33A6E76C2E657CC00088A4A3 /* PeltVibeCasterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeltVibeCasterViewCell.xib; sourceTree = "<group>"; };
+		33A6E76F2E65905D0088A4A3 /* WhiffSignalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhiffSignalController.h; sourceTree = "<group>"; };
+		33A6E7702E65905D0088A4A3 /* WhiffSignalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiffSignalController.m; sourceTree = "<group>"; };
+		33A6E7722E65925E0088A4A3 /* WoollyPeltFluffCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WoollyPeltFluffCell.h; sourceTree = "<group>"; };
+		33A6E7732E65925E0088A4A3 /* WoollyPeltFluffCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoollyPeltFluffCell.m; sourceTree = "<group>"; };
+		33A6E7742E65925E0088A4A3 /* WoollyPeltFluffCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WoollyPeltFluffCell.xib; sourceTree = "<group>"; };
+		33A6E77A2E659BC90088A4A3 /* InhaleTraceChord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InhaleTraceChord.h; sourceTree = "<group>"; };
+		33A6E77B2E659BC90088A4A3 /* InhaleTraceChord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InhaleTraceChord.m; sourceTree = "<group>"; };
+		33C85C042E66C31B0085CE01 /* CozyPeltController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CozyPeltController.h; sourceTree = "<group>"; };
+		33C85C052E66C31B0085CE01 /* CozyPeltController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CozyPeltController.m; sourceTree = "<group>"; };
+		33C85C062E66C31B0085CE01 /* CozyPeltController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CozyPeltController.xib; sourceTree = "<group>"; };
+		33C85C092E66C5D80085CE01 /* CozyPeltSanctumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CozyPeltSanctumCell.h; sourceTree = "<group>"; };
+		33C85C0A2E66C5D80085CE01 /* CozyPeltSanctumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CozyPeltSanctumCell.m; sourceTree = "<group>"; };
+		33C85C0B2E66C5D80085CE01 /* CozyPeltSanctumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CozyPeltSanctumCell.xib; sourceTree = "<group>"; };
+		33C85C0E2E66C5F20085CE01 /* ClawVaultSwishLightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClawVaultSwishLightCell.h; sourceTree = "<group>"; };
+		33C85C0F2E66C5F20085CE01 /* ClawVaultSwishLightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClawVaultSwishLightCell.m; sourceTree = "<group>"; };
+		33C85C102E66C5F20085CE01 /* ClawVaultSwishLightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClawVaultSwishLightCell.xib; sourceTree = "<group>"; };
 		BF287D1727A763E53374FC2E /* Pods-WagGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagGo.debug.xcconfig"; path = "Target Support Files/Pods-WagGo/Pods-WagGo.debug.xcconfig"; sourceTree = "<group>"; };
 		F39010D3FA4A43ADA0DB44C1 /* Pods-WagGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagGo.release.xcconfig"; path = "Target Support Files/Pods-WagGo/Pods-WagGo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,27 +152,27 @@
 		33A6E7422E652B100088A4A3 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				33A6E75B2E654FAC0088A4A3 /* TrailMarkGlyphCell.h */,
-				33A6E75C2E654FAC0088A4A3 /* TrailMarkGlyphCell.m */,
-				33A6E75D2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib */,
-				33A6E7602E65749E0088A4A3 /* FurryToneCasterView.h */,
-				33A6E7612E65749E0088A4A3 /* FurryToneCasterView.m */,
-				33A6E7622E65749E0088A4A3 /* FurryToneCasterView.xib */,
-				33A6E7652E6574AF0088A4A3 /* FurryToneCasterCell.h */,
-				33A6E7662E6574AF0088A4A3 /* FurryToneCasterCell.m */,
-				33A6E7672E6574AF0088A4A3 /* FurryToneCasterCell.xib */,
-				33A6E76A2E657CC00088A4A3 /* FurryToneCasterViewCell.h */,
-				33A6E76B2E657CC00088A4A3 /* FurryToneCasterViewCell.m */,
-				33A6E76C2E657CC00088A4A3 /* FurryToneCasterViewCell.xib */,
-				33A6E7722E65925E0088A4A3 /* WagCharmGlyphCell.h */,
-				33A6E7732E65925E0088A4A3 /* WagCharmGlyphCell.m */,
-				33A6E7742E65925E0088A4A3 /* WagCharmGlyphCell.xib */,
-				33C85C092E66C5D80085CE01 /* FelineLinkClusterMessageCell.h */,
-				33C85C0A2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m */,
-				33C85C0B2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib */,
-				33C85C0E2E66C5F20085CE01 /* FelineLinkClusterCell.h */,
-				33C85C0F2E66C5F20085CE01 /* FelineLinkClusterCell.m */,
-				33C85C102E66C5F20085CE01 /* FelineLinkClusterCell.xib */,
+				33A6E75B2E654FAC0088A4A3 /* InhaleTraceCell.h */,
+				33A6E75C2E654FAC0088A4A3 /* InhaleTraceCell.m */,
+				33A6E75D2E654FAC0088A4A3 /* InhaleTraceCell.xib */,
+				33A6E7602E65749E0088A4A3 /* PeltVibeCasterView.h */,
+				33A6E7612E65749E0088A4A3 /* PeltVibeCasterView.m */,
+				33A6E7622E65749E0088A4A3 /* PeltVibeCasterView.xib */,
+				33A6E7652E6574AF0088A4A3 /* PeltVibeCasterCell.h */,
+				33A6E7662E6574AF0088A4A3 /* PeltVibeCasterCell.m */,
+				33A6E7672E6574AF0088A4A3 /* PeltVibeCasterCell.xib */,
+				33A6E76A2E657CC00088A4A3 /* PeltVibeCasterViewCell.h */,
+				33A6E76B2E657CC00088A4A3 /* PeltVibeCasterViewCell.m */,
+				33A6E76C2E657CC00088A4A3 /* PeltVibeCasterViewCell.xib */,
+				33A6E7722E65925E0088A4A3 /* WoollyPeltFluffCell.h */,
+				33A6E7732E65925E0088A4A3 /* WoollyPeltFluffCell.m */,
+				33A6E7742E65925E0088A4A3 /* WoollyPeltFluffCell.xib */,
+				33C85C092E66C5D80085CE01 /* CozyPeltSanctumCell.h */,
+				33C85C0A2E66C5D80085CE01 /* CozyPeltSanctumCell.m */,
+				33C85C0B2E66C5D80085CE01 /* CozyPeltSanctumCell.xib */,
+				33C85C0E2E66C5F20085CE01 /* ClawVaultSwishLightCell.h */,
+				33C85C0F2E66C5F20085CE01 /* ClawVaultSwishLightCell.m */,
+				33C85C102E66C5F20085CE01 /* ClawVaultSwishLightCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -186,12 +180,8 @@
 		33A6E7432E652B170088A4A3 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				33A6E77A2E659BC90088A4A3 /* WagGoMacros.h */,
-				33A6E77B2E659BC90088A4A3 /* WagGoMacros.m */,
-				338B686E2E67CF480004B4BD /* QuestGlyphHarness.h */,
-				338B686F2E67CF480004B4BD /* QuestGlyphHarness.m */,
-				338B68712E67D4ED0004B4BD /* TailTalkStickerEngine.h */,
-				338B68722E67D4ED0004B4BD /* TailTalkStickerEngine.m */,
+				33A6E77A2E659BC90088A4A3 /* InhaleTraceChord.h */,
+				33A6E77B2E659BC90088A4A3 /* InhaleTraceChord.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -199,25 +189,25 @@
 		33A6E7442E652B1E0088A4A3 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				33A6E76F2E65905D0088A4A3 /* BarkStepCrownController.h */,
-				33A6E7702E65905D0088A4A3 /* BarkStepCrownController.m */,
-				33A6E7452E652B610088A4A3 /* TrailMarkGlyphController.h */,
-				33A6E7462E652B610088A4A3 /* TrailMarkGlyphController.m */,
-				33A6E7482E652B750088A4A3 /* FurryToneCasterController.h */,
-				33A6E7492E652B750088A4A3 /* FurryToneCasterController.m */,
-				33A6E74B2E652B8C0088A4A3 /* WagCharmGlyphController.h */,
-				33A6E74C2E652B8C0088A4A3 /* WagCharmGlyphController.m */,
-				33A6E74E2E652B9C0088A4A3 /* SnoutLensShifterController.h */,
-				33A6E74F2E652B9C0088A4A3 /* SnoutLensShifterController.m */,
-				33A6E7512E652BC00088A4A3 /* FurOrbitGatherController.h */,
-				33A6E7522E652BC00088A4A3 /* FurOrbitGatherController.m */,
-				33A6E7532E652BC00088A4A3 /* FurOrbitGatherController.xib */,
-				33A6E7562E652CAD0088A4A3 /* BarkTrailSeekerController.h */,
-				33A6E7572E652CAD0088A4A3 /* BarkTrailSeekerController.m */,
-				33A6E7582E652CAD0088A4A3 /* BarkTrailSeekerController.xib */,
-				33C85C042E66C31B0085CE01 /* FelineLinkClusterController.h */,
-				33C85C052E66C31B0085CE01 /* FelineLinkClusterController.m */,
-				33C85C062E66C31B0085CE01 /* FelineLinkClusterController.xib */,
+				33A6E76F2E65905D0088A4A3 /* WhiffSignalController.h */,
+				33A6E7702E65905D0088A4A3 /* WhiffSignalController.m */,
+				33A6E7452E652B610088A4A3 /* InhaleTraceController.h */,
+				33A6E7462E652B610088A4A3 /* InhaleTraceController.m */,
+				33A6E7482E652B750088A4A3 /* PeltVibeController.h */,
+				33A6E7492E652B750088A4A3 /* PeltVibeController.m */,
+				33A6E74B2E652B8C0088A4A3 /* WoollyEchoController.h */,
+				33A6E74C2E652B8C0088A4A3 /* WoollyEchoController.m */,
+				33A6E74E2E652B9C0088A4A3 /* ClawVaultController.h */,
+				33A6E74F2E652B9C0088A4A3 /* ClawVaultController.m */,
+				33A6E7512E652BC00088A4A3 /* GrassEchoController.h */,
+				33A6E7522E652BC00088A4A3 /* GrassEchoController.m */,
+				33A6E7532E652BC00088A4A3 /* GrassEchoController.xib */,
+				33A6E7562E652CAD0088A4A3 /* PrairieHushController.h */,
+				33A6E7572E652CAD0088A4A3 /* PrairieHushController.m */,
+				33A6E7582E652CAD0088A4A3 /* PrairieHushController.xib */,
+				33C85C042E66C31B0085CE01 /* CozyPeltController.h */,
+				33C85C052E66C31B0085CE01 /* CozyPeltController.m */,
+				33C85C062E66C31B0085CE01 /* CozyPeltController.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -299,19 +289,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A6E7692E6574AF0088A4A3 /* FurryToneCasterCell.xib in Resources */,
+				33A6E7692E6574AF0088A4A3 /* PeltVibeCasterCell.xib in Resources */,
 				33A6E73E2E652A7B0088A4A3 /* Assets.xcassets in Resources */,
-				33C85C072E66C31B0085CE01 /* FelineLinkClusterController.xib in Resources */,
-				33C85C112E66C5F20085CE01 /* FelineLinkClusterCell.xib in Resources */,
-				33A6E7752E65925E0088A4A3 /* WagCharmGlyphCell.xib in Resources */,
-				33A6E75A2E652CAD0088A4A3 /* BarkTrailSeekerController.xib in Resources */,
-				33A6E75F2E654FAC0088A4A3 /* TrailMarkGlyphCell.xib in Resources */,
-				33A6E7552E652BC00088A4A3 /* FurOrbitGatherController.xib in Resources */,
-				33A6E7642E65749E0088A4A3 /* FurryToneCasterView.xib in Resources */,
+				33C85C072E66C31B0085CE01 /* CozyPeltController.xib in Resources */,
+				33C85C112E66C5F20085CE01 /* ClawVaultSwishLightCell.xib in Resources */,
+				33A6E7752E65925E0088A4A3 /* WoollyPeltFluffCell.xib in Resources */,
+				33A6E75A2E652CAD0088A4A3 /* PrairieHushController.xib in Resources */,
+				33A6E75F2E654FAC0088A4A3 /* InhaleTraceCell.xib in Resources */,
+				33A6E7552E652BC00088A4A3 /* GrassEchoController.xib in Resources */,
+				33A6E7642E65749E0088A4A3 /* PeltVibeCasterView.xib in Resources */,
 				33A6E7402E652A7B0088A4A3 /* LaunchScreen.storyboard in Resources */,
 				33A6E7412E652A7B0088A4A3 /* Main.storyboard in Resources */,
-				33C85C0C2E66C5D80085CE01 /* FelineLinkClusterMessageCell.xib in Resources */,
-				33A6E76E2E657CC00088A4A3 /* FurryToneCasterViewCell.xib in Resources */,
+				33C85C0C2E66C5D80085CE01 /* CozyPeltSanctumCell.xib in Resources */,
+				33A6E76E2E657CC00088A4A3 /* PeltVibeCasterViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,27 +358,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A6E75E2E654FAC0088A4A3 /* TrailMarkGlyphCell.m in Sources */,
-				33A6E7542E652BC00088A4A3 /* FurOrbitGatherController.m in Sources */,
-				33A6E77C2E659BC90088A4A3 /* WagGoMacros.m in Sources */,
-				33A6E74A2E652B750088A4A3 /* FurryToneCasterController.m in Sources */,
-				33A6E7472E652B620088A4A3 /* TrailMarkGlyphController.m in Sources */,
-				33C85C0D2E66C5D80085CE01 /* FelineLinkClusterMessageCell.m in Sources */,
-				33C85C082E66C31B0085CE01 /* FelineLinkClusterController.m in Sources */,
-				33A6E7632E65749E0088A4A3 /* FurryToneCasterView.m in Sources */,
-				338B68702E67CF480004B4BD /* QuestGlyphHarness.m in Sources */,
-				33A6E7712E65905D0088A4A3 /* BarkStepCrownController.m in Sources */,
+				33A6E75E2E654FAC0088A4A3 /* InhaleTraceCell.m in Sources */,
+				33A6E7542E652BC00088A4A3 /* GrassEchoController.m in Sources */,
+				33A6E77C2E659BC90088A4A3 /* InhaleTraceChord.m in Sources */,
+				33A6E74A2E652B750088A4A3 /* PeltVibeController.m in Sources */,
+				33A6E7472E652B620088A4A3 /* InhaleTraceController.m in Sources */,
+				33C85C0D2E66C5D80085CE01 /* CozyPeltSanctumCell.m in Sources */,
+				33C85C082E66C31B0085CE01 /* CozyPeltController.m in Sources */,
+				33A6E7632E65749E0088A4A3 /* PeltVibeCasterView.m in Sources */,
+				33A6E7712E65905D0088A4A3 /* WhiffSignalController.m in Sources */,
 				33A6E73A2E652A7B0088A4A3 /* AppDelegate.m in Sources */,
-				33A6E7762E65925E0088A4A3 /* WagCharmGlyphCell.m in Sources */,
-				33A6E7502E652B9C0088A4A3 /* SnoutLensShifterController.m in Sources */,
-				33A6E76D2E657CC00088A4A3 /* FurryToneCasterViewCell.m in Sources */,
+				33A6E7762E65925E0088A4A3 /* WoollyPeltFluffCell.m in Sources */,
+				33A6E7502E652B9C0088A4A3 /* ClawVaultController.m in Sources */,
+				33A6E76D2E657CC00088A4A3 /* PeltVibeCasterViewCell.m in Sources */,
 				33A6E73B2E652A7B0088A4A3 /* main.m in Sources */,
-				33A6E7682E6574AF0088A4A3 /* FurryToneCasterCell.m in Sources */,
+				33A6E7682E6574AF0088A4A3 /* PeltVibeCasterCell.m in Sources */,
 				33A6E73C2E652A7B0088A4A3 /* SceneDelegate.m in Sources */,
-				338B68732E67D4ED0004B4BD /* TailTalkStickerEngine.m in Sources */,
-				33A6E7592E652CAD0088A4A3 /* BarkTrailSeekerController.m in Sources */,
-				33C85C122E66C5F20085CE01 /* FelineLinkClusterCell.m in Sources */,
-				33A6E74D2E652B8C0088A4A3 /* WagCharmGlyphController.m in Sources */,
+				33A6E7592E652CAD0088A4A3 /* PrairieHushController.m in Sources */,
+				33C85C122E66C5F20085CE01 /* ClawVaultSwishLightCell.m in Sources */,
+				33A6E74D2E652B8C0088A4A3 /* WoollyEchoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
