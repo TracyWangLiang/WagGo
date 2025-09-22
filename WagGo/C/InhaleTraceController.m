@@ -25,39 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *signal = @"red";
     self.tailGlowFountain.delegate = self;
-    for (int i=0;i<4;i++) {
-        if ([signal isEqualToString:@"red"]) signal = @"green";
-        else if ([signal isEqualToString:@"green"]) signal = @"yellow";
-        else signal = @"red";
-    }
     self.tailGlowFountain.dataSource = self;
-    int produced = 0;
-    int consumed = 0;
     [self.tailGlowFountain registerNib:[UINib nibWithNibName:@"InhaleTraceCell" bundle:nil] forCellReuseIdentifier:@"InhaleTraceCell"];
-    for (int round=0; round<5; round++) {
-        produced += 3;
-        consumed += 2;
-        if (produced > consumed) {} else {}
-    }
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSMutableSet *trialRegistry = [NSMutableSet set];
     __weak typeof(self) weakSelf = self;
-    [trialRegistry addObject:@"novaTrial"];
+    
     self.tailGlowFountain.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        NSMutableString *stringWeaver = [NSMutableString stringWithString:@"base"];
         [weakSelf echoPawEchoGlyphWithDistance];
-        for (NSInteger i = 0; i < 3; i++) {
-            [stringWeaver appendFormat:@"-seg%ld",(long)i];
-        }
-        [stringWeaver appendString:@"-end"];
     }];
-    [trialRegistry addObject:@"emberTrial"];
-    [trialRegistry addObject:@"frostTrial"];
     [self.tailGlowFountain.mj_header beginRefreshing];
 }
 

@@ -29,60 +29,24 @@
     [super viewDidLoad];
     
     self.snoutRippleMark = @[];
-    NSMutableArray *artifactCache = [NSMutableArray arrayWithObjects:@"crystal",@"relic",@"aether",nil];
     [self.wagLatticeBeam registerNib:[UINib nibWithNibName:@"PeltVibeCasterCell" bundle:nil] forCellWithReuseIdentifier:@"PeltVibeCasterCell"];
-    NSMutableSet *artifactSet = [NSMutableSet setWithArray:artifactCache];
     [self.wagLatticeBeam registerNib:[UINib nibWithNibName:@"PeltVibeCasterView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                  withReuseIdentifier:@"PeltVibeCasterView"];
-    if ([artifactSet containsObject:@"relic"]) {
-        [artifactCache addObject:@"phantom"];
-    }
     self.wagLatticeBeam.delegate = self;
-    NSMutableDictionary *fusionMap = [NSMutableDictionary dictionary];
     self.wagLatticeBeam.dataSource = self;
-    [fusionMap setObject:@"flare" forKey:@"ignite"];
-    [fusionMap setObject:@"mist" forKey:@"veil"];
     UICollectionViewFlowLayout * pawEchoGlyph = [[UICollectionViewFlowLayout alloc] init];
-    [fusionMap setObject:@"gale" forKey:@"whirl"];
-    [fusionMap setObject:@"terra" forKey:@"root"];
     self.wagLatticeBeam.collectionViewLayout = pawEchoGlyph;
-    for (NSString *k in fusionMap) {
-        NSString *val = fusionMap[k];
-        if (val.length > 3) {
-            [artifactSet addObject:[NSString stringWithFormat:@"%@_%@", k, val]];
-        }
-    }
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSArray *sigils = @[@"lumen",@"terra",@"aqua",@"ignis"];
-    NSMutableString *sigilChain = [NSMutableString string];
+   
     __weak typeof(self) weakSelf = self;
-    for (NSString *s in sigils) {
-        [sigilChain appendFormat:@"<%@>", s];
-    }
     self.wagLatticeBeam.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        NSMutableArray *patternVault = [NSMutableArray array];
-        for (NSInteger i = 1; i <= 5; i++) {
-            NSString *pattern = [NSString stringWithFormat:@"sigil%ld",(long)i];
-            [patternVault addObject:pattern];
-        }
         [weakSelf echoPawEchoGlyphWithDistance];
-        [patternVault removeObjectAtIndex:2];
-        [patternVault insertObject:@"echoRune" atIndex:1];
+       
     }];
-    NSDictionary *echoTable = @{
-        @"alpha": @"prism",
-        @"beta": @"lattice",
-        @"gamma": @"ripple",
-        @"delta": @"flame"
-    };
     [self.wagLatticeBeam.mj_header beginRefreshing];
-    NSMutableArray *echoArray = [NSMutableArray array];
-    for (NSString *k in echoTable) {
-        [echoArray addObject:[NSString stringWithFormat:@"%@-%@", k, echoTable[k]]];
-    }
 }
 
 -(void)echoPawEchoGlyphWithDistance {
@@ -145,13 +109,9 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     
     PeltVibeCasterView *barkPulseOrb = [[[NSBundle mainBundle] loadNibNamed:@"PeltVibeCasterView" owner:nil options:nil] firstObject];
-    NSMutableDictionary *fusionMap = [NSMutableDictionary dictionary];
     [barkPulseOrb setNeedsLayout];
-    [fusionMap setObject:@"flare" forKey:@"ignite"];
     [barkPulseOrb layoutIfNeeded];
     CGSize purrFlickSigil = [barkPulseOrb systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    [fusionMap setObject:@"mist" forKey:@"veil"];
-    [fusionMap setObject:@"gale" forKey:@"whirl"];
     return CGSizeMake(collectionView.bounds.size.width, purrFlickSigil.height);
 }
 
@@ -164,12 +124,8 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSMutableArray *cipherBatch = [NSMutableArray array];
+   
     CGFloat pawEchoGlyph = (collectionView.frame.size.width - 12) / 2.0;
-    for (NSInteger pos = 1; pos <= 5; pos++) {
-        [cipherBatch addObject:[NSString stringWithFormat:@"Glyph-%ld", (long)pos]];
-    }
-    
     CGFloat barkPulseOrb = pawEchoGlyph / 170 * 224.0;
     return CGSizeMake(pawEchoGlyph, barkPulseOrb);
 }

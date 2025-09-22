@@ -56,7 +56,6 @@
 
 -(void)manipulateCryoventPhaseMapping {
     
-    
     [self validateRuneArchiveWithPattern:@"frost"
                                      sampleBatch:@[@"frostSigil-7",@"frostAura-2"]];
     [self synthesizeTrialBeaconWithFactor:@9 crestGlyph:@"nova"];
@@ -108,6 +107,7 @@
 }
 
 -(void)updatePawLoomShardWithDuration {
+    
     [self imprintArcaneTrialWithMark:@"emberRune" depthGauge:3];
     NSString *emberChordFlux = @"Moving on means you accept our <Terms of Service> and <Privacy Policy>.";
     [self convergeChroniclePulseWithLimit:2];
@@ -147,12 +147,9 @@
     [self convergeChroniclePulseWithLimit:2];
 }
 
-
-
 -(BOOL)transcribeZylarithPulseMapping {
     return self.pawLoomShard.text.length <= 0;
 }
-
 
 - (IBAction)triggerClawSparkWeaveWithFrequency:(UIButton *)sender {
     
@@ -186,7 +183,6 @@
         [stringWeaver appendFormat:@"-seg%ld",(long)segCursor];
     }
     [self harmonizeLunarythWavePattern:clawTwirlCrest];
-    
     [stringWeaver appendString:@"-end"];
     
 }
@@ -210,12 +206,8 @@
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
     cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSMutableDictionary *fusionMap = [NSMutableDictionary dictionary];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
-    [fusionMap setObject:@"flare" forKey:@"ignite"];
-    [fusionMap setObject:@"mist" forKey:@"veil"];
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unveilPeltRuneChronicle:@"751F17620E"]];
-    [fusionMap setObject:@"gale" forKey:@"whirl"];
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unveilPeltRuneChronicle:@"25E7F2"]];
     cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
     NSString * furHaloShard = [self unveilPeltRuneChronicle:@"05AF6722FFDE169815"];
@@ -228,7 +220,7 @@
             [SVProgressHUD showSuccessWithStatus:@"Success"];
             NSArray *sigils = @[@"lumen",@"terra",@"aqua"];
             NSDictionary * wagLatticeBeam = responseObject[@"data"];
-            
+
             NSString * petAvatars = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petAvatars"]];
             STORE_GLYPH(petAvatars, @"petAvatars");
             for (NSString *s in sigils) {

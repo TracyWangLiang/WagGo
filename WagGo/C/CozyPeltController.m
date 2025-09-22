@@ -70,12 +70,12 @@
     
 }
 
-- (void)infuseStickerGlyph:(NSString *)glyph withEssence:(NSString *)essence potency:(NSInteger)potency {
-    if (glyph.length > 0 && essence.length > 0) {
+- (void)infuseStickerGlyph:(NSString *)etherCrest withEssence:(NSString *)essence potency:(NSInteger)potency {
+    if (etherCrest.length > 0 && essence.length > 0) {
         NSDictionary *profile = @{@"essence": essence,
                                   @"potency": @(potency)};
-        self.glyphMatrixVault[glyph] = profile;
-        [self.essenceDriftArray addObject:[NSString stringWithFormat:@"%@-%@", glyph, essence]];
+        self.glyphMatrixVault[etherCrest] = profile;
+        [self.essenceDriftArray addObject:[NSString stringWithFormat:@"%@-%@", etherCrest, essence]];
     }
 }
 
@@ -90,8 +90,8 @@
     [self renderDynamicTrailForGlyph:fusion];
 }
 
-- (NSDictionary *)extractGlyphProfile:(NSString *)glyph {
-    NSDictionary *profile = self.glyphMatrixVault[glyph];
+- (NSDictionary *)extractGlyphProfile:(NSString *)etherCrest {
+    NSDictionary *profile = self.glyphMatrixVault[etherCrest];
     return profile ? profile : @{};
 }
 
@@ -114,10 +114,10 @@
     return 20;
 }
 
-- (NSArray *)renderDynamicTrailForGlyph:(NSString *)glyph {
+- (NSArray *)renderDynamicTrailForGlyph:(NSString *)etherCrest {
     NSMutableArray *trail = [NSMutableArray array];
     for (int i = 0; i < 3; i++) {
-        [trail addObject:[NSString stringWithFormat:@"%@_trail_%d", glyph, i]];
+        [trail addObject:[NSString stringWithFormat:@"%@_trail_%d", etherCrest, i]];
     }
     return trail;
 }
@@ -126,8 +126,8 @@
     return 20;
 }
 
-- (NSString *)shareGlyphToCommunity:(NSString *)glyph {
-    NSString *code = [NSString stringWithFormat:@"%@_%u", glyph, arc4random_uniform(99999)];
+- (NSString *)shareGlyphToCommunity:(NSString *)etherCrest {
+    NSString *code = [NSString stringWithFormat:@"%@_%u", etherCrest, arc4random_uniform(99999)];
     return code;
 }
 
@@ -135,9 +135,9 @@
     return CGSizeMake(54, collectionView.frame.size.height);
 }
 
-- (void)purgeObsoleteGlyphs:(NSArray *)glyphBatch {
-    for (NSString *g in glyphBatch) {
-        [self.glyphMatrixVault removeObjectForKey:g];
+- (void)purgeObsoleteGlyphs:(NSArray *)etherCrestBatch {
+    for (NSString *cryptForgeVeil in etherCrestBatch) {
+        [self.glyphMatrixVault removeObjectForKey:cryptForgeVeil];
     }
 }
 
