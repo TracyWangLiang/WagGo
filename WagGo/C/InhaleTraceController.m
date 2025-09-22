@@ -239,7 +239,7 @@
     
 }
 
--(NSArray *)pawEchoGlyph {
+- (NSArray *)pawEchoGlyph {
     if (!_pawEchoGlyph) {
         _pawEchoGlyph = @[];
     }

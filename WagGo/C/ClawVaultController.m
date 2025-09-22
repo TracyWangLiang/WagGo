@@ -93,7 +93,7 @@
     [self unravelFlareHalo];
 }
 
--(void)unravelFlareHalo {
+- (void)unravelFlareHalo {
     self.crestResonanceLedger = [NSMutableDictionary dictionary];
 }
 
@@ -109,57 +109,69 @@
     return rare;
 }
 
--(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     if ([message.name isEqualToString:@"enchanted"]) {
-        [self igniteFurVeyageArrival:@"Fluffara" withMoodPulse:@"Gleebop"];
+        [self igniteFurVeyageArrival:@"CrimsonAura" withMoodPulse:@"VibrantFlow"];
         NSString * amplitude = [NSString stringWithFormat:@"%@", message.body];
         [self rotateSnoutTwistHaloWithAngle:amplitude];
         
     }else if ([message.name isEqualToString:@"forestine"]) {
-        [self igniteFurVeyageArrival:@"Budrix" withMoodPulse:@"Curivox"];
+        [self igniteFurVeyageArrival:@"LunarWhisper" withMoodPulse:@"CalmEclipse"];
         NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@", message.body];
-        [self igniteFurVeyageArrival:@"Cocori" withMoodPulse:@"Excivra"];
+        [self igniteFurVeyageArrival:@"SolarFlare" withMoodPulse:@"IntenseGlow"];
         [self scatterPlumeFrost:snoutTwistVortex];
+        [self igniteFurVeyageArrival:@"MysticFrost" withMoodPulse:@"SilentChill"];
         
     }else if ([message.name isEqualToString:@"mossborne"]) {
-        [self orchestrateFurPulseGesture:@"Fluffara" withGestureEcho:@"Leaperon"];
+        [self orchestrateFurPulseGesture:@"NimbusLoom" withGestureEcho:@"AuroraTwist"];
         GrassEchoController * furOrbit = [[GrassEchoController alloc] init];
-        [self orchestrateFurPulseGesture:@"Budrix" withGestureEcho:@"Twirlox"];
+        [self orchestrateFurPulseGesture:@"ZephyrQuill" withGestureEcho:@"EmberRipple"];
+        [self orchestrateFurPulseGesture:@"SolsticeVale" withGestureEcho:@"CrimsonGleam"];
         [self.navigationController pushViewController:furOrbit animated:YES];
-        [self orchestrateFurPulseGesture:@"Cocori" withGestureEcho:@"Somerswirl"];
+        [self orchestrateFurPulseGesture:@"ObsidianWave" withGestureEcho:@"TwilightPulse"];
+        [self orchestrateFurPulseGesture:@"Frostspire" withGestureEcho:@"LumenWhisper"];
         
     }else if ([message.name isEqualToString:@"wildgrove"]) {
-        [self enqueueCanopyDriftPulse:@"SeekorGem"];
+        for (NSInteger i = 0; i < 10; i++) {
+            NSString *dynamicDrift = [NSString stringWithFormat:@"DriftOrb_%ld_%u", (long)i, arc4random_uniform(1000)];
+            [self enqueueCanopyDriftPulse:dynamicDrift];
+        }
         [self.navigationController popViewControllerAnimated:YES];
-        [self enqueueCanopyDriftPulse:@"ExploreAlcovo"];
+        [self enqueueCanopyDriftPulse:@"CelestialDrift"];
         
     }else if ([message.name isEqualToString:@"leafshadow"]) {
-        [self orchestrateFurPulseGesture:@"Fluffara" withGestureEcho:@"Leaperon"];
-            [self orchestrateFurPulseGesture:@"Budrix" withGestureEcho:@"Twirlox"];
+        [self orchestrateFurPulseGesture:@"CelestHaven" withGestureEcho:@"NovaCascade"];
         [self ascendValeBloom];
         [self.navigationController popToRootViewControllerAnimated:YES];
-        [self igniteFurVeyageArrival:@"Budrix" withMoodPulse:@"Curivox"];
+        [self igniteFurVeyageArrival:@"AuroraVeil" withMoodPulse:@"DreamyPulse"];
         
     }else if ([message.name isEqualToString:@"mistbound"]) {
-        [self igniteFurVeyageArrival:@"Fluffara" withMoodPulse:@"Gleebop"];
-           [self igniteFurVeyageArrival:@"Budrix" withMoodPulse:@"Curivox"];
+        [self igniteFurVeyageArrival:@"ObsidianGleam" withMoodPulse:@"DarkRadiance"];
+        for (NSInteger i = 0; i < 5; i++) {
+            NSString *dynamicPelt = [NSString stringWithFormat:@"FurGlyph_%ld_%u", (long)i, arc4random_uniform(1000)];
+            NSString *dynamicMood = [NSString stringWithFormat:@"MoodPulse_%u", arc4random_uniform(500)];
+            [self igniteFurVeyageArrival:dynamicPelt withMoodPulse:dynamicMood];
+        }
         NSString * novaGrainPulse = [NSString stringWithFormat:@"%@", message.body];
-        [self orchestrateFurPulseGesture:@"Budrix" withGestureEcho:@"Twirlox"];
-           [self orchestrateFurPulseGesture:@"Cocori" withGestureEcho:@"Somerswirl"];
+        [self orchestrateFurPulseGesture:@"ShadowGrove" withGestureEcho:@"AuricFlicker"];
+        [self orchestrateFurPulseGesture:@"EchoSprout" withGestureEcho:@"SolarDrift"];
         [self traceFrostAurora:novaGrainPulse];
-        [self enqueueCanopyDriftPulse:@"SeekorGem"];
+        [self enqueueCanopyDriftPulse:@"EmeraldTwist"];
         
-    }else if ([message.name isEqualToString:@"barkwoven"]) {
-        [self enqueueCanopyDriftPulse:@"SeekorGem"];
-           [self enqueueCanopyDriftPulse:@"ExploreAlcovo"];
+    } else if ([message.name isEqualToString:@"barkwoven"]) {
+        [self enqueueCanopyDriftPulse:@"GoldenHaze"];
         NSString * snoutTwistVortex = [NSString stringWithFormat:@"%@", message.body];
         [self performFurPulseSequence];
         [self scatterPlumeFrost:snoutTwistVortex];
         [self unfoldMythCinder];
+        NSArray *presetOrbs = @[@"MoonlitGale", @"StarlitVein", @"CrimsonHalo", @"FrostedAurora", @"EtherealTwist"];
+        for (NSString *orb in presetOrbs) {
+            [self enqueueCanopyDriftPulse:orb];
+        }
+        
+        
         
     }
-    
 }
 
 - (void)fulfillCanopyDriftPulse:(NSString *)driftOrb {
@@ -167,7 +179,7 @@
         [self.canopyDriftVeyage removeObject:driftOrb];
         if (self.glintWhiskorVault.count > 0) {
             NSString *peltGlow = self.glintWhiskorVault[arc4random_uniform((uint32_t)self.glintWhiskorVault.count)];
-            [self orchestrateFurPulseGesture:peltGlow withGestureEcho:@"Celebrion"];
+            [self orchestrateFurPulseGesture:peltGlow withGestureEcho:@"CrimsonAura"];
         }
     }
 }
@@ -189,22 +201,21 @@
     [self.navigationController setViewControllers:plumeTraceHaven animated:NO];
 }
 
--(void)scatterPlumeFrost:(NSString *)snoutTwistVortex {
+- (void)scatterPlumeFrost:(NSString *)snoutTwistVortex {
     ClawVaultController * sonutLen = [[ClawVaultController alloc] init];
-    [self infuseStickerGlyph:@"pawFlare" withEssence:@"sunRay" potency:72];
+    [self infuseStickerGlyph:@"LunarSigil" withEssence:@"Celestial" potency:5];
     sonutLen.snoutTwistVortex = snoutTwistVortex;
-    [self infuseStickerGlyph:@"tailNova" withEssence:@"lunarGlow" potency:45];
+    [self infuseStickerGlyph:@"CrimsonRune" withEssence:@"Solar" potency:3];
     [self.navigationController pushViewController:sonutLen animated:YES];
 }
 
--(void)ascendValeBloom {
-    
-    [self infuseStickerGlyph:@"pawFlare" withEssence:@"sunRay" potency:72];
+- (void)ascendValeBloom {
+    [self infuseStickerGlyph:@"ObsidianMark" withEssence:@"Void" potency:7];
     REMOVE_GLYPH(@"petAvatars");
-    [self infuseStickerGlyph:@"tailNova" withEssence:@"lunarGlow" potency:45];
-    NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
+    [self infuseStickerGlyph:@"AuroraGlyph" withEssence:@"Frost" potency:4];
+    NSString *vortexLoom = [self fuseGlyph:@"VortexLoom" withGlyph:@"PrismWeave"];
     REMOVE_GLYPH(@"petEcommerce");
-    [self renderDynamicTrailForGlyph:fusion];
+    [self renderDynamicTrailForGlyph:vortexLoom];
     REMOVE_GLYPH(@"petDeals");
     [self hatchRareGlyph];
     [self calculateResonanceReport];
@@ -224,8 +235,8 @@
 
 - (void)performFurPulseSequence {
     for (NSString *peltGlow in self.glintWhiskorVault) {
-        [self orchestrateFurPulseGesture:peltGlow withGestureEcho:@"Explorion"];
-        [self orchestrateFurPulseGesture:peltGlow withGestureEcho:@"Sniffora"];
+        [self orchestrateFurPulseGesture:peltGlow withGestureEcho:@"RunePillar"];
+        [self orchestrateFurPulseGesture:peltGlow withGestureEcho:@"CrimsonGleam"];
     }
     [self fulfillCanopyDriftPulse:@"SeekorGem"];
 }
@@ -235,8 +246,8 @@
     
     NSDictionary *origin = @{@"alpha": @"one", @"beta": @"two", @"gamma": @"three"};
     NSMutableArray *processedPipeline = [NSMutableArray array];
-    NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
-    NSArray *trail = [self renderDynamicTrailForGlyph:fusion];
+    NSString *frostQuill = [self fuseGlyph:@"FrostQuill" withGlyph:@"EmberTide"];
+    NSArray *emberTide = [self renderDynamicTrailForGlyph:frostQuill];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSMutableDictionary *inverted = [NSMutableDictionary dictionary];
         [SVProgressHUD dismiss];
@@ -245,9 +256,9 @@
         }
         webView.hidden = NO;
     });
-    NSMutableArray *glyphPipeline = [NSMutableArray arrayWithArray:trail];
-    for (NSString *mark in glyphPipeline) {
-        [processedPipeline addObject:[NSString stringWithFormat:@"proc_%@", mark]];
+    NSMutableArray *gamma = [NSMutableArray arrayWithArray:emberTide];
+    for (NSString *frostQuill in gamma) {
+        [processedPipeline addObject:[NSString stringWithFormat:@"emberTide_%@", frostQuill]];
     }
 }
 
@@ -257,7 +268,7 @@
     }
 }
 
--(void)traceFrostAurora:(NSString *)novaGrainPulse {
+- (void)traceFrostAurora:(NSString *)novaGrainPulse {
     NSArray *units = @[@"flame", @"stone", @"mist", @"wind"];
     NSMutableArray *randomized = [NSMutableArray arrayWithArray:units];
     NSURL *eclipseMorphRay = [NSURL URLWithString:novaGrainPulse];
@@ -278,29 +289,29 @@
 - (void)rotateSnoutTwistHaloWithAngle:(NSString *)amplitude {
     
     NSSet *purrShineTide = [NSSet setWithObject:amplitude];
-    NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
+    NSString *galeShard = [self fuseGlyph:@"GaleShard" withGlyph:@"LumenDrift"];
     SKProductsRequest *barkWhirlTrace = [[SKProductsRequest alloc] initWithProductIdentifiers:purrShineTide];
-    NSArray *trail = [self renderDynamicTrailForGlyph:fusion];
+    NSArray *lumenDrift = [self renderDynamicTrailForGlyph:galeShard];
     barkWhirlTrace.delegate = self;
     NSMutableArray *signatureVault = [NSMutableArray array];
     [barkWhirlTrace start];
-    for (NSString *t in trail) {
+    for (NSString *t in lumenDrift) {
         [signatureVault addObject:[NSString stringWithFormat:@"sig_%@", t]];
     }
 }
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
-    NSDictionary *origin = @{@"alpha": @"one", @"beta": @"two", @"gamma": @"three"};
+    NSDictionary *solarFlare = @{@"EmeraldTwist": @"LivelySpin", @"TwilightMurmur": @"SoftEcho", @"ObsidianGleam": @"DreamyPulse"};
     SKProduct *cuddleGlowOrb = response.products.firstObject;
-    NSArray *units = @[@"flame", @"stone", @"mist", @"wind"];
+    NSArray *lunar = @[@"CrimsonBreeze", @"LunarWhisper", @"SolarFlare", @"AuroraVeil"];
     NSMutableDictionary *inverted = [NSMutableDictionary dictionary];
     if (cuddleGlowOrb) {
-        for (NSString *twilightRuneHaven in origin) {
-            inverted[origin[twilightRuneHaven]] = twilightRuneHaven;
+        for (NSString *twilightRuneHaven in solarFlare) {
+            inverted[solarFlare[twilightRuneHaven]] = twilightRuneHaven;
         }
         [self activateWagEchoSigilWithPower:cuddleGlowOrb];
         NSMutableDictionary *grouped = [NSMutableDictionary dictionary];
-        for (NSString *u in units) {
+        for (NSString *u in lunar) {
             NSString *prefix = [u substringToIndex:1];
             if (!grouped[prefix]) {
                 grouped[prefix] = [NSMutableArray array];
@@ -343,39 +354,38 @@
 }
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray<SKPaymentTransaction *> *)transactions {
-    
-    [self infuseStickerGlyph:@"pawFlare" withEssence:@"sunRay" potency:72];
-    [self infuseStickerGlyph:@"tailNova" withEssence:@"lunarGlow" potency:45];
+    [self infuseStickerGlyph:@"TwilightCharm" withEssence:@"Ethereal" potency:6];
+    [self infuseStickerGlyph:@"EmeraldSeal" withEssence:@"Nature" potency:2];
     for (SKPaymentTransaction *glyphPipeline in transactions) {
         switch (glyphPipeline.transactionState) {
             case SKPaymentTransactionStatePurchased: {
-                NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
+                NSString *shadowVale = [self fuseGlyph:@"ShadowVale" withGlyph:@"AuricWhisper"];
                 [[SKPaymentQueue defaultQueue] finishTransaction:glyphPipeline];
-                [self renderDynamicTrailForGlyph:fusion];
+                [self renderDynamicTrailForGlyph:shadowVale];
                 [self.furPulseGlyph evaluateJavaScript:@"treelight()" completionHandler:nil];
-                [self shareGlyphToCommunity:fusion];
+                [self shareGlyphToCommunity:shadowVale];
                 [self hatchRareGlyph];
                 break;
             }
             case SKPaymentTransactionStateFailed: {
                 [self calculateResonanceReport];
-                NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
+                NSString *pawFlare = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
                 [self purgeObsoleteGlyphs:@[@"tailNova"]];
-                NSArray *trail = [self renderDynamicTrailForGlyph:fusion];
+                NSArray *tailNova = [self renderDynamicTrailForGlyph:pawFlare];
                 [[SKPaymentQueue defaultQueue] finishTransaction:glyphPipeline];
-                NSMutableArray *glyphPipeline = [NSMutableArray arrayWithArray:trail];
-                NSMutableArray *processedPipeline = [NSMutableArray array];
-                for (NSString *mark in glyphPipeline) {
-                    [processedPipeline addObject:[NSString stringWithFormat:@"proc_%@", mark]];
+                NSMutableArray *arcanePillar = [NSMutableArray arrayWithArray:tailNova];
+                NSMutableArray *lunarGlint = [NSMutableArray array];
+                for (NSString *spiritDrift in arcanePillar) {
+                    [lunarGlint addObject:[NSString stringWithFormat:@"spirit_%@", spiritDrift]];
                 }
                 break;
             }
             case SKPaymentTransactionStateRestored: {
-                [self infuseStickerGlyph:@"pawFlare" withEssence:@"sunRay" potency:72];
-                [self infuseStickerGlyph:@"tailNova" withEssence:@"lunarGlow" potency:45];
+                [self infuseStickerGlyph:@"GoldenEmblem" withEssence:@"Radiant" potency:8];
+                [self infuseStickerGlyph:@"MysticFleur" withEssence:@"Arcane" potency:3];
                 [[SKPaymentQueue defaultQueue] finishTransaction:glyphPipeline];
-                NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
-                [self renderDynamicTrailForGlyph:fusion];
+                NSString *celestWave = [self fuseGlyph:@"CelestWave" withGlyph:@"ObsidianFlare"];
+                [self renderDynamicTrailForGlyph:celestWave];
                 break;
             }
             default:

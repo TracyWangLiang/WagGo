@@ -33,23 +33,23 @@
     
     self.pawEchoGlyph = @[];
     
-    [self infuseStickerGlyph:@"pawFlare" withEssence:@"sunRay" potency:72];
-    [self infuseStickerGlyph:@"tailNova" withEssence:@"lunarGlow" potency:45];
+    [self infuseStickerGlyph:@"CelestialRune" withEssence:@"Starlight" potency:5];
+    [self infuseStickerGlyph:@"ShadowMark" withEssence:@"Darkness" potency:4];
     [self.purrShineTide registerNib:[UINib nibWithNibName:@"ClawVaultSwishLightCell" bundle:nil] forCellWithReuseIdentifier:@"ClawVaultSwishLightCell"];
     [self extractGlyphProfile:@"pawFlare"];
     self.purrShineTide.delegate = self;
-    NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
-    NSArray *trail = [self renderDynamicTrailForGlyph:fusion];
+    NSString *mistHaven = [self fuseGlyph:@"MistHaven" withGlyph:@"SolarCascade"];
+    NSArray *solarCascade = [self renderDynamicTrailForGlyph:mistHaven];
     self.purrShineTide.dataSource = self;
-    [self shareGlyphToCommunity:fusion];
+    [self shareGlyphToCommunity:mistHaven];
     [self hatchRareGlyph];
     UICollectionViewFlowLayout * prismFlareDust = [[UICollectionViewFlowLayout alloc] init];
     [self calculateResonanceReport];
     [self purgeObsoleteGlyphs:@[@"tailNova"]];
     prismFlareDust.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     NSMutableArray *signatureVault = [NSMutableArray array];
-    for (NSString *t in trail) {
-        [signatureVault addObject:[NSString stringWithFormat:@"sig_%@", t]];
+    for (NSString *t in solarCascade) {
+        [signatureVault addObject:[NSString stringWithFormat:@"solarCascade_%@", t]];
     }
     self.purrShineTide.collectionViewLayout = prismFlareDust;
     NSMutableDictionary *fusionStats = [NSMutableDictionary dictionary];
@@ -82,12 +82,16 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self renderAstraWeave];
-    [self infuseStickerGlyph:@"pawFlare" withEssence:@"sunRay" potency:72];
-    [self infuseStickerGlyph:@"tailNova" withEssence:@"lunarGlow" potency:45];
+    for (NSInteger i = 0; i < 10; i++) {
+        NSString *dynamicGlyph = [NSString stringWithFormat:@"GlyphOrb_%ld_%u", (long)i, arc4random_uniform(1000)];
+        NSString *dynamicEssence = [NSString stringWithFormat:@"Essence_%u", arc4random_uniform(1000)];
+        NSInteger potency = arc4random_uniform(10) + 1;
+        [self infuseStickerGlyph:dynamicGlyph withEssence:dynamicEssence potency:potency];
+    }
     [self traceFrostAurora];
-    NSString *fusion = [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
-    [self fuseGlyph:@"pawFlare" withGlyph:@"tailNova"];
-    [self renderDynamicTrailForGlyph:fusion];
+    NSString *runeSprout = [self fuseGlyph:@"RuneSprout" withGlyph:@"TwilightGleam"];
+    [self fuseGlyph:@"EchoGrove" withGlyph:@"NovaFrost"];
+    [self renderDynamicTrailForGlyph:runeSprout];
 }
 
 - (NSDictionary *)extractGlyphProfile:(NSString *)etherCrest {
