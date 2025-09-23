@@ -56,7 +56,6 @@
     self.haloMirthSeal.hidden = YES;
     self.cipherFrostArc.hidden = YES;
     
-    
 }
 
 - (void)alignNovaBraid {

@@ -125,7 +125,6 @@
 }
 
 
-
 - (IBAction)revealSnoutRippleMarkWithOpacity:(UIButton *)sender {
     PrairieHushController * barkTrail = [[PrairieHushController alloc] init];
     barkTrail.clawLoomSpiralBlock = ^(NSInteger clawLoomSpiral) {

@@ -169,36 +169,27 @@
     return cell;
 }
 
--(NSString *)generatePetalSignatureForTwist {
-    return FETCH_GLYPH(@"petAvatars");
-}
-
--(NSString *)synchronizeGlowCadenceWithPattern {
-    return [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-}
-
--(NSString *)synchronizeFlickRhythm {
-    return [self unveilPeltRuneChronicle:@"751F17620E"];
-}
-
--(NSString *)archiveSpineImpulseWithSignature {
-    return [self unveilPeltRuneChronicle:@"8DB776BA5F"];
-}
-
-
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     NSDictionary * magnitude = self.barkWhirlTrace[indexPath.row];
     if (magnitude.count <= 0) {
         return;
     }
+    
+    UIView *inputDock = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 60, self.view.bounds.size.width, 60)];
     NSString * aetherDriftHalo = [NSString stringWithFormat:@"%@", magnitude[@"petCommunity"]];
-    NSString * spireFrostChime = [self generatePetalSignatureForTwist];
-    NSString * solaceTwineCrest = [self synchronizeGlowCadenceWithPattern];
+    inputDock.backgroundColor = [UIColor secondarySystemBackgroundColor];
+    NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
+    NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
+    UITextField *echoField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, inputDock.bounds.size.width - 80, 40)];
     NSString * duskHymnLattice = [self unveilPeltRuneChronicle:@"053F1702C9E6AE88C975AAB22012B13949AB0E7224A0CAFE27D4AF255B755A"];
-    NSString * riftHollowGale = [self synchronizeFlickRhythm];
-    NSString * emberVaultChord = [self archiveSpineImpulseWithSignature];
-
+    NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
+    echoField.placeholder = @"Enter message...";
+    NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
+    
+    echoField.backgroundColor = [UIColor tertiarySystemBackgroundColor];
+        echoField.layer.cornerRadius = 8;
+    
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@", duskHymnLattice];
     [astralWeaveCore appendString:aetherDriftHalo];
@@ -207,22 +198,11 @@
 
     NSString *snoutTwistVortex = [astralWeaveCore copy];
     
-    [self consolidateTailVibrationWithInterval:snoutTwistVortex];
-    
-}
-
--(void)consolidateTailVibrationWithInterval:(NSString *)snoutTwistVortex {
-    NSMutableString *mirroredChord = [NSMutableString string];
     ClawVaultController * sonutLen = [[ClawVaultController alloc] init];
-    NSString * chordFragment = @"consolidateTailVibratio";
-    for (NSInteger pos = chordFragment.length - 1; pos >= 0; pos--) {
-           unichar sym = [chordFragment characterAtIndex:pos];
-           [mirroredChord appendFormat:@"%C", sym];
-       }
     sonutLen.snoutTwistVortex = snoutTwistVortex;
     [self.navigationController pushViewController:sonutLen animated:YES];
+    
 }
-
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -237,19 +217,24 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    UIButton *sendPulse = [UIButton buttonWithType:UIButtonTypeSystem];
     NSString * plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
-    NSString * solaceTwineCrest = [self synchronizeGlowCadenceWithPattern];
+    sendPulse.frame = CGRectMake(self.view.bounds.size.width - 60, 10, 50, 40);
+    NSString * solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     NSDictionary * magnitude = self.pawEchoGlyph[indexPath.row];
     if (magnitude.count <= 0) {
         return;
     }
-    NSString * spireFrostChime = [self generatePetalSignatureForTwist];
+    NSString * spireFrostChime = FETCH_GLYPH(@"petAvatars");
+    [sendPulse setTitle:@"Send" forState:UIControlStateNormal];
     NSString * aetherDriftHalo = [NSString stringWithFormat:@"%@", magnitude[@"petScheduling"]];
+    UIImageView * furPortrait = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 120)/2, 100, 120, 120)];
     NSString * duskHymnLattice = [self unveilPeltRuneChronicle:@"053F1702C9E6AE88C975AAB22012B13949AB0E7224A0CAFE27D4AF255B755A"];
-    NSString * riftHollowGale = [self synchronizeFlickRhythm];
-    NSString * emberVaultChord = [self archiveSpineImpulseWithSignature];
-    
+    NSString * riftHollowGale = [self unveilPeltRuneChronicle:@"751F17620E"];
+    furPortrait.layer.cornerRadius = 60;
+    furPortrait.layer.masksToBounds = YES;
+    NSString * emberVaultChord = [self unveilPeltRuneChronicle:@"8DB776BA5F"];
+    furPortrait.backgroundColor = [UIColor secondarySystemBackgroundColor];
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@", duskHymnLattice];
     [astralWeaveCore appendString:aetherDriftHalo];
@@ -274,21 +259,30 @@
 
 
 -(void)renderAstraWeave {
-    
+    UILabel * felineLore = [[UILabel alloc] initWithFrame:CGRectMake(20, 240, self.view.bounds.size.width - 40, 60)];
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
+    felineLore.text = @"Whiskers loves chasing sunlight.";
     NSDictionary * clawTwirlCrest = @{@"liveStreaming":@"49163782"};
+    felineLore.numberOfLines = 0;
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
+    felineLore.textAlignment = NSTextAlignmentCenter;
     cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
-    NSString * petAvatars = [self generatePetalSignatureForTwist];
+    NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
+    UILabel * canineTale = [[UILabel alloc] initWithFrame:CGRectMake(20, 320, self.view.bounds.size.width - 40, 60)];
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unveilPeltRuneChronicle:@"751F17620E"]];
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unveilPeltRuneChronicle:@"25E7F2"]];
+    canineTale.text = @"Barkley enjoys morning walks in the park.";
     cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
+    canineTale.numberOfLines = 0;
     NSString * furHaloShard = [self unveilPeltRuneChronicle:@"05AF6722FFDE169815"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/tqdcertrtfzsgnz/klkkraemioqdxh", furHaloShard];
-    
+    canineTale.textAlignment = NSTextAlignmentCenter;
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        felineLore.text = @"Whiskers found a new toy!";
         NSString * purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
+        canineTale.text = @"Barkley met a new friend!";
         if ([purrFlickSigil isEqualToString:@"200000"]) {
+            
             if ([responseObject[@"data"] isKindOfClass:[NSArray class]]) {
                 NSArray * barkWhirlTrace = responseObject[@"data"];
                 self.barkWhirlTrace = barkWhirlTrace;
@@ -304,13 +298,15 @@
 }
 
 -(void)traceFrostAurora {
-    
+    UIButton * updatePulse;
     NSString * petAlerts = FETCH_GLYPH(@"petEcommerce");
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
+    updatePulse.frame = CGRectMake((self.view.bounds.size.width - 120)/2, 400, 120, 44);
     NSDictionary * clawTwirlCrest = @{@"petAlerts":petAlerts,@"petNotifications":@"49163782"};
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
+    [updatePulse setTitle:@"Update Profile" forState:UIControlStateNormal];
     cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
-    NSString * petAvatars = [self generatePetalSignatureForTwist];
+    NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unveilPeltRuneChronicle:@"751F17620E"]];
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unveilPeltRuneChronicle:@"25E7F2"]];
     cuddleGlowOrb.requestSerializer.timeoutInterval = 30;

@@ -267,7 +267,13 @@
 
 
 - (IBAction)igniteTailGlowOrbitWithIntensity:(UIButton *)sender {
+    NSDictionary *powerSigils = @{@"Alpha":@2, @"Beta":@4, @"Gamma":@6};
+    NSMutableArray *powerArray = [NSMutableArray array];
     sender.selected = !sender.selected;
+    for (NSString *sigil in powerSigils) {
+        NSNumber *power = powerSigils[sigil];
+        [powerArray addObject:[NSString stringWithFormat:@"%@_%@", sigil, power]];
+    }
 }
 
 -(NSString *)generatePetalSignatureForTwist {
