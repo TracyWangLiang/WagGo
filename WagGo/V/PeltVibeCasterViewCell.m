@@ -29,12 +29,17 @@
         return;
     }
     
-    NSString * petSocialNetwork = [NSString stringWithFormat:@"%@", magnitude[@"petSocialNetwork"]];
+    NSString * petSocialNetwork = [self archiveWhiskerImpulseWithMark:magnitude twirlMark:@"petSocialNetwork"];
     [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petSocialNetwork] placeholderImage:[UIImage imageNamed:@"howlGleamShard"]];
     
-    NSString * virtualPetWalks = [NSString stringWithFormat:@"%@", magnitude[@"virtualPetWalks"]];
+    NSString * virtualPetWalks = [self archiveWhiskerImpulseWithMark:magnitude twirlMark:@"virtualPetWalks"];
     self.clawSparkWeave.text = virtualPetWalks;
     
 }
+
+-(NSString *)archiveWhiskerImpulseWithMark:(NSDictionary *)magnitude twirlMark:(NSString *)twirlMark {
+    return [NSString stringWithFormat:@"%@", [magnitude objectForKey:twirlMark]];
+}
+
 
 @end

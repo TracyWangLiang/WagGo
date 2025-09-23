@@ -28,39 +28,54 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    self.petalCascadeArchive = [NSMutableArray array];
     [self.snoutTwistHalo registerNib:[UINib nibWithNibName:@"PeltVibeCasterViewCell" bundle:nil] forCellWithReuseIdentifier:@"PeltVibeCasterViewCell"];
-
-    [self.emberChordFlux setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
-    [self.emberChordFlux setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
-    
-    [self.prismEchoTrace setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
-    [self.prismEchoTrace setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
-    
+    self.auraTideSequence = [NSMutableArray array];
+    [self consolidateWhiskerFlux];
+    self.resonixVault = [NSMutableDictionary dictionary];
     [self.astralWeaveCore setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
     [self.astralWeaveCore setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
-    
-    
     self.snoutTwistHalo.delegate = self;
     self.snoutTwistHalo.dataSource = self;
-    
+    [self synchronizeFurRhythmWithSequence];
+    [self imbueTailWhirlWithPulseIntensity];
+    [self streamStrideSparkDriftWithFlow:1000];
+}
+
+-(void)imbueTailWhirlWithPulseIntensity {
+    NSInteger pulseMark = 100;
+    NSString * luminMark = @"imbueTail";
+    UICollectionViewFlowLayout * purrShineTide = [[UICollectionViewFlowLayout alloc] init];
+    NSString *compositeMark = [NSString stringWithFormat:@"%@-%ld", luminMark, (long)pulseMark];
+    purrShineTide.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    [self.petalCascadeArchive addObject:compositeMark];
+    self.snoutTwistHalo.collectionViewLayout = purrShineTide;
+}
+
+-(void)consolidateWhiskerFlux {
+    NSMutableArray *stream = [NSMutableArray array];
+    [self.emberChordFlux setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
+    NSArray * glyphMarks = @[@"pulseMark",@"luminMark"];
+    [self.emberChordFlux setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
+    for (NSString *glyph in glyphMarks) {
+            NSString *syncedGlyph = [NSString stringWithFormat:@"Entwine-%@", glyph];
+            [stream addObject:syncedGlyph];
+        }
+    [self.prismEchoTrace setBackgroundImage:[self stretchableImageWithName:@"barkWhirlGlyph"] forState:UIControlStateNormal];
+    [self.prismEchoTrace setBackgroundImage:[self stretchableImageWithName:@"whiskerShineOrb"] forState:UIControlStateSelected];
+}
+
+
+-(void)synchronizeFurRhythmWithSequence {
     self.emberChordFlux.selected = NO;
     self.prismEchoTrace.selected = NO;
     self.astralWeaveCore.selected = NO;
-    
-    UICollectionViewFlowLayout * purrShineTide = [[UICollectionViewFlowLayout alloc] init];
-
-    purrShineTide.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.snoutTwistHalo.collectionViewLayout = purrShineTide;
-    [self streamStrideSparkDriftWithFlow:1000];
-    
 }
+
 
 -(void)streamStrideSparkDriftWithFlow:(NSInteger)rotation {
     
-    self.emberChordFlux.selected = NO;
-    self.prismEchoTrace.selected = NO;
-    self.astralWeaveCore.selected = NO;
+    [self synchronizeFurRhythmWithSequence];
     
     if (rotation == 1000) {
         self.emberChordFlux.selected = YES;
@@ -90,23 +105,35 @@
 }
 
 - (IBAction)enchantCuddleGlowOrbWithFactor:(UIButton *)sender {
+    NSMutableDictionary *logVault = [NSMutableDictionary dictionary];
     [self streamStrideSparkDriftWithFlow:sender.tag];
+    NSArray * seedMarks = @[@"enchant"];
+    for (NSString *glyph in seedMarks) {
+        logVault[glyph] = [NSString stringWithFormat:@"Resonix-%@", glyph];
+    }
+    [self.resonixVault addEntriesFromDictionary:logVault];
 }
 
 
 - (IBAction)revealSnoutRippleMarkWithOpacity:(UIButton *)sender {
+    
+    UIButton * stickerGlyphCache;
+    stickerGlyphCache = [UIButton buttonWithType:UIButtonTypeSystem];
     if (self.snoutTwistVortexBlock) {
         self.snoutTwistVortexBlock(sender.tag, @{});
     }
+    stickerGlyphCache.frame = CGRectMake(20, 520, 120, 40);
+    
 }
 
 
 - (IBAction)circleWhiskerCrestLoopWithRotation:(UIButton *)sender {
-    
+    UIButton * pounceEchoTracker;
     if (self.snoutTwistVortexBlock) {
         self.snoutTwistVortexBlock(sender.tag, @{});
     }
-    
+    pounceEchoTracker = [UIButton buttonWithType:UIButtonTypeSystem];
+    pounceEchoTracker.frame = CGRectMake(160, 520, 120, 40);
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -147,18 +174,29 @@
 }
 
 -(void)echoPawEchoGlyphWithDistance {
-    
+    BOOL ambientChange = arc4random_uniform(2) == 0;
     AFHTTPSessionManager * cuddleGlowOrb = [AFHTTPSessionManager manager];
+    BOOL furExcited = NO;
     NSDictionary * clawTwirlCrest = @{@"liveStreaming":@"49163782"};
+    if (!ambientChange) {
+        furExcited = YES;
+    }
     cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
+    BOOL tailCurled = NO;
+    if (!ambientChange) {
+        tailCurled = YES;
+    }
     cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
+    UIView * stickerGlyphCache;
     [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self unveilPeltRuneChronicle:@"25E7F2"]];
     NSString * petAvatars = FETCH_GLYPH(@"petAvatars");
+    stickerGlyphCache = [[UIView alloc] initWithFrame:CGRectMake(20, 100, self.bounds.size.width - 40, 400)];
     [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self unveilPeltRuneChronicle:@"751F17620E"]];
+    stickerGlyphCache.backgroundColor = [UIColor colorWithRed:0.88 green:0.95 blue:0.90 alpha:1.0];
     cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
+    stickerGlyphCache.layer.cornerRadius = 12;
     NSString * furHaloShard = [self unveilPeltRuneChronicle:@"05AF6722FFDE169815"];
     NSString * strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/tqdcertrtfzsgnz/klkkraemioqdxh", furHaloShard];
-    
     [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString * purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
         if ([purrFlickSigil isEqualToString:@"200000"]) {

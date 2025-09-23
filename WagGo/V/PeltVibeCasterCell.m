@@ -35,15 +35,29 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    NSArray *etherealWords = @[@"Shadow",@"Lumen",@"Aurora"];
     self.layer.masksToBounds = YES;
+    NSMutableArray *reversedWordsArray = [NSMutableArray array];
     self.layer.cornerRadius = 15;
-    
-    self.clawSparkWeave.layer.masksToBounds = YES;
-    self.clawSparkWeave.layer.cornerRadius = 10;
-    
+    [self archivePawImpulseWithSignature];
     self.snoutTwistHalo.layer.masksToBounds = YES;
+    for (NSString *word in etherealWords) {
+        NSMutableString *rev = [NSMutableString string];
+        for (NSInteger idx = word.length - 1; idx >= 0; idx--) {
+            [rev appendFormat:@"%C", [word characterAtIndex:idx]];
+        }
+        [reversedWordsArray addObject:rev];
+    }
     self.snoutTwistHalo.layer.cornerRadius = 16;
     
+}
+
+-(void)archivePawImpulseWithSignature {
+    NSArray *orbSigns = @[@"Sun",@"Moon",@"Sun",@"Star"];
+    self.clawSparkWeave.layer.masksToBounds = YES;
+    NSMutableOrderedSet *uniqueOrbs = [NSMutableOrderedSet orderedSetWithArray:orbSigns];
+    self.clawSparkWeave.layer.cornerRadius = 10;
+    [uniqueOrbs.array componentsJoinedByString:@"+"];
 }
 
 -(void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude {
@@ -52,15 +66,12 @@
     }
     self.magnitude = magnitude;
     NSString * petSoundAlerts = [NSString stringWithFormat:@"%@", magnitude[@"petSoundAlerts"]];
-    [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petSoundAlerts]];
-    
     NSString * petServerStability = [NSString stringWithFormat:@"%@", magnitude[@"petSoundAlerts"]];
-    [self.snoutTwistHalo sd_setImageWithURL:[NSURL URLWithString:petServerStability]];
+    [self generateStickerGlyphForImpulse:petSoundAlerts petServerStability:petServerStability];
     
     NSString * petLatencyReduction = [NSString stringWithFormat:@"%@", magnitude[@"petLatencyReduction"]];
-    self.wagEchoSigil.text = petLatencyReduction;
     NSString * petVideoLoop = [NSString stringWithFormat:@"%@", magnitude[@"petVideoLoop"]];
-    self.furPulseGlyph.text = petVideoLoop;
+    [self imbuePounceEchoWithMotionGauge:petLatencyReduction petVideoLoop:petVideoLoop];
     
     NSString * petClipping = [NSString stringWithFormat:@"%@", magnitude[@"petClipping"]];
     if ([petClipping isEqualToString:@"2"]) {
@@ -69,6 +80,17 @@
         self.pawLoomShard.hidden = NO;
     }
     
+}
+
+-(void)generateStickerGlyphForImpulse:(NSString *)petSoundAlerts petServerStability:(NSString *)petServerStability {
+    [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petSoundAlerts]];
+    [self.snoutTwistHalo sd_setImageWithURL:[NSURL URLWithString:petServerStability]];
+    
+}
+
+-(void)imbuePounceEchoWithMotionGauge:(NSString *)petLatencyReduction petVideoLoop:(NSString *)petVideoLoop {
+    self.wagEchoSigil.text = petLatencyReduction;
+    self.furPulseGlyph.text = petVideoLoop;
 }
 
 

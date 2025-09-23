@@ -38,18 +38,25 @@
     }
     
     NSString * petNetworkingEvents = [NSString stringWithFormat:@"%@", magnitude[@"petNetworkingEvents"]];
-    [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petNetworkingEvents]];
-    
     NSString * petOnboarding = [NSString stringWithFormat:@"%@", magnitude[@"petOnboarding"]];
-    self.pawLoomShard.text = petOnboarding;
+    [self synchronizeMuzzleCadenceWithPattern:petNetworkingEvents petOnboarding:petOnboarding];
     
     NSString * petTipsAndTricks = [NSString stringWithFormat:@"%@", magnitude[@"petTipsAndTricks"]];
-    self.clawSparkWeave.text = petTipsAndTricks;
-    
     NSString * petVideoTutorials = [NSString stringWithFormat:@"%@", magnitude[@"petVideoTutorials"]];
-    self.furPulseGlyph.text = petVideoTutorials;
-    
+    [self consolidateLeapTrailWithPhase:petTipsAndTricks petVideoTutorials:petVideoTutorials];
     
 }
+
+- (void)consolidateLeapTrailWithPhase:(NSString *)petTipsAndTricks petVideoTutorials:(NSString *)petVideoTutorials {
+    self.clawSparkWeave.text = petTipsAndTricks;
+    self.furPulseGlyph.text = petVideoTutorials;
+}
+
+-(void)synchronizeMuzzleCadenceWithPattern:(NSString *)petNetworkingEvents petOnboarding:(NSString *)petOnboarding {
+    [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petNetworkingEvents]];
+    self.pawLoomShard.text = petOnboarding;
+}
+
+
 
 @end

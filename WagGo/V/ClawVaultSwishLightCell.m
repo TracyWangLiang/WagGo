@@ -21,10 +21,21 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.tailGlowOrbit.layer.masksToBounds = YES;
+    [self archiveWhiskerImpulseWithMark];
     self.tailGlowOrbit.layer.cornerRadius = 54 * 0.5;
-    self.tailGlowOrbit.layer.borderColor = [UIColor colorWithRed:151/255.0 green:151/255.0 blue:151/255.0 alpha:1].CGColor;
-    self.tailGlowOrbit.layer.borderWidth = 1.0;
     
+}
+
+-(void)archiveWhiskerImpulseWithMark {
+    NSMutableArray *leapTrailChronicle = [NSMutableArray array];
+    self.tailGlowOrbit.layer.borderColor = [UIColor colorWithRed:151/255.0 green:151/255.0 blue:151/255.0 alpha:1].CGColor;
+    NSArray *snoutImpulseRegistry = @[@"archive",@"Whisker",@"Impulse"];
+    self.tailGlowOrbit.layer.borderWidth = 1.0;
+    for (NSString *muzzleCadenceMap in snoutImpulseRegistry) {
+        if (muzzleCadenceMap.length >= 3) {
+            [leapTrailChronicle addObject:muzzleCadenceMap];
+        }
+    }
 }
 
 -(void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude {

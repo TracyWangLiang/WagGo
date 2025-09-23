@@ -29,14 +29,32 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.tailGlowOrbit.layer.masksToBounds = YES;
-    self.tailGlowOrbit.layer.cornerRadius = 70 * 0.5;
-    self.tailGlowOrbit.layer.borderColor = [UIColor colorNamed:@"#FF9B3B"].CGColor;
-    self.tailGlowOrbit.layer.borderWidth = 1.0;
     
+    [self generateWhiskerSignatureForTwist];
     self.wagEchoSigil.layer.masksToBounds = YES;
     self.wagEchoSigil.layer.cornerRadius = 10;
     
+}
+
+-(void)generateWhiskerSignatureForTwist {
+    self.pulseGrooveArchive = [NSMutableDictionary dictionary];
+    self.tailGlowOrbit.layer.masksToBounds = YES;
+    self.driftSignalGauge = 0;
+    self.tailGlowOrbit.layer.cornerRadius = 70 * 0.5;
+    self.tempoPhaseChronicle = [NSMutableArray array];
+    self.tailGlowOrbit.layer.borderColor = [UIColor colorNamed:@"#FF9B3B"].CGColor;
+    [self infuseCadencePattern:@"drumHit" intensityScale:5];
+    self.tailGlowOrbit.layer.borderWidth = 1.0;
+    [self renderHarmonicPulseWithLayer:3];
+}
+
+- (void)infuseCadencePattern:(NSString *)cadenceMark intensityScale:(NSInteger)scaleVal {
+    if (cadenceMark.length > 0) {
+        NSString *fusionMark = [NSString stringWithFormat:@"%@_%ld", cadenceMark, (long)scaleVal];
+        [self.pulseGrooveArchive setObject:fusionMark forKey:[NSString stringWithFormat:@"trace-%lu",(unsigned long)self.pulseGrooveArchive.count+1]];
+        [self.tempoPhaseChronicle addObject:fusionMark];
+        self.driftSignalGauge += scaleVal % 3;
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -95,6 +113,14 @@
     aquaSpiralTone.dateFormat = @"MMM dd, yyyy";
     return [aquaSpiralTone stringFromDate:flareRuneNest];
 }
+
+- (NSString *)renderHarmonicPulseWithLayer:(NSInteger)layerTune {
+    if (self.tempoPhaseChronicle.count == 0) return @"<empty>";
+    NSInteger selector = (layerTune + self.driftSignalGauge) % self.tempoPhaseChronicle.count;
+    NSString *selected = [self.tempoPhaseChronicle objectAtIndex:selector];
+    return [NSString stringWithFormat:@"HarmonicPulse[%@]", selected];
+}
+
 
 
 @end
