@@ -123,6 +123,18 @@
                         <constraint firstAttribute="height" constant="34" id="YB0-av-Xyx"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huv-fc-HBq">
+                    <rect key="frame" x="16" y="133" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="4eA-T4-kLj"/>
+                        <constraint firstAttribute="height" constant="24" id="Qhu-fT-NUW"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="clawDriftRune"/>
+                    <connections>
+                        <action selector="exploreVirtualPetEnvironment:" destination="-1" eventType="touchUpInside" id="d4L-5u-nIN"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" red="0.0039215686274509803" green="0.0" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,10 +155,12 @@
                 <constraint firstItem="Dlb-8Q-Wg6" firstAttribute="top" secondItem="3CE-2I-kg9" secondAttribute="top" id="TS7-K7-mRG"/>
                 <constraint firstItem="JOZ-qh-1ZT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="12" id="TpE-LK-Ipv"/>
                 <constraint firstItem="Sfd-4Y-mWg" firstAttribute="top" secondItem="WV2-5j-QNA" secondAttribute="bottom" constant="10" id="VBQ-EX-IF3"/>
+                <constraint firstItem="huv-fc-HBq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="e58-kr-xTt"/>
                 <constraint firstItem="JOZ-qh-1ZT" firstAttribute="top" secondItem="Sfd-4Y-mWg" secondAttribute="bottom" constant="64" id="gwg-k3-BLn"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Sfd-4Y-mWg" secondAttribute="trailing" constant="12" id="iFL-xb-vkM"/>
                 <constraint firstItem="WV2-5j-QNA" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="22" id="ijF-rC-Ice"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="3CE-2I-kg9" secondAttribute="trailing" constant="40" id="lGW-Fr-Oev"/>
+                <constraint firstItem="huv-fc-HBq" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="oj1-wk-LU3"/>
                 <constraint firstItem="kxx-4p-YJe" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="tqu-AA-Bts"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="JOZ-qh-1ZT" secondAttribute="trailing" constant="12" id="wx9-tI-bx3"/>
                 <constraint firstItem="Rpz-Kh-dDb" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="22" id="yxF-C3-8an"/>
@@ -156,6 +170,7 @@
     </objects>
     <resources>
         <image name="barkRippleCrown" width="129.33332824707031" height="26"/>
+        <image name="clawDriftRune" width="45" height="44"/>
         <image name="pawRippleGlow" width="375" height="387"/>
         <image name="snoutSparkTide" width="22" height="22"/>
         <image name="tailRuneFlare" width="351" height="48"/>

@@ -18,7 +18,6 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-
 - (IBAction)triggerClawSparkWeaveWithFrequency:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -27,7 +26,6 @@
     }
     
 }
-
 
 - (IBAction)igniteTailGlowOrbitWithIntensity:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

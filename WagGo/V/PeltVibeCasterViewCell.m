@@ -24,20 +24,20 @@
     self.tailGlowOrbit.layer.cornerRadius = 54 * 0.5;
 }
 
--(void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude {
+- (void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude {
     if (magnitude.count <= 0) {
         return;
     }
     
-    NSString * petSocialNetwork = [self archiveWhiskerImpulseWithMark:magnitude twirlMark:@"petSocialNetwork"];
+    NSString *petSocialNetwork = [self archiveWhiskerImpulseWithMark:magnitude twirlMark:@"petSocialNetwork"];
     [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petSocialNetwork] placeholderImage:[UIImage imageNamed:@"howlGleamShard"]];
     
-    NSString * virtualPetWalks = [self archiveWhiskerImpulseWithMark:magnitude twirlMark:@"virtualPetWalks"];
+    NSString *virtualPetWalks = [self archiveWhiskerImpulseWithMark:magnitude twirlMark:@"virtualPetWalks"];
     self.clawSparkWeave.text = virtualPetWalks;
     
 }
 
--(NSString *)archiveWhiskerImpulseWithMark:(NSDictionary *)magnitude twirlMark:(NSString *)twirlMark {
+- (NSString *)archiveWhiskerImpulseWithMark:(NSDictionary *)magnitude twirlMark:(NSString *)twirlMark {
     return [NSString stringWithFormat:@"%@", [magnitude objectForKey:twirlMark]];
 }
 

@@ -10,10 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CozyPeltSanctumCell : UITableViewCell
-@property (nonatomic, strong) NSMutableDictionary *pulseGrooveArchive;
-@property (nonatomic, strong) NSMutableArray *tempoPhaseChronicle;
--(void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude;
-@property (nonatomic, assign) NSInteger driftSignalGauge;
+
+- (void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude;
 
 @end
 

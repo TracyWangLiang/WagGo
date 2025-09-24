@@ -10,11 +10,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface InhaleTraceCell : UITableViewCell
--(void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude;
-@property (nonatomic, copy) void (^trailMarkCellBlock)(void);
-@property(nonatomic, copy) void(^emberChordFluxBlock)(NSString *emberChordFlux);
-@property(nonatomic, copy) void(^prismEchoTraceBlock)(void);
 
+- (void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude;
+
+@property (nonatomic, copy) void(^trailMarkCellBlock)(void);
+@property (nonatomic, copy) void(^emberChordFluxBlock)(NSString *emberChordFlux);
+@property (nonatomic, copy) void(^prismEchoTraceBlock)(void);
 
 @end
 

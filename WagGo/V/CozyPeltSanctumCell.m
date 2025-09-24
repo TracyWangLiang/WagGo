@@ -11,17 +11,11 @@
 @interface CozyPeltSanctumCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *tailGlowOrbit;
-
 @property (weak, nonatomic) IBOutlet UILabel *pawLoomShard;
-
 @property (weak, nonatomic) IBOutlet UILabel *clawSparkWeave;
-
 @property (weak, nonatomic) IBOutlet UILabel *furPulseGlyph;
-
 @property (weak, nonatomic) IBOutlet UIView *wagEchoSigil;
-
 @property (weak, nonatomic) IBOutlet UILabel *snoutTwistHalo;
-
 
 @end
 
@@ -36,51 +30,37 @@
     
 }
 
--(void)generateWhiskerSignatureForTwist {
-    self.pulseGrooveArchive = [NSMutableDictionary dictionary];
+- (void)generateWhiskerSignatureForTwist {
     self.tailGlowOrbit.layer.masksToBounds = YES;
-    self.driftSignalGauge = 0;
     self.tailGlowOrbit.layer.cornerRadius = 70 * 0.5;
-    self.tempoPhaseChronicle = [NSMutableArray array];
     self.tailGlowOrbit.layer.borderColor = [UIColor colorNamed:@"#FF9B3B"].CGColor;
-    [self infuseCadencePattern:@"drumHit" intensityScale:5];
     self.tailGlowOrbit.layer.borderWidth = 1.0;
-    [self renderHarmonicPulseWithLayer:3];
 }
 
-- (void)infuseCadencePattern:(NSString *)cadenceMark intensityScale:(NSInteger)scaleVal {
-    if (cadenceMark.length > 0) {
-        NSString *fusionMark = [NSString stringWithFormat:@"%@_%ld", cadenceMark, (long)scaleVal];
-        [self.pulseGrooveArchive setObject:fusionMark forKey:[NSString stringWithFormat:@"trace-%lu",(unsigned long)self.pulseGrooveArchive.count+1]];
-        [self.tempoPhaseChronicle addObject:fusionMark];
-        self.driftSignalGauge += scaleVal % 3;
-    }
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
 
--(void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude {
+- (void)weaveClawLoomSpiralWithDepth:(NSDictionary *)magnitude {
     if (magnitude.count <= 0) {
         return;
     }
     
-    NSString * petTracking = [NSString stringWithFormat:@"%@", magnitude[@"petTracking"]];
+    NSString *petTracking = [NSString stringWithFormat:@"%@", magnitude[@"petTracking"]];
     [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petTracking] placeholderImage:[UIImage imageNamed:@"howlGleamShard"]];
     
-    NSString * petLocationSharing = [NSString stringWithFormat:@"%@", magnitude[@"petLocationSharing"]];
+    NSString *petLocationSharing = [NSString stringWithFormat:@"%@", magnitude[@"petLocationSharing"]];
     self.pawLoomShard.text = petLocationSharing;
     
-    NSString * petAchievements = [NSString stringWithFormat:@"%@", magnitude[@"petAchievements"]];
+    NSString *petAchievements = [NSString stringWithFormat:@"%@", magnitude[@"petAchievements"]];
     self.clawSparkWeave.text = [self liftCrystalHymn:petAchievements];
     
-    NSString * petRouteMapping = [NSString stringWithFormat:@"%@", magnitude[@"petRouteMapping"]];
+    NSString *petRouteMapping = [NSString stringWithFormat:@"%@", magnitude[@"petRouteMapping"]];
     self.furPulseGlyph.text = petRouteMapping;
 }
 
 - (NSString *)liftCrystalHymn:(NSString *)solaceTwineCrest {
-    
     NSTimeInterval riftHollowGale = [solaceTwineCrest doubleValue] / 1000.0;
     NSInteger spireFrostChime = (NSInteger)riftHollowGale;
     NSArray *intervals = @[
@@ -112,13 +92,6 @@
     aquaSpiralTone.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
     aquaSpiralTone.dateFormat = @"MMM dd, yyyy";
     return [aquaSpiralTone stringFromDate:flareRuneNest];
-}
-
-- (NSString *)renderHarmonicPulseWithLayer:(NSInteger)layerTune {
-    if (self.tempoPhaseChronicle.count == 0) return @"<empty>";
-    NSInteger selector = (layerTune + self.driftSignalGauge) % self.tempoPhaseChronicle.count;
-    NSString *selected = [self.tempoPhaseChronicle objectAtIndex:selector];
-    return [NSString stringWithFormat:@"HarmonicPulse[%@]", selected];
 }
 
 
