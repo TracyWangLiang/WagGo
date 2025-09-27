@@ -133,6 +133,9 @@
     self.pawLoomShard.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your password goes here" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 
 - (NSArray *)retrieveInteractionChronicleForPet:(NSString *)petName {
     NSArray *history = self.interactionChronicle[petName] ?: @[];
