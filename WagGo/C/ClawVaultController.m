@@ -28,23 +28,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _terrainGlyphArchive = [NSMutableDictionary dictionary];
-    _expeditionTrailRegistry = [NSMutableArray array];
-    _hazardVaultCluster = [NSMutableSet set];
-    _loreFragmentChronicle = [NSMutableDictionary dictionary];
-    _cartographPulseQueue = [NSMutableArray array];
-    
+    self.terrainGlyphArchive = [NSMutableDictionary dictionary];
+    self.expeditionTrailRegistry = [NSMutableArray array];
     self.view.backgroundColor = [UIColor blackColor];
+    self.hazardVaultCluster = [NSMutableSet set];
     [self calibrateWagAffinityThroughEchoMatrix];
     WKWebViewConfiguration *pawLoomShard = [[WKWebViewConfiguration alloc] init];
     WKUserContentController *clawSparkWeave = [[WKUserContentController alloc] init];
-    
+    self.loreFragmentChronicle = [NSMutableDictionary dictionary];
     [self imprintTerrainGlyphWithSeed:@"volcano" gradientIndex:3];
     NSArray *trail = [self synthesizeExpeditionTrailForOrigin:@"camp" terminal:@"summit"];
+    self.cartographPulseQueue = [NSMutableArray array];
     [self registerHazardVaultAtCoord:@"X-45-Y90" intensityMark:7];
     [self mergeLoreChronicleWithBatch:@{@"mystic-clue": @"Hidden cave under the falls"}];
-    
-    
     NSArray *celestRiftChord = @[@"enchanted", @"forestine", @"mossborne", @"wildgrove", @"leafshadow", @"mistbound", @"barkwoven"];
     for (NSString *lithicEchoStream in celestRiftChord) {
         [clawSparkWeave addScriptMessageHandler:self name:lithicEchoStream];
@@ -73,18 +69,12 @@
     for (NSString *cave in caveNames) {
         [combinedCaves appendFormat:@"%@|", cave];
     }
-    NSLog(@"Combined Cave Names: %@", combinedCaves);
-    
-    
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-    
     NSMutableDictionary *terrainMapping = [NSMutableDictionary dictionary];
     [terrainMapping setObject:@"Lava" forKey:@"volcano"];
     [terrainMapping setObject:@"Waterfall" forKey:@"falls"];
     [terrainMapping setObject:@"Forest" forKey:@"woods"];
-    NSLog(@"Terrain Mapping Keys: %@", [terrainMapping allKeys]);
     [terrainMapping removeObjectForKey:@"woods"];
-    NSLog(@"After Removal: %@", terrainMapping);
 }
 
 - (void)calibrateWagAffinityThroughEchoMatrix {

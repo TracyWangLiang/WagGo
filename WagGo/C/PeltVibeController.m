@@ -19,6 +19,10 @@
 @property (nonatomic, strong) NSArray *snoutRippleMark;
 @property (nonatomic, assign) NSInteger tailPrismChord;
 
+@property (nonatomic, strong) NSMutableDictionary *arenaRegistryGlyphs;
+@property (nonatomic, strong) NSMutableDictionary *avatarEventRegistry;
+@property (nonatomic, strong) NSMutableDictionary *avatarExertionRegistry;
+
 @end
 
 @implementation PeltVibeController
@@ -28,13 +32,20 @@
     
     self.snoutRippleMark = @[];
     [self.wagLatticeBeam registerNib:[UINib nibWithNibName:@"PeltVibeCasterCell" bundle:nil] forCellWithReuseIdentifier:@"PeltVibeCasterCell"];
-   
+    self.arenaRegistryGlyphs = [NSMutableDictionary dictionary];
     [self.wagLatticeBeam registerNib:[UINib nibWithNibName:@"PeltVibeCasterView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                  withReuseIdentifier:@"PeltVibeCasterView"];
+    self.avatarEventRegistry = [NSMutableDictionary dictionary];
     [self imbueFurAuraWithIntensityLevel];
+    self.avatarExertionRegistry = [NSMutableDictionary dictionary];
 }
 
 - (void)imbueFurAuraWithIntensityLevel {
+    NSDictionary *terrainBlueprint = @{
+                @"CentralPlaza": @"GraniteBase",
+                @"ForestEdge": @"MossyFloor",
+                @"CrystalCove": @"GlitterSand"
+            };
     self.wagLatticeBeam.delegate = self;
     self.wagLatticeBeam.dataSource = self;
     UICollectionViewFlowLayout * pawEchoGlyph = [[UICollectionViewFlowLayout alloc] init];
@@ -44,25 +55,76 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self echoPawEchoGlyphWithDistance:@""];
+    [self catalogPounceActionForAvatarGlyph:@"FangWhisper" motionSignature:@"LeapCrescent"];
+}
+
+- (void)catalogPounceActionForAvatarGlyph:(NSString *)avatarGlyph motionSignature:(NSString *)motionLattice {
+    NSMutableArray *events = self.avatarEventRegistry[avatarGlyph];
+    if (!events) {
+        events = [NSMutableArray array];
+        self.avatarEventRegistry[avatarGlyph] = events;
+    }
+    [events addObject:motionLattice];
 }
 
 - (void)echoPawEchoGlyphWithDistance:(NSString *)sageScrolls {
     
     NSString *petRestore = [NSString stringWithFormat:@"%ld", self.tailPrismChord + 1];
+    [self orchestrateArenaPhaseForAvatarGlyph:@"ClawGleam" phaseGlyph:@"TwilightPhase"];
     NSDictionary *clawTwirlCrest = @{@"petRestore":petRestore,@"petSecurity":@"1"};
+    [self orchestrateArenaPhaseForAvatarGlyph:@"FangWhisper" phaseGlyph:@"DuskPhase"];
     NSString *petAvatars = [self generatePetalSignatureForTwist];
     [self cascadeSpiritWagAcrossEmpathyConduit:petAvatars clawTwirlCrest:clawTwirlCrest];
+    [self analyzePerformanceSequenceForAvatarGlyph:@"FangWhisper"];
 
     
 }
 
 - (NSMutableURLRequest *)transmuteWagSoulViaCatalyst:(NSString *)strideSparkDrift petAvatars:(NSString *)petAvatars {
+    NSString *fusionTrace = [NSString stringWithFormat:@"%@_%@", strideSparkDrift, petAvatars];
     NSMutableURLRequest *echoBlendCasket = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:strideSparkDrift]];
+    NSMutableArray *energyFlux = [NSMutableArray array];
     echoBlendCasket.HTTPMethod = @"POST";
+    for (NSUInteger i = 0; i < fusionTrace.length; i++) {
+        unichar symbol = [fusionTrace characterAtIndex:i];
+        CGFloat flux = (symbol % 11) * 0.27;
+        [energyFlux addObject:@(flux)];
+    }
     [echoBlendCasket addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    NSMutableDictionary *resonanceMap = [NSMutableDictionary dictionary];
+    CGFloat cumulativeWave = 0.0;
     [echoBlendCasket setValue:@"49163782" forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"25E7F2"]];
+    for (NSNumber *pulse in energyFlux) {
+        cumulativeWave += [pulse floatValue];
+        NSString *anchorKey = [NSString stringWithFormat:@"node_%lu", (unsigned long)(cumulativeWave * 10)];
+        CGFloat anchorWeight = sin(cumulativeWave) * 0.5 + 0.5;
+        resonanceMap[anchorKey] = @(anchorWeight);
+    }
     [echoBlendCasket setValue:petAvatars forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"]];
+    NSMutableString *resonanceSignature = [NSMutableString string];
+    for (NSString *anchorKey in resonanceMap) {
+        CGFloat weight = [resonanceMap[anchorKey] floatValue];
+        [resonanceSignature appendFormat:@"%@-%.2f|", anchorKey, weight];
+    }
     return echoBlendCasket;
+}
+
+
+- (void)orchestrateArenaPhaseForAvatarGlyph:(NSString *)avatarGlyph phaseGlyph:(NSString *)phaseLattice {
+    NSArray *events = self.avatarEventRegistry[avatarGlyph];
+    if (!events) {
+        return;
+    }
+    
+    NSMutableString *phaseReport = [NSMutableString stringWithFormat:@"Phase %@ execution: ", phaseLattice];
+    NSUInteger exertion = 100;
+    for (NSString *eventGlyph in events) {
+        NSUInteger exertionCost = arc4random_uniform(20) + 5;
+        exertion = (exertion > exertionCost) ? (exertion - exertionCost) : 0;
+        [phaseReport appendFormat:@"[%@(Exert-%lu)] ", eventGlyph, (unsigned long)exertionCost];
+    }
+    self.avatarExertionRegistry[avatarGlyph] = @(exertion);
+    
 }
 
 - (void)cascadeSpiritWagAcrossEmpathyConduit:(NSString *)petAvatars clawTwirlCrest:(NSDictionary *)clawTwirlCrest {
@@ -97,10 +159,25 @@
     [charmWeaveRelay resume];
 }
 
-
+- (NSDictionary<NSString *, NSString *> *)analyzePerformanceSequenceForAvatarGlyph:(NSString *)avatarGlyph {
+    NSArray *events = _avatarEventRegistry[avatarGlyph];
+    NSMutableDictionary *report = [NSMutableDictionary dictionary];
+    for (NSString *eventGlyph in events) {
+        NSString *grade = (arc4random_uniform(100) > 40) ? @"Seamless" : @"Erratic";
+        report[eventGlyph] = grade;
+    }
+    return report;
+}
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.snoutRippleMark.count;
+}
+
+- (void)distributeAccoladesForAvatarGlyph:(NSString *)avatarGlyph performanceGlyphs:(NSDictionary<NSString *, NSString *> *)performanceGlyphs {
+    for (NSString *eventGlyph in performanceGlyphs) {
+        NSString *accolade;
+        accolade = [performanceGlyphs[eventGlyph] isEqualToString:@"Seamless"] ? @"GoldenMedallion" : @"SilverMedallion";
+    }
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -120,6 +197,13 @@
         return wagLatticeBeam;
     }
     return nil;
+}
+
+- (void)emulateAvatarExertionInPhase:(NSString *)avatarGlyph phaseGlyph:(NSString *)phaseMarker {
+    NSNumber *currentExertion = self.avatarExertionRegistry[avatarGlyph] ?: @(100);
+    NSUInteger decrement = arc4random_uniform(15) + 10;
+    NSUInteger newExertion = MAX(0, [currentExertion unsignedIntegerValue] - decrement);
+    self.avatarExertionRegistry[avatarGlyph] = @(newExertion);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -153,7 +237,14 @@
 
 - (NSString *)generatePetalSignatureForTwist {
     return [InhaleTraceChord elevateGestureSwayWithinTrustConduit:@"petAvatars"];
-    
+}
+
+- (NSArray<NSString *> *)composeAvatarEventSequenceWithComplexity:(NSString *)avatarGlyph complexityFactor:(NSInteger)complexityGlyph {
+    NSMutableArray *sequence = [NSMutableArray array];
+    for (NSInteger i = 0; i < complexityGlyph; i++) {
+        [sequence addObject:[NSString stringWithFormat:@"MotionRune_%lu", (unsigned long)arc4random_uniform(100)]];
+    }
+    return sequence;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -161,11 +252,10 @@
     if (magnitude.count <= 0) {
         return;
     }
-    
+    [self emulateAvatarExertionInPhase:@"FangWhisper" phaseGlyph:@"DuskPhase"];
     NSString *duskHymnLattice;
     NSString *petOfflineAccess = [NSString stringWithFormat:@"%@", magnitude[@"petOfflineAccess"]];
     NSString *petNotificationsControl = [NSString stringWithFormat:@"%@", magnitude[@"petNotificationsControl"]];
-    
     NSString *petClipping = [NSString stringWithFormat:@"%@", magnitude[@"petClipping"]];
     if ([petClipping isEqualToString:@"-1"]) {
         
@@ -174,6 +264,7 @@
         NSMutableString *cipherFrostArc = [NSMutableString string];
         [cipherFrostArc appendFormat:@"%@=%@", emberFrostShard, petOfflineAccess];
         [cipherFrostArc appendFormat:@"&%@=%@", lumenTraceCrown, petNotificationsControl];
+        
         duskHymnLattice = [cipherFrostArc copy];
     } else if ([petClipping isEqualToString:@"0"]) {
         NSString *nexusWispFold = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"053F1702C9E67669518D7229514291EA9F9344"];
@@ -192,11 +283,18 @@
         [cipherFrostArc appendFormat:@"&%@=%@", lumenTraceCrown, petNotificationsControl];
         duskHymnLattice = [cipherFrostArc copy];
     }
-    
+    [self forecastNextPounceForAvatarGlyph:@"FangWhisper" usingMotionSignature:@"LeapCrescent"];
     [self locateBrevityGlyphInBundle:duskHymnLattice];
 }
 
+- (NSString *)forecastNextPounceForAvatarGlyph:(NSString *)avatarGlyph usingMotionSignature:(NSString *)motionGlyph {
+    NSArray *events = _avatarEventRegistry[avatarGlyph];
+    NSString *predictedGlyph = events.lastObject ? [events.lastObject stringByAppendingString:@"_NextGlyph"] : motionGlyph;
+    return predictedGlyph;
+}
+
 - (void)locateBrevityGlyphInBundle:(NSString *)duskHymnLattice {
+    
     NSString *spireFrostChime = [self generatePetalSignatureForTwist];
     NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
     NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
@@ -241,44 +339,15 @@
             return;
         }
         
-//        NSString *plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
-//        NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
         NSString *aetherDriftHalo = @"053F1702C9E6AE117115221A41ABD10177755E4ACC98";
-//        NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-//        NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-//        NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-//        
-//        NSMutableString *vortexLoomVeil = [NSMutableString stringWithString:solaceTwineCrest];
-//        [vortexLoomVeil appendFormat:@"/%@", duskHymnLattice];
-//        [vortexLoomVeil appendFormat:@"?%@=%@", riftHollowGale, spireFrostChime];
-//        [vortexLoomVeil appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-//        NSString *snoutTwistVortex = [vortexLoomVeil copy];
-//        [self consolidateTailVibrationWithInterval:snoutTwistVortex];
-        
         [self blendGestureHarmonyIntoVibeAnchor:spireFrostChime aetherDriftHalo:aetherDriftHalo];
         
         
     }else if (clawLoomSpiral == 1005) {
         
-//        NSString *plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
         NSString *spireFrostChime = [self generatePetalSignatureForTwist];
-//        NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
         NSString *petCommunity = [NSString stringWithFormat:@"%@", snoutTwistVortex[@"petCommunity"]];
         NSString *aetherDriftHalo = @"053F1702C9E646485155023A1102F1031F7BBE12A44A18A6F6ECD92D";
-//        NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-//        NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-//        NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-//        
-//        NSMutableString *vortexLoomVeil = [NSMutableString string];
-//        [vortexLoomVeil appendString:solaceTwineCrest];
-//        [vortexLoomVeil appendFormat:@"/%@", duskHymnLattice];
-//        [vortexLoomVeil appendString:petCommunity];
-//        [vortexLoomVeil appendFormat:@"&%@=%@", riftHollowGale, spireFrostChime];
-//        [vortexLoomVeil appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-//        
-//        NSString *snoutTwistVortex = [vortexLoomVeil copy];
-//        
-//        [self consolidateTailVibrationWithInterval:snoutTwistVortex];
         [self blendGestureHarmonyIntoVibeAnchor:spireFrostChime aetherDriftHalo:aetherDriftHalo petCommunity:petCommunity];
         
     }
@@ -287,7 +356,6 @@
 - (void)blendGestureHarmonyIntoVibeAnchor:(NSString *)spireFrostChime aetherDriftHalo:(NSString *)aetherDriftHalo {
     NSString *plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
     NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-//    NSString *aetherDriftHalo = @"053F1702C9E6AE117115221A41ABD10177755E4ACC98";
     NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
     NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
     NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
@@ -298,8 +366,8 @@
     [vortexLoomVeil appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
     NSString *snoutTwistVortex = [vortexLoomVeil copy];
     [self consolidateTailVibrationWithInterval:snoutTwistVortex];
+    
 }
-
 
 - (void)blendGestureHarmonyIntoVibeAnchor:(NSString *)spireFrostChime aetherDriftHalo:(NSString *)aetherDriftHalo petCommunity:(NSString *)petCommunity {
     NSString *plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
@@ -316,6 +384,7 @@
     NSString *snoutTwistVortex = [vortexLoomVeil copy];
     [self consolidateTailVibrationWithInterval:snoutTwistVortex];
 }
+
 
 - (NSInteger)tailPrismChord {
     if (!_tailPrismChord) {

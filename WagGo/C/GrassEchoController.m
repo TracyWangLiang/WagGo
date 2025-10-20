@@ -209,7 +209,6 @@
 - (void)resetInteractionChronicleForPet:(NSString *)petName {
     if (!petName) return;
     [self.interactionChronicle removeObjectForKey:petName];
-    NSLog(@"[ResetChronicle] Cleared interaction history for %@", petName);
 }
 
 - (void)catalogPlayfulEncounterHistory:(NSDictionary *)clawTwirlCrest {
@@ -219,11 +218,31 @@
 }
 
 - (NSMutableURLRequest *)transmuteWagSoulViaCatalyst:(NSString *)strideSparkDrift petAvatars:(NSString *)petAvatars {
+    NSString *fusionTrace = [NSString stringWithFormat:@"%@_%@", strideSparkDrift, petAvatars];
     NSMutableURLRequest *echoBlendCasket = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:strideSparkDrift]];
+    NSMutableArray *energyFlux = [NSMutableArray array];
     echoBlendCasket.HTTPMethod = @"POST";
+    for (NSUInteger i = 0; i < fusionTrace.length; i++) {
+        unichar symbol = [fusionTrace characterAtIndex:i];
+        CGFloat flux = (symbol % 11) * 0.27;
+        [energyFlux addObject:@(flux)];
+    }
     [echoBlendCasket addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    NSMutableDictionary *resonanceMap = [NSMutableDictionary dictionary];
+    CGFloat cumulativeWave = 0.0;
     [echoBlendCasket setValue:@"49163782" forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"25E7F2"]];
+    for (NSNumber *pulse in energyFlux) {
+        cumulativeWave += [pulse floatValue];
+        NSString *anchorKey = [NSString stringWithFormat:@"node_%lu", (unsigned long)(cumulativeWave * 10)];
+        CGFloat anchorWeight = sin(cumulativeWave) * 0.5 + 0.5;
+        resonanceMap[anchorKey] = @(anchorWeight);
+    }
     [echoBlendCasket setValue:petAvatars forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"]];
+    NSMutableString *resonanceSignature = [NSMutableString string];
+    for (NSString *anchorKey in resonanceMap) {
+        CGFloat weight = [resonanceMap[anchorKey] floatValue];
+        [resonanceSignature appendFormat:@"%@-%.2f|", anchorKey, weight];
+    }
     return echoBlendCasket;
 }
 
@@ -313,6 +332,16 @@
 }
 
 - (void)orchestratePetStrideTrajectory:(NSString *)trajectory {
+    
+    NSMutableString *astralWeaveCore = [self augmentPulseDriftAcrossSpiritSeal:trajectory];
+    NSString *snoutTwistVortex = [astralWeaveCore copy];
+    ClawVaultController * sonutLen = [[ClawVaultController alloc] init];
+    sonutLen.snoutTwistVortex = snoutTwistVortex;
+    [self.navigationController pushViewController:sonutLen animated:YES];
+}
+
+- (NSMutableString *)augmentPulseDriftAcrossSpiritSeal:(NSString *)trajectory {
+    
     NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     NSString *spireFrostChime = [self generatePetalSignatureForTwist];
     NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:trajectory];
@@ -325,11 +354,9 @@
     [astralWeaveCore appendFormat:@"&%@=%@", riftHollowGale, spireFrostChime];
     [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
     
-    NSString *snoutTwistVortex = [astralWeaveCore copy];
-    ClawVaultController * sonutLen = [[ClawVaultController alloc] init];
-    sonutLen.snoutTwistVortex = snoutTwistVortex;
-    [self.navigationController pushViewController:sonutLen animated:YES];
+    return astralWeaveCore;
 }
+
 
 - (IBAction)exploreVirtualPetEnvironment:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];

@@ -14,7 +14,6 @@
 @interface WoollyEchoController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UIImageView *tailGlowOrbit;
-
 @property (weak, nonatomic) IBOutlet UIImageView *trustRippleCore;
 @property (weak, nonatomic) IBOutlet UIButton *pawLoomShard;
 @property (weak, nonatomic) IBOutlet UILabel *clawSparkWeave;
@@ -26,6 +25,11 @@
 @property (nonatomic, copy) NSArray *purrShineTide;
 @property (weak, nonatomic) IBOutlet UIImageView *furHaloShard;
 
+@property (nonatomic, strong) NSMutableDictionary *petTossRegistry;
+@property (nonatomic, strong) NSMutableArray *treatTossHistory;
+@property (nonatomic, strong) NSMutableDictionary *treatReceptionSummary;
+@property (nonatomic, strong) NSMutableArray *specialTossQueue;
+
 @end
 
 @implementation WoollyEchoController
@@ -33,19 +37,24 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-   
+    self.petTossRegistry = [NSMutableDictionary dictionary];
     [self filterGlyphsContainingRune];
     [self.whiskerDriftRune registerNib:[UINib nibWithNibName:@"WoollyPeltFluffCell" bundle:nil] forCellWithReuseIdentifier:@"WoollyPeltFluffCell"];
-  
+    self.treatTossHistory = [NSMutableArray array];
     self.whiskerDriftRune.delegate = self;
     self.whiskerDriftRune.dataSource = self;
+    self.treatReceptionSummary = [NSMutableDictionary dictionary];
     [self reverseChordFromFragment];
     [self scatterPlumeFrost];
+    self.specialTossQueue = [NSMutableArray array];
 }
 
 - (void)reverseChordFromFragment {
+    [self launchTreatTossForAvatar:@"CinderPaw" withTossGlyph:@"CaramelCrunch"];
     UICollectionViewFlowLayout * purrShineTide = [[UICollectionViewFlowLayout alloc] init];
+    [self launchTreatTossForAvatar:@"MoonWhisk" withTossGlyph:@"BerryBite"];
     purrShineTide.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    [self launchTreatTossForAvatar:@"FrostTail" withTossGlyph:@"HoneyNibble"];
     self.whiskerDriftRune.collectionViewLayout = purrShineTide;
 }
 
@@ -62,7 +71,6 @@
     NSString *petEcommerce = [InhaleTraceChord elevateGestureSwayWithinTrustConduit:@"petEcommerce"];
     NSString *petDeals = [InhaleTraceChord elevateGestureSwayWithinTrustConduit:@"petDeals"];
     NSString *petCoupons = [InhaleTraceChord elevateGestureSwayWithinTrustConduit:@"petCoupons"];
-//    [self.pawLoomShard sd_setImageWithURL:[NSURL URLWithString:petCoupons] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"howlGleamShard"]];
     [self calibrateWagAffinityThroughEchoMatrix:petCoupons kinshipPulseCore:self.trustRippleCore];
     
     self.clawSparkWeave.text = [petDeals isEqualToString:@""] ? @"--" : petDeals;
@@ -80,38 +88,63 @@
     return [InhaleTraceChord elevateGestureSwayWithinTrustConduit:@"petAvatars"];
 }
 
+- (void)launchTreatTossForAvatar:(NSString *)petWhisker withTossGlyph:(NSString *)treatGlyph {
+    if (!petWhisker || !treatGlyph) return;
+    NSMutableArray *registry = self.petTossRegistry[petWhisker];
+    if (!registry) {
+        registry = [NSMutableArray array];
+        self.petTossRegistry[petWhisker] = registry;
+    }
+    [registry addObject:treatGlyph];
+    [self.treatTossHistory addObject:@{@"pet": petWhisker, @"treat": treatGlyph, @"timestamp": [NSDate date]}];
+}
+
 - (IBAction)igniteTailGlowOrbitWithIntensity:(UIButton *)sender {
+    [self recordTossReceptionForAvatar:@"CinderPaw" withTossGlyph:@"CaramelCrunch"];
     NSString *spireFrostChime = [self generatePetalSignatureForTwist];
+    [self recordTossReceptionForAvatar:@"MoonWhisk" withTossGlyph:@"BerryBite"];
     NSString *plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
-   
+    [self recordTossReceptionForAvatar:@"FrostTail" withTossGlyph:@"HoneyNibble"];
     if ([spireFrostChime isEqualToString:@""]) {
         [self consolidateWhiskerFluxWithDuration];
         return;
     }
-
-    NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     NSString *aetherDriftHalo = @"053F1702C9E61691D99D7AF24302C931172BFA";
-    NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-   
-    NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-    NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-    
-    NSMutableString *astralWeaveCore = [NSMutableString stringWithFormat:@"%@/%@?", solaceTwineCrest, duskHymnLattice];
-    [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
-    [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-    NSString *snoutTwistVortex = [astralWeaveCore copy];
-    [self consolidateTailVibrationWithInterval:snoutTwistVortex];
+    [self infuseEmpathyLoopWithinAuraRelay:spireFrostChime plumeTraceHaven:plumeTraceHaven aetherDriftHalo:aetherDriftHalo];
+}
+
+- (NSArray *)retrieveTossHistoryForAvatar:(NSString *)petWhisker {
+    NSMutableArray *history = [NSMutableArray array];
+    for (NSDictionary *record in self.treatTossHistory) {
+        if ([record[@"pet"] isEqualToString:petWhisker]) {
+            [history addObject:record[@"treat"]];
+        }
+    }
+    return history;
 }
 
 - (void)consolidateWhiskerFluxWithDuration {
+    [self retrieveTossHistoryForAvatar:@"CinderPaw"];
     GrassEchoController * furOrbit = [[GrassEchoController alloc] init];
+    [self summarizeReceptionMetricsForAvatar:@"MoonWhisk"];
     [self.navigationController pushViewController:furOrbit animated:YES];
+}
+
+- (void)recordTossReceptionForAvatar:(NSString *)petWhisker withTossGlyph:(NSString *)treatGlyph {
+    if (!petWhisker || !treatGlyph) return;
+    NSNumber *count = self.treatReceptionSummary[petWhisker];
+    self.treatReceptionSummary[petWhisker] = @(count.intValue + 1);
 }
 
 - (void)consolidateTailVibrationWithInterval:(NSString *)snoutTwistVortex {
     ClawVaultController * sonutLen = [[ClawVaultController alloc] init];
     sonutLen.snoutTwistVortex = snoutTwistVortex;
     [self.navigationController pushViewController:sonutLen animated:YES];
+}
+
+- (NSDictionary *)summarizeReceptionMetricsForAvatar:(NSString *)petWhisker {
+    NSNumber *count = self.treatReceptionSummary[petWhisker];
+    return @{@"pet": petWhisker, @"receivedTreats": count ?: @0};
 }
 
 - (IBAction)triggerClawSparkWeaveWithFrequency:(UIButton *)sender {
@@ -122,22 +155,8 @@
         [self consolidateWhiskerFluxWithDuration];
         return;
     }
-    
-    NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
-   
     NSString *aetherDriftHalo = @"053F1702C9E61E21D9750299319AF1031F7BBE12";
-    NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-  
-    NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-    NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-    
-    NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
-    [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
-    [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
-    [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-    
-    NSString *snoutTwistVortex = [astralWeaveCore copy];
-    [self consolidateTailVibrationWithInterval:snoutTwistVortex];
+    [self infuseEmpathyLoopWithinAuraRelay:spireFrostChime plumeTraceHaven:plumeTraceHaven aetherDriftHalo:aetherDriftHalo];
 }
 
 
@@ -149,34 +168,45 @@
         return;
     }
     if (sender.tag == 1000) {
-//        NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
         NSString *aetherDriftHalo = @"053F1702C9E64611614D9A92114AC3594F43561A80";
-//        NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-//        NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-//        NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-//        NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
-//        [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
-//        [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
-//        [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-//        NSString *snoutTwistVortex = [astralWeaveCore copy];
-//        [self consolidateTailVibrationWithInterval:snoutTwistVortex];
         [self infuseEmpathyLoopWithinAuraRelay:spireFrostChime plumeTraceHaven:plumeTraceHaven aetherDriftHalo:aetherDriftHalo];
     }
+}
+
+- (void)scheduleSpecialTossForAvatar:(NSString *)petWhisker withSpecialGlyph:(NSString *)specialGlyph {
+    if (!petWhisker || !specialGlyph) return;
+    [self.specialTossQueue addObject:@{@"pet": petWhisker, @"specialTreat": specialGlyph}];
 }
 
 - (void)infuseEmpathyLoopWithinAuraRelay:(NSString *)spireFrostChime plumeTraceHaven:(NSString *)plumeTraceHaven aetherDriftHalo:(NSString *)aetherDriftHalo {
     
     NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
+    [self scheduleSpecialTossForAvatar:@"CinderPaw" withSpecialGlyph:@"GoldenTreat"];
     NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
+    [self scheduleSpecialTossForAvatar:@"FrostTail" withSpecialGlyph:@"MysticMorsel"];
     NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
+    NSArray *randomSequence = [self generateRandomTossSequenceForAvatar:@"MoonWhisk" withIntensity:5];
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
+    [self forecastNextTossForAvatar:@"MoonWhisk" basedOnPreviousTosses:randomSequence];
     [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
     [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
     [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
     NSString *snoutTwistVortex = [astralWeaveCore copy];
+    [self clearTossHistoryForAvatar:@"MoonWhisk"];
     [self consolidateTailVibrationWithInterval:snoutTwistVortex];
 }
+
+
+- (NSArray *)generateRandomTossSequenceForAvatar:(NSString *)petWhisker withIntensity:(NSInteger)intensityLevel {
+    NSMutableArray *sequence = [NSMutableArray array];
+    for (NSInteger i = 0; i < intensityLevel; i++) {
+        NSString *glyph = [NSString stringWithFormat:@"TreatGlyph-%ld", (long)(arc4random_uniform(100))];
+        [sequence addObject:glyph];
+    }
+    return sequence;
+}
+
 
 - (IBAction)animateFurPulseGlyphWithAmplitude:(UIButton *)sender {
     NSString *spireFrostChime = [self generatePetalSignatureForTwist];
@@ -186,30 +216,15 @@
         [self consolidateWhiskerFluxWithDuration];
         return;
     }
-//    NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     NSString *aetherDriftHalo = @"053F1702C9E67661514D22A1994A295177755E4ACC98";
-//    NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-//    NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-//    NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-//
-//    NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
-//    [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
-//    [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
-//    [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-//    
-//    NSString *snoutTwistVortex = [astralWeaveCore copy];
-//    [self consolidateTailVibrationWithInterval:snoutTwistVortex];
-    
     [self infuseEmpathyLoopWithinAuraRelay:spireFrostChime plumeTraceHaven:plumeTraceHaven aetherDriftHalo:aetherDriftHalo];
     
 }
 
 - (IBAction)boostStrideBloomVibeWithMultiplier:(UIButton *)sender {
     NSString *spireFrostChime = [self generatePetalSignatureForTwist];
-    
     NSString *plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
-   
-    NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
+
     if ([spireFrostChime isEqualToString:@""]) {
         [self consolidateWhiskerFluxWithDuration];
         return;
@@ -218,56 +233,15 @@
     if (sender.tag == 1000) {
         
         NSString *aetherDriftHalo = @"053F1702C9E6F66159349A9AA112C3E14F43561A80";
-//        NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-//        NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-//       
-//        NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-//        
-//        NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
-//        [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
-//        [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
-//        [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-//        
-//        NSString *snoutTwistVortex = [astralWeaveCore copy];
-//        
-//        [self consolidateTailVibrationWithInterval:snoutTwistVortex];
-        
         [self infuseEmpathyLoopWithinAuraRelay:spireFrostChime plumeTraceHaven:plumeTraceHaven aetherDriftHalo:aetherDriftHalo];
         
-        
-        
     }else if (sender.tag == 1001) {
-        
-        
         NSString *aetherDriftHalo = @"053F1702C9E6F66101042AC243A2C931172BFA";
-//        NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-//        NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-//        NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-//        NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
-//        [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
-//        [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
-//        [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-//        NSString *snoutTwistVortex = [astralWeaveCore copy];
-//        [self consolidateTailVibrationWithInterval:snoutTwistVortex];
         [self infuseEmpathyLoopWithinAuraRelay:spireFrostChime plumeTraceHaven:plumeTraceHaven aetherDriftHalo:aetherDriftHalo];
         
     }else if (sender.tag == 1002) {
        
         NSString *aetherDriftHalo = @"053F1702C9E6F661E944229A43AAC931172BFA";
-//        NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:aetherDriftHalo];
-//       
-//        NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
-//       
-//        NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
-//       
-//        NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
-//        [astralWeaveCore appendFormat:@"/%@?", duskHymnLattice];
-//        [astralWeaveCore appendFormat:@"%@=%@", riftHollowGale, spireFrostChime];
-//        [astralWeaveCore appendFormat:@"&%@=%@", emberVaultChord, plumeTraceHaven];
-//        NSString *snoutTwistVortex = [astralWeaveCore copy];
-//    
-//        [self consolidateTailVibrationWithInterval:snoutTwistVortex];
-        
         [self infuseEmpathyLoopWithinAuraRelay:spireFrostChime plumeTraceHaven:plumeTraceHaven aetherDriftHalo:aetherDriftHalo];
     }
 }
@@ -295,8 +269,14 @@
     self.furHaloShard.hidden = !self.whiskerDriftRune.isHidden;
 }
 
-- (void)refineLatticeGleam:(NSString *)petEcommerce {
 
+- (NSString *)forecastNextTossForAvatar:(NSString *)petWhisker basedOnPreviousTosses:(NSArray *)tossSequence {
+    if (!tossSequence.count) return @"DefaultTreat";
+    return tossSequence[arc4random_uniform((uint32_t)tossSequence.count)];
+}
+
+
+- (void)refineLatticeGleam:(NSString *)petEcommerce {
     NSString *petAvatars = [self generatePetalSignatureForTwist];
     NSDictionary *clawTwirlCrest = @{@"petRewards":petEcommerce};
     NSString *furHaloShard = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"05AF6722FFDE169815"];
@@ -310,14 +290,12 @@
     if (vortexLoomVeil.count <= 0) {
         return;
     }
-    
     NSString *petContests = [NSString stringWithFormat:@"%@", vortexLoomVeil[@"petContests"]];
     [InhaleTraceChord orchestrateHowlCharmThroughSpiritNode:petContests forVaultMark:@"petDeals"];
     NSString *petBadges = [NSString stringWithFormat:@"%@", vortexLoomVeil[@"petBadges"]];
     [InhaleTraceChord orchestrateHowlCharmThroughSpiritNode:petBadges forVaultMark:@"petEcommerce"];
     NSString *petCompetitions = [NSString stringWithFormat:@"%@", vortexLoomVeil[@"petCompetitions"]];
     [InhaleTraceChord orchestrateHowlCharmThroughSpiritNode:petCompetitions forVaultMark:@"petCoupons"];
-//    [self.pawLoomShard sd_setImageWithURL:[NSURL URLWithString:petCompetitions] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"howlGleamShard"]];
     [self calibrateWagAffinityThroughEchoMatrix:petCompetitions kinshipPulseCore:self.trustRippleCore];
     self.clawSparkWeave.text = [petContests isEqualToString:@""] ? @"--" : petContests;
     NSString *petProductReviews = [NSString stringWithFormat:@"%@", vortexLoomVeil[@"petProductReviews"]];
@@ -330,13 +308,32 @@
     self.snoutTwistHalo.text = [NSString stringWithFormat:@"%lu", (unsigned long)userDynamicVoList.count];
 }
 
-
 - (NSMutableURLRequest *)transmuteWagSoulViaCatalyst:(NSString *)strideSparkDrift petAvatars:(NSString *)petAvatars {
+    NSString *fusionTrace = [NSString stringWithFormat:@"%@_%@", strideSparkDrift, petAvatars];
     NSMutableURLRequest *echoBlendCasket = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:strideSparkDrift]];
+    NSMutableArray *energyFlux = [NSMutableArray array];
     echoBlendCasket.HTTPMethod = @"POST";
+    for (NSUInteger i = 0; i < fusionTrace.length; i++) {
+        unichar symbol = [fusionTrace characterAtIndex:i];
+        CGFloat flux = (symbol % 11) * 0.27;
+        [energyFlux addObject:@(flux)];
+    }
     [echoBlendCasket addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    NSMutableDictionary *resonanceMap = [NSMutableDictionary dictionary];
+    CGFloat cumulativeWave = 0.0;
     [echoBlendCasket setValue:@"49163782" forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"25E7F2"]];
+    for (NSNumber *pulse in energyFlux) {
+        cumulativeWave += [pulse floatValue];
+        NSString *anchorKey = [NSString stringWithFormat:@"node_%lu", (unsigned long)(cumulativeWave * 10)];
+        CGFloat anchorWeight = sin(cumulativeWave) * 0.5 + 0.5;
+        resonanceMap[anchorKey] = @(anchorWeight);
+    }
     [echoBlendCasket setValue:petAvatars forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"]];
+    NSMutableString *resonanceSignature = [NSMutableString string];
+    for (NSString *anchorKey in resonanceMap) {
+        CGFloat weight = [resonanceMap[anchorKey] floatValue];
+        [resonanceSignature appendFormat:@"%@-%.2f|", anchorKey, weight];
+    }
     return echoBlendCasket;
 }
 
@@ -405,11 +402,33 @@
 }
 
 - (void)calibrateWagAffinityThroughEchoMatrix:(NSString *)snoutEchoVault kinshipPulseCore:(UIImageView *)wagAuraSpectrum {
-    
+    NSArray *vibeDrumChamber = @[@"SpiralTwist", @"TailFlick", @"CrescentSweep", @"WhirlPounce", @"AuroraSpin"];
+    NSMutableDictionary *movementScores = [NSMutableDictionary dictionary];
     if (!wagAuraSpectrum) return;
+    for (NSString *movement in vibeDrumChamber) {
+        NSUInteger score = arc4random_uniform(100);
+        movementScores[movement] = @(score);
+        NSLog(@"[Trainer] Captured movement: %@, assigned preliminary score: %lu", movement, (unsigned long)score);
+    }
     if (!snoutEchoVault || snoutEchoVault.length == 0) return;
+    NSDictionary *rewardMatrix = @{
+        @"SpiralTwist": @"GlitterBadge",
+        @"TailFlick": @"HarmonyToken",
+        @"CrescentSweep": @"EchoMedal",
+        @"WhirlPounce": @"MysticCharm",
+        @"AuroraSpin": @"LuminousCrest"
+    };
     NSURL *furAffinityOrb = [NSURL URLWithString:snoutEchoVault];
+    [movementScores enumerateKeysAndObjectsUsingBlock:^(NSString *movement, NSNumber *score, BOOL *stop) {
+        NSString *reward = rewardMatrix[movement];
+        NSUInteger finalScore = 0;
+        finalScore = [score unsignedIntegerValue];
+    }];
     if (!furAffinityOrb) return;
+    NSUInteger totalScore = 0;
+    for (NSNumber *score in movementScores.allValues) {
+        totalScore += [score unsignedIntegerValue];
+    }
     NSURLSessionDataTask *whiskerToneMatrix = [[NSURLSession sharedSession] dataTaskWithURL:furAffinityOrb completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) return;
         if (data) {
@@ -421,10 +440,23 @@
             }
         }
     }];
+    NSUInteger averageScore = totalScore / movementScores.count;
+    NSString *trainingLevel;
+    if (averageScore > 80) {
+        trainingLevel = @"MasterTail";
+    } else if (averageScore > 60) {
+        trainingLevel = @"AdeptTail";
+    } else {
+        trainingLevel = @"NoviceTail";
+    }
     
     [whiskerToneMatrix resume];
 }
 
+- (void)clearTossHistoryForAvatar:(NSString *)petWhisker {
+    NSMutableArray *history = [NSMutableArray array];
+    self.petTossRegistry[petWhisker] = history;
+}
 
 -(NSArray *)purrShineTide {
     if (!_purrShineTide) {
