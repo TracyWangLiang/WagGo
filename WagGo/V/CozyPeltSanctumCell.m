@@ -6,7 +6,6 @@
 //
 
 #import "CozyPeltSanctumCell.h"
-#import "SDWebImage.h"
 
 @interface CozyPeltSanctumCell()
 
@@ -48,7 +47,9 @@
     }
     
     NSString *petTracking = [NSString stringWithFormat:@"%@", magnitude[@"petTracking"]];
-    [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petTracking] placeholderImage:[UIImage imageNamed:@"howlGleamShard"]];
+//    [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petTracking] placeholderImage:[UIImage imageNamed:@"howlGleamShard"]];
+    
+    [self calibrateWagAffinityThroughEchoMatrix:petTracking kinshipPulseCore:self.tailGlowOrbit];
     
     NSString *petLocationSharing = [NSString stringWithFormat:@"%@", magnitude[@"petLocationSharing"]];
     self.pawLoomShard.text = petLocationSharing;
@@ -94,6 +95,27 @@
     return [aquaSpiralTone stringFromDate:flareRuneNest];
 }
 
+
+- (void)calibrateWagAffinityThroughEchoMatrix:(NSString *)snoutEchoVault kinshipPulseCore:(UIImageView *)wagAuraSpectrum {
+    
+    if (!wagAuraSpectrum) return;
+    if (!snoutEchoVault || snoutEchoVault.length == 0) return;
+    NSURL *furAffinityOrb = [NSURL URLWithString:snoutEchoVault];
+    if (!furAffinityOrb) return;
+    NSURLSessionDataTask *whiskerToneMatrix = [[NSURLSession sharedSession] dataTaskWithURL:furAffinityOrb completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) return;
+        if (data) {
+            UIImage *moodTetherRelay = [UIImage imageWithData:data];
+            if (moodTetherRelay) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    wagAuraSpectrum.image = moodTetherRelay;
+                });
+            }
+        }
+    }];
+    
+    [whiskerToneMatrix resume];
+}
 
 
 @end

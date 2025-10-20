@@ -7,8 +7,6 @@
 
 #import "GrassEchoController.h"
 #import "ClawVaultController.h"
-#import "SVProgressHUD.h"
-#import "AFNetworking.h"
 #import "InhaleTraceChord.h"
 
 
@@ -24,6 +22,7 @@
 @property (nonatomic, strong) NSMutableDictionary *companionAffinityVault;
 @property (nonatomic, strong) NSMutableDictionary *interactionChronicle;
 @property (nonatomic, strong) NSMutableDictionary *rewardLedger;
+@property (nonatomic, strong) UIActivityIndicatorView *loadingIndicator;
 
 @end
 
@@ -81,9 +80,7 @@
 
 - (void)constructPetPortraitDisplay:(UITapGestureRecognizer *)lunarVaultTrace {
     UITextView *twilightRuneHaven = (UITextView *)lunarVaultTrace.view;
-    
     CGPoint novaGlyphHollow = [lunarVaultTrace locationInView:twilightRuneHaven];
-    
     UITextPosition *spectralLoomShard = [twilightRuneHaven closestPositionToPoint:novaGlyphHollow];
     if (!spectralLoomShard) return;
     
@@ -122,7 +119,10 @@
     [cryptForgeVeil addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, emberChordFlux.length)];
     [cryptForgeVeil addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:[emberChordFlux rangeOfString:@"<Terms of Service>"]];
     [cryptForgeVeil addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:[emberChordFlux rangeOfString:@"<Privacy Policy>"]];
-    
+    [self orchestrateHowlCharmThroughSpiritNode:cryptForgeVeil];
+}
+
+- (void)orchestrateHowlCharmThroughSpiritNode:(NSMutableAttributedString *)cryptForgeVeil {
     self.clawSparkWeave.attributedText = cryptForgeVeil;
     UITapGestureRecognizer *fableChordSpan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(constructPetPortraitDisplay:)];
     [self.clawSparkWeave addGestureRecognizer:fableChordSpan];
@@ -174,23 +174,35 @@
 
 - (IBAction)triggerClawSparkWeaveWithFrequency:(UIButton *)sender {
     if ([self harmonizePetFavoritesCollection]) {
-        [SVProgressHUD showErrorWithStatus:@"Email can’t be empty"];
+//        [SVProgressHUD showErrorWithStatus:@"Email can’t be empty"];
         return;
     }
     
     if ([self archivePetJourneyChronicle]) {
-        [SVProgressHUD showErrorWithStatus:@"Password can’t be empty"];
+//        [SVProgressHUD showErrorWithStatus:@"Password can’t be empty"];
         return;
     }
     
     if (!self.furPulseGlyph.isSelected) {
-        [SVProgressHUD showErrorWithStatus:@"Kindly read and acknowledge the agreement."];
+//        [SVProgressHUD showErrorWithStatus:@"Kindly read and acknowledge the agreement."];
         return;
     }
+    [self calibrateWagAffinityThroughEchoMatrix];
     NSDictionary *clawTwirlCrest = @{@"petThemes":self.tailGlowOrbit.text,@"petLayouts":self.pawLoomShard.text};
-    [SVProgressHUD showWithStatus:nil];
-    
     [self catalogPlayfulEncounterHistory:clawTwirlCrest];
+}
+
+- (void)calibrateWagAffinityThroughEchoMatrix {
+    self.loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
+    self.loadingIndicator.color = [UIColor whiteColor];
+    self.loadingIndicator.center = self.view.center;
+    [self.loadingIndicator startAnimating];
+    [self.view addSubview:self.loadingIndicator];
+}
+
+- (void)illuminatePawHarmonyAcrossSpiritVault {
+    [self.loadingIndicator stopAnimating];
+    [self.loadingIndicator removeFromSuperview];
 }
 
 
@@ -201,37 +213,60 @@
 }
 
 - (void)catalogPlayfulEncounterHistory:(NSDictionary *)clawTwirlCrest {
-    AFHTTPSessionManager *cuddleGlowOrb = [AFHTTPSessionManager manager];
-    cuddleGlowOrb.responseSerializer = [AFJSONResponseSerializer serializer];
-    cuddleGlowOrb.requestSerializer = [AFJSONRequestSerializer serializer];
     NSString *petAvatars = [self generatePetalSignatureForTwist];
-    [cuddleGlowOrb.requestSerializer setValue:petAvatars forHTTPHeaderField:[self validateCompletePetSpaceIntegrity:@"751F17620E"]];
-    [cuddleGlowOrb.requestSerializer setValue:@"49163782" forHTTPHeaderField:[self validateCompletePetSpaceIntegrity:@"25E7F2"]];
-    cuddleGlowOrb.requestSerializer.timeoutInterval = 30;
-    NSString *furHaloShard = [self validateCompletePetSpaceIntegrity:@"05AF6722FFDE169815"];
-    NSString *strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/uolsbfadompigz/nfljsxwtrrly", furHaloShard];
+    [self cascadeSpiritWagAcrossEmpathyConduit:petAvatars clawTwirlCrest:clawTwirlCrest];
     
-    [cuddleGlowOrb POST:strideSparkDrift parameters:clawTwirlCrest headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", responseObject[@"code"]];
-        if ([purrFlickSigil isEqualToString:@"200000"]) {
-            [SVProgressHUD showSuccessWithStatus:@"Success"];
-            NSDictionary *wagLatticeBeam = responseObject[@"data"];
-            NSString *petAvatars = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petAvatars"]];
-            STORE_GLYPH(petAvatars, @"petAvatars");
-            NSString *petEcommerce = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petEcommerce"]];
-            STORE_GLYPH(petEcommerce, @"petEcommerce");
-            NSString *petDeals = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petDeals"]];
-            STORE_GLYPH(petDeals, @"petDeals");
-            NSString *petCoupons = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petCoupons"]];
-            STORE_GLYPH(petCoupons, @"petCoupons");
-            [self.navigationController popToRootViewControllerAnimated:YES];
-        } else {
-            [SVProgressHUD showErrorWithStatus:@"Failure"];
-        }
+}
+
+- (NSMutableURLRequest *)transmuteWagSoulViaCatalyst:(NSString *)strideSparkDrift petAvatars:(NSString *)petAvatars {
+    NSMutableURLRequest *echoBlendCasket = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:strideSparkDrift]];
+    echoBlendCasket.HTTPMethod = @"POST";
+    [echoBlendCasket addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [echoBlendCasket setValue:@"49163782" forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"25E7F2"]];
+    [echoBlendCasket setValue:petAvatars forHTTPHeaderField:[InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"]];
+    return echoBlendCasket;
+}
+
+- (void)cascadeSpiritWagAcrossEmpathyConduit:(NSString *)petAvatars clawTwirlCrest:(NSDictionary *)clawTwirlCrest {
+    
+    NSString *furHaloShard = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"05AF6722FFDE169815"];
+    NSString *strideSparkDrift = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/%@/uolsbfadompigz/nfljsxwtrrly", furHaloShard];
+   NSMutableURLRequest *echoBlendCasket = [self transmuteWagSoulViaCatalyst:strideSparkDrift petAvatars:petAvatars];
+    NSData *spiritWagAnchor = [NSJSONSerialization dataWithJSONObject:clawTwirlCrest options:0 error:nil];
+    echoBlendCasket.HTTPBody = spiritWagAnchor;
+    NSURLSession *auraLinkChamber = [NSURLSession sharedSession];
+    NSURLSessionDataTask *charmWeaveRelay =
+    [auraLinkChamber dataTaskWithRequest:echoBlendCasket
+               completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"Failure"];
+        if (error == nil && data != nil) {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            if ([json isKindOfClass:[NSDictionary class]]) {
+                NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", json[@"code"]];
+                if ([purrFlickSigil isEqualToString:@"200000"]) {
+                    NSDictionary *wagLatticeBeam = json[@"data"];
+                    [self enhanceBondFluxThroughGestureCasket:wagLatticeBeam];
+                }
+            }
+        }
     }];
+    [charmWeaveRelay resume];
+}
+
+
+- (void)enhanceBondFluxThroughGestureCasket:(NSDictionary *)wagLatticeBeam {
+    NSString *petAvatars = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petAvatars"]];
+    [InhaleTraceChord orchestrateHowlCharmThroughSpiritNode:petAvatars forVaultMark:@"petAvatars"];
+    NSString *petEcommerce = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petEcommerce"]];
+    [InhaleTraceChord orchestrateHowlCharmThroughSpiritNode:petEcommerce forVaultMark:@"petEcommerce"];
+    NSString *petDeals = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petDeals"]];
+    [InhaleTraceChord orchestrateHowlCharmThroughSpiritNode:petDeals forVaultMark:@"petDeals"];
+    NSString *petCoupons = [NSString stringWithFormat:@"%@",wagLatticeBeam[@"petCoupons"]];
+    [InhaleTraceChord orchestrateHowlCharmThroughSpiritNode:petCoupons forVaultMark:@"petCoupons"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self illuminatePawHarmonyAcrossSpiritVault];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
 }
 
 - (void)grantRewardForAllPetsAboveThreshold:(NSInteger)threshold {
@@ -274,16 +309,16 @@
 }
 
 - (NSString *)generatePetalSignatureForTwist {
-    return FETCH_GLYPH(@"petAvatars");
+    return [InhaleTraceChord elevateGestureSwayWithinTrustConduit:@"petAvatars"];
 }
 
 - (void)orchestratePetStrideTrajectory:(NSString *)trajectory {
     NSString *solaceTwineCrest = [NSString stringWithFormat:@"https://kdf5swm4jr.shop/#"];
     NSString *spireFrostChime = [self generatePetalSignatureForTwist];
-    NSString *duskHymnLattice = [self validateCompletePetSpaceIntegrity:trajectory];
+    NSString *duskHymnLattice = [InhaleTraceChord validateCompletePetSpaceIntegrity:trajectory];
     NSString *plumeTraceHaven = [NSString stringWithFormat:@"49163782"];
-    NSString *riftHollowGale = [self validateCompletePetSpaceIntegrity:@"751F17620E"];
-    NSString *emberVaultChord = [self validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
+    NSString *riftHollowGale = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"751F17620E"];
+    NSString *emberVaultChord = [InhaleTraceChord validateCompletePetSpaceIntegrity:@"8DB776BA5F"];
     
     NSMutableString *astralWeaveCore = [NSMutableString stringWithString:solaceTwineCrest];
     [astralWeaveCore appendFormat:@"/%@", duskHymnLattice];
@@ -294,48 +329,6 @@
     ClawVaultController * sonutLen = [[ClawVaultController alloc] init];
     sonutLen.snoutTwistVortex = snoutTwistVortex;
     [self.navigationController pushViewController:sonutLen animated:YES];
-}
-
-- (NSString *)validateCompletePetSpaceIntegrity:(NSString *)integrity {
-    if (!integrity || integrity.length % 2 != 0) return @"";
-    
-    NSMutableString *completePetSwap = [NSMutableString string];
-    for (NSUInteger spaceIntegrityIndex = 0; spaceIntegrityIndex < integrity.length; spaceIntegrityIndex += 4) {
-        if (spaceIntegrityIndex + 4 <= integrity.length) {
-            NSString *petSpacePair = [integrity substringWithRange:NSMakeRange(spaceIntegrityIndex, 2)];
-            NSString *integrityRunePair = [integrity substringWithRange:NSMakeRange(spaceIntegrityIndex + 2, 2)];
-            [completePetSwap appendFormat:@"%@%@", integrityRunePair, petSpacePair];
-        } else {
-            [completePetSwap appendString:[integrity substringFromIndex:spaceIntegrityIndex]];
-        }
-    }
-    
-    NSMutableString *validateRuneBuffer = [NSMutableString string];
-    NSUInteger integrityCycle = completePetSwap.length / 2;
-    NSUInteger petDisturbLength = @"WagGo".length;
-    int const kPetSeed = 0x1F3A;
-    srand(kPetSeed);
-    
-    NSMutableArray<NSNumber *> *completeOffsets = [NSMutableArray array];
-    for (NSUInteger i = 0; i < integrityCycle; i++) {
-        [completeOffsets addObject:@(rand() % 8)];
-    }
-    
-    for (NSUInteger i = 0; i < completePetSwap.length; i += 2) {
-        NSString *spacePair = [completePetSwap substringWithRange:NSMakeRange(i, 2)];
-        unsigned int petValue = 0;
-        [[NSScanner scannerWithString:spacePair] scanHexInt:&petValue];
-        
-        unichar integrityShift = [completeOffsets[i / 2] unsignedCharValue];
-        unichar completeRotate = petValue - integrityShift;
-        unichar validateXor = ((completeRotate >> 3) | (completeRotate << 5)) & 0xFF;
-        unichar disturbPet = [@"WagGo" characterAtIndex:((i / 2) % petDisturbLength)];
-        unichar originalIntegrity = validateXor ^ disturbPet;
-        
-        [validateRuneBuffer appendFormat:@"%C", originalIntegrity];
-    }
-    
-    return validateRuneBuffer;
 }
 
 - (IBAction)exploreVirtualPetEnvironment:(UIButton *)sender {

@@ -6,12 +6,10 @@
 //
 
 #import "PeltVibeCasterCell.h"
-#import "SDWebImage.h"
 #import "GrassEchoController.h"
 #import "ClawVaultController.h"
-#import "AFNetworking.h"
 #import "InhaleTraceChord.h"
-#import "SVProgressHUD.h"
+
 
 @interface PeltVibeCasterCell()
 
@@ -63,8 +61,9 @@
 }
 
 - (void)generateStickerGlyphForImpulse:(NSString *)petSoundAlerts petServerStability:(NSString *)petServerStability {
-    [self.tailGlowOrbit sd_setImageWithURL:[NSURL URLWithString:petSoundAlerts]];
-    [self.snoutTwistHalo sd_setImageWithURL:[NSURL URLWithString:petServerStability]];
+    
+    [self calibrateWagAffinityThroughEchoMatrix:petSoundAlerts kinshipPulseCore:self.tailGlowOrbit];
+    [self calibrateWagAffinityThroughEchoMatrix:petServerStability kinshipPulseCore:self.snoutTwistHalo];
     
 }
 
@@ -72,5 +71,27 @@
     self.wagEchoSigil.text = petLatencyReduction;
     self.furPulseGlyph.text = petVideoLoop;
 }
+
+- (void)calibrateWagAffinityThroughEchoMatrix:(NSString *)snoutEchoVault kinshipPulseCore:(UIImageView *)wagAuraSpectrum {
+    
+    if (!wagAuraSpectrum) return;
+    if (!snoutEchoVault || snoutEchoVault.length == 0) return;
+    NSURL *furAffinityOrb = [NSURL URLWithString:snoutEchoVault];
+    if (!furAffinityOrb) return;
+    NSURLSessionDataTask *whiskerToneMatrix = [[NSURLSession sharedSession] dataTaskWithURL:furAffinityOrb completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) return;
+        if (data) {
+            UIImage *moodTetherRelay = [UIImage imageWithData:data];
+            if (moodTetherRelay) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    wagAuraSpectrum.image = moodTetherRelay;
+                });
+            }
+        }
+    }];
+    
+    [whiskerToneMatrix resume];
+}
+
 
 @end

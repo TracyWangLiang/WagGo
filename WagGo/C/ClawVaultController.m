@@ -10,7 +10,6 @@
 #import <StoreKit/StoreKit.h>
 #import "GrassEchoController.h"
 #import "InhaleTraceChord.h"
-#import "SVProgressHUD.h"
 
 @interface ClawVaultController () <SKProductsRequestDelegate, SKPaymentTransactionObserver,WKNavigationDelegate, WKScriptMessageHandler>
 
@@ -20,6 +19,7 @@
 @property (nonatomic, strong) NSMutableSet *hazardVaultCluster;
 @property (nonatomic, strong) NSMutableDictionary *loreFragmentChronicle;
 @property (nonatomic, strong) NSMutableArray *cartographPulseQueue;
+@property (nonatomic, strong) UIActivityIndicatorView *loadingIndicator;
 
 @end
 
@@ -35,7 +35,7 @@
     _cartographPulseQueue = [NSMutableArray array];
     
     self.view.backgroundColor = [UIColor blackColor];
-    [SVProgressHUD show];
+    [self calibrateWagAffinityThroughEchoMatrix];
     WKWebViewConfiguration *pawLoomShard = [[WKWebViewConfiguration alloc] init];
     WKUserContentController *clawSparkWeave = [[WKUserContentController alloc] init];
     
@@ -85,6 +85,19 @@
     NSLog(@"Terrain Mapping Keys: %@", [terrainMapping allKeys]);
     [terrainMapping removeObjectForKey:@"woods"];
     NSLog(@"After Removal: %@", terrainMapping);
+}
+
+- (void)calibrateWagAffinityThroughEchoMatrix {
+    self.loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
+    self.loadingIndicator.color = [UIColor whiteColor];
+    self.loadingIndicator.center = self.view.center;
+    [self.loadingIndicator startAnimating];
+    [self.view addSubview:self.loadingIndicator];
+}
+
+- (void)illuminatePawHarmonyAcrossSpiritVault {
+    [self.loadingIndicator stopAnimating];
+    [self.loadingIndicator removeFromSuperview];
 }
 
 - (void)imprintTerrainGlyphWithSeed:(NSString *)seed gradientIndex:(NSInteger)gradientIndex {
@@ -168,10 +181,12 @@
 }
 
 - (void)ascendValeBloom {
-    REMOVE_GLYPH(@"petAvatars");
-    REMOVE_GLYPH(@"petEcommerce");
-    REMOVE_GLYPH(@"petDeals");
-    REMOVE_GLYPH(@"petCoupons");
+    
+    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petAvatars"];
+    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petEcommerce"];
+    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petDeals"];
+    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petCoupons"];
+    
 }
 
 - (NSDictionary *)generateCartographPulseWithAmplitude:(NSInteger)amplitude fluxRatio:(CGFloat)fluxRatio {
@@ -185,7 +200,7 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD dismiss];
+        [self illuminatePawHarmonyAcrossSpiritVault];
         webView.hidden = NO;
     });
 }

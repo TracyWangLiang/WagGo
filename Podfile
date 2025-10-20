@@ -6,10 +6,10 @@ target 'WagGo' do
   use_frameworks!
 
   # Pods for WagGo
-  pod 'SVProgressHUD'
-  pod 'AFNetworking'
-  pod 'MJRefresh'
-  pod 'SDWebImage'
+#  pod 'SVProgressHUD'
+#  pod 'AFNetworking'
+#  pod 'MJRefresh'
+#  pod 'SDWebImage'
   
 end
 

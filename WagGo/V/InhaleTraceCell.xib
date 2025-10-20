@@ -17,6 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="356" height="358"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7DN-dQ-HNH">
+                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0o-Gp-xWj">
                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,6 +117,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="7DN-dQ-HNH" firstAttribute="bottom" secondItem="S0o-Gp-xWj" secondAttribute="bottom" id="0Qu-A4-jSr"/>
                     <constraint firstItem="lwR-As-bYd" firstAttribute="centerY" secondItem="S0o-Gp-xWj" secondAttribute="centerY" id="1ua-WX-rE5"/>
                     <constraint firstItem="hm6-rJ-FUx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7AB-6M-6Bm"/>
                     <constraint firstItem="uff-Zb-1A0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7im-G1-U2E"/>
@@ -124,9 +128,12 @@
                     <constraint firstItem="S0o-Gp-xWj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ejh-Ux-77o"/>
                     <constraint firstAttribute="trailing" secondItem="hm6-rJ-FUx" secondAttribute="trailing" id="J2A-QU-KV3"/>
                     <constraint firstItem="r68-Ap-ErL" firstAttribute="leading" secondItem="lwR-As-bYd" secondAttribute="trailing" constant="8" id="K4s-sM-aJW"/>
+                    <constraint firstItem="7DN-dQ-HNH" firstAttribute="top" secondItem="S0o-Gp-xWj" secondAttribute="top" id="O5b-cq-WZ5"/>
                     <constraint firstAttribute="trailing" secondItem="uff-Zb-1A0" secondAttribute="trailing" id="Vui-g4-Asr"/>
                     <constraint firstItem="uff-Zb-1A0" firstAttribute="top" secondItem="hm6-rJ-FUx" secondAttribute="bottom" constant="12" id="b2e-xf-xVH"/>
                     <constraint firstItem="S0o-Gp-xWj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b3L-Vn-yGk"/>
+                    <constraint firstItem="7DN-dQ-HNH" firstAttribute="trailing" secondItem="S0o-Gp-xWj" secondAttribute="trailing" id="hVm-2L-9tz"/>
+                    <constraint firstItem="7DN-dQ-HNH" firstAttribute="leading" secondItem="S0o-Gp-xWj" secondAttribute="leading" id="hYW-ow-qN3"/>
                     <constraint firstAttribute="bottom" secondItem="6cg-LU-Fzo" secondAttribute="bottom" constant="20" id="i2W-xd-eXJ"/>
                     <constraint firstItem="X1N-n3-jNd" firstAttribute="centerY" secondItem="wVS-Nc-GWa" secondAttribute="centerY" id="j53-AW-IY3"/>
                     <constraint firstItem="hm6-rJ-FUx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kyg-DY-QZC"/>
@@ -144,6 +151,7 @@
                 <outlet property="clawSparkWeave" destination="r68-Ap-ErL" id="qgX-MD-Gsc"/>
                 <outlet property="furPulseGlyph" destination="hm6-rJ-FUx" id="Q6k-06-M7b"/>
                 <outlet property="haloMirthSeal" destination="0x2-5c-PBx" id="wC8-oc-3bC"/>
+                <outlet property="joySurgeMeter" destination="7DN-dQ-HNH" id="k6n-Dw-hu2"/>
                 <outlet property="pawLoomShard" destination="lwR-As-bYd" id="VRj-ws-EH8"/>
                 <outlet property="strideBloomVibe" destination="wVS-Nc-GWa" id="IUi-WH-qCx"/>
                 <outlet property="tailGlowOrbit" destination="S0o-Gp-xWj" id="f7z-cq-aVh"/>
