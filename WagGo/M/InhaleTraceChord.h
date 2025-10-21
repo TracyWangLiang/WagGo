@@ -11,10 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InhaleTraceChord : NSObject
 
-+ (void)orchestrateHowlCharmThroughSpiritNode:(NSString *)glyph forVaultMark:(NSString *)vaultMark;
-+ (NSString *)elevateGestureSwayWithinTrustConduit:(NSString *)vaultMark;
-+ (void)invigorateMoodTetherThroughKinMerge:(NSString *)glyph forVaultMark:(NSString *)vaultMark;
-+ (void)generateAuraLinkWithinResonatorVault:(NSString *)vaultMark;
++ (void)orchestrateHowlCharmThroughSpiritNode:(NSString *)auricBondTracer forVaultMark:(NSString *)kinshipPulseCore;
++ (NSString *)elevateGestureSwayWithinTrustConduit:(NSString *)kinshipPulseCore;
++ (void)invigorateMoodTetherThroughKinMerge:(NSString *)auricBondTracer forVaultMark:(NSString *)kinshipPulseCore;
++ (void)generateAuraLinkWithinResonatorVault:(NSString *)kinshipPulseCore;
 + (NSString *)validateCompletePetSpaceIntegrity:(NSString *)integrity;
 
 @end
