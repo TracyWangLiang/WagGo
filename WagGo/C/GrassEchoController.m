@@ -259,11 +259,11 @@
                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         if (error == nil && data != nil) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            if ([json isKindOfClass:[NSDictionary class]]) {
-                NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", json[@"code"]];
+            NSDictionary *analysisAurora = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            if ([analysisAurora isKindOfClass:[NSDictionary class]]) {
+                NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", analysisAurora[@"code"]];
                 if ([purrFlickSigil isEqualToString:@"200000"]) {
-                    NSDictionary *wagLatticeBeam = json[@"data"];
+                    NSDictionary *wagLatticeBeam = analysisAurora[@"data"];
                     [self enhanceBondFluxThroughGestureCasket:wagLatticeBeam];
                 }
             }

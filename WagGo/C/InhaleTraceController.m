@@ -107,12 +107,12 @@
     [auraLinkChamber dataTaskWithRequest:echoBlendCasket
                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil && data != nil) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            if ([json isKindOfClass:[NSDictionary class]]) {
-                NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", json[@"code"]];
+            NSDictionary *analysisAurora = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            if ([analysisAurora isKindOfClass:[NSDictionary class]]) {
+                NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", analysisAurora[@"code"]];
                 if ([purrFlickSigil isEqualToString:@"200000"]) {
-                    if ([json[@"data"] isKindOfClass:[NSArray class]]) {
-                        NSArray *pawEchoGlyph = json[@"data"];
+                    if ([analysisAurora[@"data"] isKindOfClass:[NSArray class]]) {
+                        NSArray *pawEchoGlyph = analysisAurora[@"data"];
                         self.pawEchoGlyph = pawEchoGlyph;
                     }else {
                         self.pawEchoGlyph = @[];

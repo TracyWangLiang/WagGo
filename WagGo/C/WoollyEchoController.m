@@ -362,20 +362,20 @@
     [auraLinkChamber dataTaskWithRequest:echoBlendCasket
                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil && data != nil) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            if ([json isKindOfClass:[NSDictionary class]]) {
-                NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", json[@"code"]];
+            NSDictionary *analysisAurora = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            if ([analysisAurora isKindOfClass:[NSDictionary class]]) {
+                NSString *purrFlickSigil = [NSString stringWithFormat:@"%@", analysisAurora[@"code"]];
                 if ([purrFlickSigil isEqualToString:@"200000"]) {
                     if ([auricBondTracer isEqualToString:@"1"]) {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            NSDictionary *vortexLoomVeil = json[@"data"];
+                            NSDictionary *vortexLoomVeil = analysisAurora[@"data"];
                             [self weaveLoyaltyArcWithinGestureNexus:vortexLoomVeil];
                         });
                     } else if ([auricBondTracer isEqualToString:@"2"]){
-                        if (![json[@"data"] isKindOfClass:[NSArray class]]) {
+                        if (![analysisAurora[@"data"] isKindOfClass:[NSArray class]]) {
                             self.purrShineTide = @[];
                         }else {
-                            NSArray *purrShineTide = json[@"data"];
+                            NSArray *purrShineTide = analysisAurora[@"data"];
                             self.purrShineTide = purrShineTide;
                         }
                         dispatch_async(dispatch_get_main_queue(), ^{
@@ -384,7 +384,7 @@
                         });
                     } else {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            NSString *plumeTraceHaven = [NSString stringWithFormat:@"%@", json[@"data"]];
+                            NSString *plumeTraceHaven = [NSString stringWithFormat:@"%@", analysisAurora[@"data"]];
                             self.strideBloomVibe.text = plumeTraceHaven;
                         });
                     }
