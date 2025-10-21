@@ -1,6 +1,0 @@
-framework module Pods_WagGo {
-  umbrella header "Pods-WagGo-umbrella.h"
-
-  export *
-  module * { export * }
-}

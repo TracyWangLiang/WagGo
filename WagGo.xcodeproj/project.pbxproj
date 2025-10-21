@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05EA8CE8C206E5D4BA3A3B85 /* Pods_WagGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */; };
 		33A6E73A2E652A7B0088A4A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E72D2E652A7B0088A4A3 /* AppDelegate.m */; };
 		33A6E73B2E652A7B0088A4A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7322E652A7B0088A4A3 /* main.m */; };
 		33A6E73C2E652A7B0088A4A3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6E7362E652A7B0088A4A3 /* SceneDelegate.m */; };
@@ -43,7 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WagGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A6E70F2E652A700088A4A3 /* WagGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WagGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A6E72C2E652A7B0088A4A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33A6E72D2E652A7B0088A4A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,8 +94,6 @@
 		33C85C0E2E66C5F20085CE01 /* ClawVaultSwishLightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClawVaultSwishLightCell.h; sourceTree = "<group>"; };
 		33C85C0F2E66C5F20085CE01 /* ClawVaultSwishLightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClawVaultSwishLightCell.m; sourceTree = "<group>"; };
 		33C85C102E66C5F20085CE01 /* ClawVaultSwishLightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClawVaultSwishLightCell.xib; sourceTree = "<group>"; };
-		BF287D1727A763E53374FC2E /* Pods-WagGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagGo.debug.xcconfig"; path = "Target Support Files/Pods-WagGo/Pods-WagGo.debug.xcconfig"; sourceTree = "<group>"; };
-		F39010D3FA4A43ADA0DB44C1 /* Pods-WagGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagGo.release.xcconfig"; path = "Target Support Files/Pods-WagGo/Pods-WagGo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05EA8CE8C206E5D4BA3A3B85 /* Pods_WagGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +112,6 @@
 			children = (
 				33A6E7392E652A7B0088A4A3 /* WagGo */,
 				33A6E7102E652A700088A4A3 /* Products */,
-				C7FF9F54D66CBCEB71C37DB0 /* Pods */,
-				3E471E3C433A669A1E9F958F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,23 +205,6 @@
 			path = C;
 			sourceTree = "<group>";
 		};
-		3E471E3C433A669A1E9F958F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2F09B2A4D18DF045191D720D /* Pods_WagGo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C7FF9F54D66CBCEB71C37DB0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BF287D1727A763E53374FC2E /* Pods-WagGo.debug.xcconfig */,
-				F39010D3FA4A43ADA0DB44C1 /* Pods-WagGo.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,7 +212,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33A6E7272E652A710088A4A3 /* Build configuration list for PBXNativeTarget "WagGo" */;
 			buildPhases = (
-				64DC72845491E8E8503B3C09 /* [CP] Check Pods Manifest.lock */,
 				33A6E70B2E652A700088A4A3 /* Sources */,
 				33A6E70C2E652A700088A4A3 /* Frameworks */,
 				33A6E70D2E652A700088A4A3 /* Resources */,
@@ -306,31 +281,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		64DC72845491E8E8503B3C09 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WagGo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		33A6E70B2E652A700088A4A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -382,7 +332,6 @@
 /* Begin XCBuildConfiguration section */
 		33A6E7282E652A710088A4A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF287D1727A763E53374FC2E /* Pods-WagGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -416,7 +365,6 @@
 		};
 		33A6E7292E652A710088A4A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F39010D3FA4A43ADA0DB44C1 /* Pods-WagGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
