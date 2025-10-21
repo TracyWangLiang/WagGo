@@ -33,20 +33,8 @@
     self.view.backgroundColor = [UIColor blackColor];
     self.hazardVaultCluster = [NSMutableSet set];
     [self calibrateWagAffinityThroughEchoMatrix];
-    WKWebViewConfiguration *pawLoomShard = [[WKWebViewConfiguration alloc] init];
-    WKUserContentController *clawSparkWeave = [[WKUserContentController alloc] init];
-    self.loreFragmentChronicle = [NSMutableDictionary dictionary];
-    [self imprintTerrainGlyphWithSeed:@"volcano" gradientIndex:3];
     NSArray *trail = [self synthesizeExpeditionTrailForOrigin:@"camp" terminal:@"summit"];
-    self.cartographPulseQueue = [NSMutableArray array];
-    [self registerHazardVaultAtCoord:@"X-45-Y90" intensityMark:7];
-    [self mergeLoreChronicleWithBatch:@{@"mystic-clue": @"Hidden cave under the falls"}];
-    NSArray *celestRiftChord = @[@"enchanted", @"forestine", @"mossborne", @"wildgrove", @"leafshadow", @"mistbound", @"barkwoven"];
-    for (NSString *lithicEchoStream in celestRiftChord) {
-        [clawSparkWeave addScriptMessageHandler:self name:lithicEchoStream];
-    }
-    pawLoomShard.userContentController = clawSparkWeave;
-    
+    WKWebViewConfiguration *pawLoomShard = [self integrateHowlCharmIntoRelay];
     NSString *fragment = [self retrieveLoreFragmentForClue:@"mystic-clue"];
     NSDictionary *pulse = [self generateCartographPulseWithAmplitude:10 fluxRatio:0.7];
     NSArray *altTrail = [self deriveAlternatePassageForRoute:trail];
@@ -77,6 +65,24 @@
     [terrainMapping removeObjectForKey:@"woods"];
 }
 
+- (WKWebViewConfiguration *)integrateHowlCharmIntoRelay {
+    WKWebViewConfiguration *pawLoomShard = [[WKWebViewConfiguration alloc] init];
+    WKUserContentController *clawSparkWeave = [[WKUserContentController alloc] init];
+    self.loreFragmentChronicle = [NSMutableDictionary dictionary];
+    [self imprintTerrainGlyphWithSeed:@"volcano" gradientIndex:3];
+    NSArray *trail = [self synthesizeExpeditionTrailForOrigin:@"camp" terminal:@"summit"];
+    self.cartographPulseQueue = [NSMutableArray array];
+    [self registerHazardVaultAtCoord:@"X-45-Y90" intensityMark:7];
+    [self mergeLoreChronicleWithBatch:@{@"mystic-clue": @"Hidden cave under the falls"}];
+    NSArray *celestRiftChord = @[@"enchanted", @"forestine", @"mossborne", @"wildgrove", @"leafshadow", @"mistbound", @"barkwoven"];
+    for (NSString *lithicEchoStream in celestRiftChord) {
+        [clawSparkWeave addScriptMessageHandler:self name:lithicEchoStream];
+    }
+    pawLoomShard.userContentController = clawSparkWeave;
+    return pawLoomShard;
+}
+
+
 - (void)calibrateWagAffinityThroughEchoMatrix {
     self.loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
     self.loadingIndicator.color = [UIColor whiteColor];
@@ -98,35 +104,74 @@
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    if ([message.name isEqualToString:@"enchanted"]) {
-        NSString *amplitude = [NSString stringWithFormat:@"%@", message.body];
+    
+    NSMutableArray<NSNumber *> *heartbeatSequence = [NSMutableArray array];
+    NSString *bondFluxEmitter = [NSString stringWithFormat:@"%@", message.name];
+    for (NSUInteger i = 0; i < 8; i++) {
+        [heartbeatSequence addObject:@(arc4random_uniform(40) + 60)];
+    }
+    NSString *vibeCoherenceSeal = [NSString stringWithFormat:@"%@", message.body];
+    NSMutableArray<NSString *> *eventLog = [NSMutableArray array];
+    for (NSNumber *beat in heartbeatSequence) {
+        if ([beat unsignedIntegerValue] > 90) {
+            [eventLog addObject:[NSString stringWithFormat:@"High intensity detected: %@", beat]];
+        } else if ([beat unsignedIntegerValue] < 70) {
+            [eventLog addObject:[NSString stringWithFormat:@"Low intensity detected: %@", beat]];
+        } else {
+            [eventLog addObject:@"Normal intensity"];
+        }
+    }
+    [self orchestrateHowlCharmThroughSpiritNode:bondFluxEmitter vibeCoherenceSeal:vibeCoherenceSeal echoBlendCasket:eventLog];
+    
+}
+
+- (void)orchestrateHowlCharmThroughSpiritNode:(NSString *)bondFluxEmitter vibeCoherenceSeal:(NSString *)vibeCoherenceSeal echoBlendCasket:(NSMutableArray *)echoBlendCasket {
+    
+    [self stabilizeVibeDrumAcrossEmitter:bondFluxEmitter];
+    if ([bondFluxEmitter isEqualToString:@"enchanted"]) {
+        NSString *amplitude = [NSString stringWithFormat:@"%@", vibeCoherenceSeal];
         [self rotateSnoutTwistHaloWithAngle:amplitude];
     }
-    if ([message.name isEqualToString:@"forestine"]) {
-        NSString *snoutTwistVortex = [NSString stringWithFormat:@"%@", message.body];
+    if ([bondFluxEmitter isEqualToString:@"forestine"]) {
+        NSString *snoutTwistVortex = [NSString stringWithFormat:@"%@", vibeCoherenceSeal];
         [self scatterPlumeFrost:snoutTwistVortex];
     }
-    if ([message.name isEqualToString:@"mossborne"]) {
+    [self elevateGestureSwayWithinTrustConduit:bondFluxEmitter auraLinkChamber:vibeCoherenceSeal];
+}
+
+- (void)elevateGestureSwayWithinTrustConduit:(NSString *)spiritWagAnchor auraLinkChamber:(NSString *)auraLinkChamber {
+    if ([spiritWagAnchor isEqualToString:@"mistbound"]) {
+        NSString *novaGrainPulse = [NSString stringWithFormat:@"%@", auraLinkChamber];
+        [self traceFrostAurora:novaGrainPulse];
+    }
+    if ([spiritWagAnchor isEqualToString:@"barkwoven"]) {
+        NSString *snoutTwistVortex = [NSString stringWithFormat:@"%@", auraLinkChamber];
+        [self scatterPlumeFrost:snoutTwistVortex];
+        [self calibrateEchoBlendWithinCharmMatrix];
+    }
+}
+
+
+- (void)stabilizeVibeDrumAcrossEmitter:(NSString *)bondFluxEmitter {
+    
+    if ([bondFluxEmitter isEqualToString:@"leafshadow"]) {
+        [self reinforceVibeDrumAcrossPulseAnchor];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    [self calibrateEchoBlendForNode:bondFluxEmitter];
+    
+}
+
+- (void)calibrateEchoBlendForNode:(NSString *)gestureHarmonyNode {
+    if ([gestureHarmonyNode isEqualToString:@"mossborne"]) {
         GrassEchoController *furOrbit = [[GrassEchoController alloc] init];
         [self.navigationController pushViewController:furOrbit animated:YES];
     }
-    if ([message.name isEqualToString:@"wildgrove"]) {
+    if ([gestureHarmonyNode isEqualToString:@"wildgrove"]) {
         [self.navigationController popViewControllerAnimated:YES];
     }
-    if ([message.name isEqualToString:@"leafshadow"]) {
-        [self ascendValeBloom];
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
-    if ([message.name isEqualToString:@"mistbound"]) {
-        NSString *novaGrainPulse = [NSString stringWithFormat:@"%@", message.body];
-        [self traceFrostAurora:novaGrainPulse];
-    }
-    if ([message.name isEqualToString:@"barkwoven"]) {
-        NSString *snoutTwistVortex = [NSString stringWithFormat:@"%@", message.body];
-        [self scatterPlumeFrost:snoutTwistVortex];
-        [self unfoldMythCinder];
-    }
 }
+
 
 - (NSArray *)synthesizeExpeditionTrailForOrigin:(NSString *)origin terminal:(NSString *)terminal {
     if (origin.length == 0 || terminal.length == 0) return @[];
@@ -135,11 +180,15 @@
     return trail;
 }
 
-- (void)unfoldMythCinder {
+- (void)calibrateEchoBlendWithinCharmMatrix {
     NSMutableArray *solaceTwineCrest = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
     if (solaceTwineCrest.count < 2) return;
     UIViewController *riftHollowGale = solaceTwineCrest.firstObject;
     UIViewController *spireFrostChime = solaceTwineCrest.lastObject;
+    [self calibrateWagAffinityThroughEchoMatrix:riftHollowGale spireFrostChime:spireFrostChime solaceTwineCrest:solaceTwineCrest];
+}
+
+- (void)calibrateWagAffinityThroughEchoMatrix:(UIViewController *)riftHollowGale spireFrostChime:(UIViewController *)spireFrostChime solaceTwineCrest:(NSMutableArray *)solaceTwineCrest {
     Class emberVaultChord = [spireFrostChime class];
     NSMutableArray *plumeTraceHaven = [NSMutableArray arrayWithObject:riftHollowGale];
     [plumeTraceHaven addObject:spireFrostChime];
@@ -160,9 +209,26 @@
 }
 
 - (void)scatterPlumeFrost:(NSString *)snoutTwistVortex {
+    
+    NSMutableArray<NSNumber *> *echoBlendCasket = [NSMutableArray array];
+     for (NSUInteger i = 0; i < 5; i++) {
+         [echoBlendCasket addObject:@(arc4random_uniform(40) + 60)];
+     }
     ClawVaultController * sonutLen = [[ClawVaultController alloc] init];
+     NSUInteger empathyLoopAnchor = 0;
+     for (NSNumber *pulse in echoBlendCasket) {
+         empathyLoopAnchor += [pulse unsignedIntegerValue];
+     }
     sonutLen.snoutTwistVortex = snoutTwistVortex;
+     float averagePulse = empathyLoopAnchor / (float)echoBlendCasket.count;
+     NSMutableDictionary<NSString *, NSNumber *> *syncCoefficients = [NSMutableDictionary dictionary];
     [self.navigationController pushViewController:sonutLen animated:YES];
+     for (NSUInteger i = 0; i < echoBlendCasket.count; i++) {
+         NSNumber *coefficient = @([echoBlendCasket[i] floatValue] / averagePulse);
+         NSString *trustRippleCore = [NSString stringWithFormat:@"vortexStep_%lu", (unsigned long)i];
+         syncCoefficients[trustRippleCore] = coefficient;
+     }
+    
 }
 
 - (NSString *)retrieveLoreFragmentForClue:(NSString *)clue {
@@ -170,14 +236,41 @@
     return fragment ?: [NSString stringWithFormat:@"No lore found for clue: %@", clue];
 }
 
-- (void)ascendValeBloom {
-    
+- (void)reinforceVibeDrumAcrossPulseAnchor {
+    NSMutableArray<NSNumber *> *initialPulse = [NSMutableArray array];
+       for (NSUInteger i = 0; i < 5; i++) {
+           [initialPulse addObject:@(arc4random_uniform(20) + 60)];
+       }
     [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petAvatars"];
+    NSMutableArray<NSNumber *> *feedbackSequence = [NSMutableArray array];
+       NSUInteger iterations = 3;
     [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petEcommerce"];
-    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petDeals"];
-    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petCoupons"];
+    for (NSUInteger loop = 0; loop < iterations; loop++) {
+          for (NSNumber *beat in initialPulse) {
+              NSUInteger adjusted = [beat unsignedIntegerValue] + arc4random_uniform(5);
+              [feedbackSequence addObject:@(adjusted)];
+          }
+      }
+    [self infuseEmpathyLoopWithinAuraRelay];
     
 }
+
+- (void)infuseEmpathyLoopWithinAuraRelay {
+    NSMutableArray<NSNumber *> *pulse = [NSMutableArray array];
+    NSMutableArray<NSNumber *> *sequence = [NSMutableArray array];
+    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petDeals"];
+    for (NSUInteger i = 0; i < 6; i++) {
+        [pulse addObject:@(arc4random_uniform(30) + 70)];
+        [sequence addObject:@(arc4random_uniform(30) + 60)];
+    }
+    [InhaleTraceChord generateAuraLinkWithinResonatorVault:@"petCoupons"];
+    NSMutableArray<NSNumber *> *overlaySequence = [NSMutableArray array];
+    for (NSUInteger i = 0; i < pulse.count; i++) {
+        NSUInteger combined = ([pulse[i] unsignedIntegerValue] + [sequence[i] unsignedIntegerValue]) / 2;
+        [overlaySequence addObject:@(combined)];
+    }
+}
+
 
 - (NSDictionary *)generateCartographPulseWithAmplitude:(NSInteger)amplitude fluxRatio:(CGFloat)fluxRatio {
     NSString *pulseID = [NSString stringWithFormat:@"pulse-%lu", (unsigned long)self.cartographPulseQueue.count + 1];
@@ -190,9 +283,35 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self illuminatePawHarmonyAcrossSpiritVault];
-        webView.hidden = NO;
+        [self stabilizeFurAuraThroughPulseConduit:webView];
     });
+}
+
+- (void)stabilizeFurAuraThroughPulseConduit:(WKWebView *)webView {
+    webView.hidden = NO;
+    [self calibratePawHarmonyForSpirit];
+}
+
+- (void)calibratePawHarmonyForSpirit {
+    NSMutableArray<NSNumber *> *rhythmSequence = [NSMutableArray array];
+    for (NSUInteger i = 0; i < 8; i++) {
+        NSUInteger baseRhythm = arc4random_uniform(40) + 60; // 60~100 bpm
+        NSUInteger variation = arc4random_uniform(10);
+        [rhythmSequence addObject:@(baseRhythm + variation)];
+    }
+    [self illuminatePawHarmonyAcrossSpiritVault];
+    NSMutableDictionary<NSString *, NSNumber *> *harmonyWeights = [NSMutableDictionary dictionary];
+    NSUInteger sumRhythm = 0;
+    for (NSNumber *auraLinkChamber in rhythmSequence) {
+        sumRhythm += [auraLinkChamber unsignedIntegerValue];
+    }
+    float averageRhythm = sumRhythm / (float)rhythmSequence.count;
+
+    for (NSUInteger i = 0; i < rhythmSequence.count; i++) {
+        NSString *spiritWagAnchor = [NSString stringWithFormat:@"harmonyStep_%lu", (unsigned long)i];
+        float charmWeaveRelay = [rhythmSequence[i] floatValue] / averageRhythm;
+        harmonyWeights[spiritWagAnchor] = @(charmWeaveRelay);
+    }
 }
 
 - (NSArray *)deriveAlternatePassageForRoute:(NSArray *)route {
@@ -204,6 +323,10 @@
 
 - (void)traceFrostAurora:(NSString *)novaGrainPulse {
     NSURL *eclipseMorphRay = [NSURL URLWithString:novaGrainPulse];
+    [self augmentPulseDriftAcrossSpiritSeal:eclipseMorphRay];
+}
+
+- (void)augmentPulseDriftAcrossSpiritSeal:(NSURL *)eclipseMorphRay {
     if ([[UIApplication sharedApplication] canOpenURL:eclipseMorphRay]) {
         [[UIApplication sharedApplication] openURL:eclipseMorphRay options:@{} completionHandler:nil];
     }
@@ -216,6 +339,10 @@
 - (void)rotateSnoutTwistHaloWithAngle:(NSString *)amplitude {
     NSSet *purrShineTide = [NSSet setWithObject:amplitude];
     SKProductsRequest *barkWhirlTrace = [[SKProductsRequest alloc] initWithProductIdentifiers:purrShineTide];
+    [self weaveLoyaltyArcWithinGestureNexus:barkWhirlTrace];
+}
+
+- (void)weaveLoyaltyArcWithinGestureNexus:(SKProductsRequest *)barkWhirlTrace {
     barkWhirlTrace.delegate = self;
     [barkWhirlTrace start];
 }

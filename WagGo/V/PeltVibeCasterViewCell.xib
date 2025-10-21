@@ -17,6 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="54" height="85"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-sz-HtH">
+                        <rect key="frame" x="0.0" y="0.0" width="54" height="85"/>
+                    </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-6w-LSa">
                         <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                         <constraints>
@@ -43,8 +46,11 @@
             </view>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <constraints>
+                <constraint firstItem="cdb-sz-HtH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3cn-mu-TxG"/>
                 <constraint firstAttribute="bottom" secondItem="jZS-PP-mtq" secondAttribute="bottom" id="D9R-GB-ZkI"/>
+                <constraint firstItem="cdb-sz-HtH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="K1L-NL-zMU"/>
                 <constraint firstItem="jZS-PP-mtq" firstAttribute="top" secondItem="HmF-fN-F0o" secondAttribute="bottom" constant="4" id="OsQ-rY-H7F"/>
+                <constraint firstAttribute="trailing" secondItem="cdb-sz-HtH" secondAttribute="trailing" id="Ozv-ld-z5Y"/>
                 <constraint firstItem="a9b-6w-LSa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WoK-Fy-Mlx"/>
                 <constraint firstItem="HmF-fN-F0o" firstAttribute="bottom" secondItem="a9b-6w-LSa" secondAttribute="bottom" constant="10" id="XYQ-Oa-8ud"/>
                 <constraint firstItem="HmF-fN-F0o" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fmV-Kn-QB3"/>
@@ -52,6 +58,7 @@
                 <constraint firstItem="jZS-PP-mtq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nEL-fM-0oi"/>
                 <constraint firstAttribute="trailing" secondItem="jZS-PP-mtq" secondAttribute="trailing" id="pws-go-vxs"/>
                 <constraint firstItem="a9b-6w-LSa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tb8-o0-RRZ"/>
+                <constraint firstAttribute="bottom" secondItem="cdb-sz-HtH" secondAttribute="bottom" id="u4K-9F-zYG"/>
             </constraints>
             <connections>
                 <outlet property="clawSparkWeave" destination="jZS-PP-mtq" id="8IG-DS-cCL"/>
